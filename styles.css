@@ -329,9 +329,28 @@
       letter-spacing:-.06em;
     }
 
+
+    .mini-status{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      margin:0 0 12px;
+    }
+
+    .mini-status span{
+      padding:7px 9px;
+      border-radius:999px;
+      background:white;
+      border:1px solid var(--line);
+      color:var(--muted);
+      font-size:9px;
+      font-weight:900;
+      white-space:nowrap;
+    }
+
     .mini-map{
       position:relative;
-      min-height:290px;
+      min-height:250px;
       border-radius:22px;
       overflow:hidden;
       background:
