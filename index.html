@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UrbanTrack | CRM para obras, ventas y entregas</title>
-  <meta name="description" content="UrbanTrack ayuda a empresas de construcción, materiales y servicios a controlar clientes, obras, entregas, rutas y reportes en una sola plataforma." />
+  <title>UrbanTrack | CRM para seguimiento de clientes, obras, entregas y monitoreo de rutas</title>
+  <meta name="description" content="UrbanTrack ayuda a empresas comerciales y operativas a dar seguimiento a clientes, obras, entregas y rutas en una sola plataforma." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="urbantrack-styles-updated.css" />
 </head>
 
 <body>
@@ -31,11 +31,11 @@
   <main>
     <section class="hero">
       <div class="hero-copy">
-        <h1>CRM comercial para construcción y materiales</h1>
-        <h2>Controla lo que pasa en campo.</h2>
+        <h1>CRM comercial para seguimiento de clientes, obras, entregas y monitoreo de rutas.</h1>
         <p>
-          UrbanTrack convierte tus clientes, obras, entregas y rutas comerciales en información clara
-          para vender mejor, operar con orden y tomar decisiones sin depender de llamadas, Excel o intuición.
+          UrbanTrack ayuda al seguimiento de tus clientes, obras, entregas y rutas comerciales,
+          transformando la operación en información clara para trabajar con orden y tomar decisiones
+          sin depender de llamadas, Excel o intuición.
         </p>
 
         <div class="actions">
@@ -66,33 +66,40 @@
               </div>
 
               <div class="mini-nav">
-                <div class="active">▦ Centro de control</div>
+                <div class="active">▦ Dashboard</div>
                 <div>👥 Clientes</div>
                 <div>🏗 Obras</div>
                 <div>📦 Entregas</div>
-                <div>🗺 Mapa</div>
-                <div>📊 Análisis</div>
+                <div>🗺 Rutas de seguimiento</div>
+                <div>📊 Reportes</div>
               </div>
             </aside>
 
             <div class="mini-main">
               <div class="mini-head">
                 <div>
-                  <h3>Centro de control operativo</h3>
+                  <h3>Dashboard operativo</h3>
                   <p>Clientes, obras, entregas y actividad comercial en campo.</p>
                 </div>
                 <div class="mini-filter">Este mes ▾</div>
               </div>
 
               <div class="mini-kpis">
-                <article class="mini-kpi"><small>Prospectos</small><strong>124</strong></article>
-                <article class="mini-kpi"><small>Clientes</small><strong>842</strong></article>
+                <article class="mini-kpi"><small>Leads</small><strong>124</strong></article>
+                <article class="mini-kpi"><small>Clientes activos</small><strong>842</strong></article>
                 <article class="mini-kpi"><small>Obras</small><strong>45</strong></article>
-                <article class="mini-kpi"><small>Riesgo</small><strong>18</strong></article>
+                <article class="mini-kpi"><small>Seguimientos</small><strong>18</strong></article>
+              </div>
+
+              <div class="mini-status">
+                <span>Leads</span>
+                <span>Leads perdidos</span>
+                <span>Clientes activos</span>
+                <span>Clientes inactivos ocultos del mapa</span>
               </div>
 
               <div class="mini-map">
-                <div class="map-chip">Zona operativa: Santa Cruz</div>
+                <div class="map-chip">Obras por zona: Santa Cruz</div>
                 <div class="pin green"></div>
                 <div class="pin orange"></div>
                 <div class="pin yellow"></div>
@@ -101,7 +108,7 @@
                 <div class="map-tooltip">
                   <small>● En ejecución</small>
                   <strong>Obra Norte</strong>
-                  <p>Cliente: Constructora ABC<br>Responsable: Carlos Rojas<br>Próximo seguimiento: 10:30 AM</p>
+                  <p>Cliente: Constructora ABC<br>Zona: Norte<br>Responsable: Carlos Rojas<br>Próximo seguimiento: 10:30 AM</p>
                 </div>
               </div>
             </div>
@@ -109,8 +116,8 @@
         </div>
 
         <div class="floating-phone">
-          <h3>Hola, Carlos 👋</h3>
-          <p>Tu resumen de campo para hoy.</p>
+          <h3>Actividad reciente</h3>
+          <p>Últimos movimientos de clientes, obras y rutas.</p>
 
           <div class="phone-stat">
             <span>Seguimientos hoy</span>
@@ -125,7 +132,7 @@
             <strong>08</strong>
           </div>
 
-          <button class="phone-btn">Ver actividad</button>
+          <button class="phone-btn">Ver actividad reciente</button>
         </div>
       </div>
     </section>
@@ -136,15 +143,17 @@
           <h2>El problema real</h2>
           <h3>Si no tienes control de tu operación, estás perdiendo oportunidades todos los días.</h3>
           <p>
-            UrbanTrack te da visibilidad total sobre clientes, obras y entregas.
+            UrbanTrack te da visibilidad total sobre clientes, obras, entregas y rutas.
           </p>
         </div>
 
         <div class="pain-list">
-          <div class="pain-item">Visitas comerciales que quedan solo en conversaciones.</div>
-          <div class="pain-item">Clientes y prospectos sin seguimiento oportuno.</div>
-          <div class="pain-item">Entregas pendientes difíciles de controlar.</div>
+          <div class="pain-item">¿No concretas clientes por falta de seguimiento?</div>
+          <div class="pain-item">¿Proyectos sin registro y sin seguimiento oportuno?</div>
+          <div class="pain-item">¿Entregas pendientes difíciles de controlar?</div>
           <div class="pain-item">Obras activas sin una vista clara por zona o responsable.</div>
+          <div class="pain-item">¿Te cuesta controlar las rutas de tu personal?</div>
+          <div class="pain-item">¿Te falta claridad sobre ventas registradas y el seguimiento de lo vendido a cada cliente?</div>
         </div>
       </div>
     </section>
@@ -163,7 +172,7 @@
         <article class="feature-card">
           <div class="feature-icon">👥</div>
           <h3>Nunca pierdas un cliente</h3>
-          <p>Registra clientes y prospectos con teléfono, email, notas, ubicación, próximo contacto y recordatorios.</p>
+          <p>Registra clientes y leads con teléfono, email, notas, ubicación, próximo contacto y recordatorios.</p>
         </article>
 
         <article class="feature-card">
@@ -180,20 +189,20 @@
 
         <article class="feature-card">
           <div class="feature-icon">🗺️</div>
-          <h3>Todo visible en mapa</h3>
-          <p>Visualiza clientes, obras, entregas y actividad comercial por zona, estado o vendedor responsable.</p>
+          <h3>Obras visibles en mapa</h3>
+          <p>Visualiza obras por zona, estado, responsable y próximo seguimiento para priorizar la operación en campo.</p>
         </article>
 
         <article class="feature-card">
           <div class="feature-icon">📍</div>
           <h3>Tu equipo en campo</h3>
-          <p>Monitorea inicio y fin de jornada, check-in/check-out, visitas realizadas y rutas recorridas.</p>
+          <p>Monitorea rutas de seguimiento, inicio y fin de jornada, check-in/check-out y visitas realizadas.</p>
         </article>
 
         <article class="feature-card">
           <div class="feature-icon">📊</div>
           <h3>Decisiones con datos</h3>
-          <p>Consulta reportes de ventas, productividad, entregas pendientes, obras activas y rutas realizadas.</p>
+          <p>Consulta reportes de ventas, productividad, entregas pendientes, obras activas, rutas realizadas y eficiencia de cierre.</p>
         </article>
       </div>
     </section>
@@ -209,8 +218,8 @@
           </p>
 
           <ul class="checklist">
-            <li>Dashboard con indicadores clave de clientes, obras y entregas.</li>
-            <li>Mapa interactivo con actividad geolocalizada.</li>
+            <li>Dashboard con indicadores clave de clientes, leads, obras y entregas.</li>
+            <li>Mapa interactivo enfocado en obras activas por zona y responsable.</li>
             <li>Gestión web para administración y supervisión.</li>
             <li>App móvil para registrar visitas, entregas y actividad en campo.</li>
           </ul>
@@ -221,7 +230,7 @@
             <span>1</span>
             <div>
               <h3>Registra</h3>
-              <p>Clientes, prospectos, obras, responsables, entregas y próximos seguimientos.</p>
+              <p>Clientes, leads, obras, responsables, entregas, recordatorios y próximos seguimientos.</p>
             </div>
           </article>
 
@@ -237,7 +246,7 @@
             <span>3</span>
             <div>
               <h3>Controla</h3>
-              <p>Rutas, visitas, entregas, productividad y oportunidades desde reportes claros.</p>
+              <p>Rutas de seguimiento, visitas, entregas, productividad y oportunidades desde reportes claros.</p>
             </div>
           </article>
         </div>
@@ -259,10 +268,11 @@
           <small>hasta 10 usuarios</small>
 
           <ul>
-            <li>Clientes y prospectos</li>
+            <li>Clientes y leads</li>
             <li>Obras y proyectos</li>
             <li>Entregas</li>
-            <li>Mapa interactivo</li>
+            <li>Recordatorios y seguimientos sobre clientes y obras</li>
+            <li>Mapa de obras activas</li>
             <li>Reportes básicos</li>
           </ul>
 
@@ -278,7 +288,7 @@
           <ul>
             <li>Todo lo del Plan Starter</li>
             <li>Tracking de vendedores</li>
-            <li>Rutas y check-in/check-out</li>
+            <li>Rutas de seguimiento y check-in/check-out</li>
             <li>Historial de visitas</li>
             <li>Reportes avanzados</li>
           </ul>
@@ -307,7 +317,7 @@
 
   <footer>
     <strong>UrbanTrack</strong>
-    <span>CRM comercial para construcción, materiales y servicios.</span>
+    <span>CRM para seguimiento de clientes, obras, entregas y monitoreo de rutas.</span>
   </footer>
 </body>
 </html>
