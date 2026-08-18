@@ -3,385 +3,620 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UrbanTrack | CRM para seguimiento de clientes, obras, entregas y monitoreo de rutas</title>
-  <meta name="description" content="UrbanTrack ayuda a empresas comerciales y operativas a dar seguimiento a clientes, obras, entregas y rutas en una sola plataforma." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta
+    name="description"
+    content="UrbanTrack conecta clientes, obras, entregas, visitas y equipos en campo para que tengas control comercial y operativo en un solo lugar."
+  />
+  <title>UrbanTrack | CRM comercial y operativo</title>
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <header class="nav">
-    <a class="brand" href="#">
-      <span class="logo">UT</span>
-      <span>UrbanTrack</span>
-    </a>
 
-    <nav>
-      <a href="#features">Funcionalidades</a>
-      <a href="#control">Control operativo</a>
-      <a href="#pricing">Planes</a>
-      <a href="#contact">Contacto</a>
-    </nav>
+  <!-- NAVBAR -->
+  <div class="nav-wrap">
+    <div class="container">
+      <nav>
+        <a class="brand" href="#">
+          <span class="brand-mark">U</span>
+          <span>UrbanTrack</span>
+        </a>
 
-    <a class="nav-cta" href="#contact">Solicitar demo</a>
-  </header>
+        <div class="nav-links">
+          <a href="#problema">Problemas</a>
+          <a href="#solucion">Solución</a>
+          <a href="#diferencias">Por qué UrbanTrack</a>
+          <a href="#roles">Para tu equipo</a>
+          <a href="#contacto">Contacto</a>
+        </div>
 
-  <main>
-    <section class="hero">
-      <div class="hero-copy">
-        <h1>CRM comercial para seguimiento de clientes, obras, entregas y monitoreo de rutas.</h1>
-        <p>
-          UrbanTrack ayuda al seguimiento de tus clientes, obras, entregas y rutas comerciales,
-          transformando la operación en información clara para trabajar con orden y tomar decisiones
-          sin depender de llamadas, Excel o intuición.
+        <a class="btn btn-primary" href="#contacto">Solicitar demo</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container hero-grid">
+
+      <div>
+        <span class="eyebrow">
+          <span class="dot"></span>
+          CRM comercial + operación en campo
+        </span>
+
+        <h1>
+          Tu operación comercial no debería depender de
+          <span class="blue">Excel</span>,
+          WhatsApp y llamadas.
+        </h1>
+
+        <p class="lead">
+          UrbanTrack conecta clientes, obras, entregas, visitas y equipos en campo
+          para que sepas qué está pasando, qué está pendiente y dónde debes actuar.
         </p>
 
-        <div class="actions">
-          <a class="btn primary" href="#contact">Quiero una demo</a>
-          <a class="btn secondary" href="#features">Ver funcionalidades</a>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contacto">
+            Quiero conocer UrbanTrack
+          </a>
+
+          <a class="btn btn-light" href="#solucion">
+            Ver cómo funciona
+          </a>
+        </div>
+
+        <div class="hero-tags">
+          <span class="hero-tag">Clientes y leads</span>
+          <span class="hero-tag">Obras y entregas</span>
+          <span class="hero-tag">Visitas y rutas</span>
+          <span class="hero-tag">Web + móvil</span>
+        </div>
+      </div>
+
+      <!-- Dashboard visual -->
+      <div class="dashboard-wrap">
+        <div class="dashboard">
+
+          <aside class="sidebar">
+            <div class="side-brand">
+              <i>U</i>
+              UrbanTrack
+            </div>
+
+            <div class="side-item active">▦ Dashboard</div>
+            <div class="side-item">👥 Clientes</div>
+            <div class="side-item">🏗 Obras</div>
+            <div class="side-item">📦 Entregas</div>
+            <div class="side-item">📍 Visitas</div>
+            <div class="side-item">🗺 Rutas</div>
+            <div class="side-item">📊 Reportes</div>
+          </aside>
+
+          <main class="dash-main">
+
+            <div class="dash-head">
+              <div>
+                <strong>Dashboard operativo</strong><br />
+                <small>Actividad comercial y en campo</small>
+              </div>
+
+              <small>Este mes ▾</small>
+            </div>
+
+            <div class="stats">
+
+              <div class="stat">
+                <small>Clientes activos</small>
+                <b>842</b>
+                <em class="blue-text">+18 este mes</em>
+              </div>
+
+              <div class="stat">
+                <small>Obras</small>
+                <b>45</b>
+                <em class="orange-text">12 en seguimiento</em>
+              </div>
+
+              <div class="stat">
+                <small>Visitas hoy</small>
+                <b>18</b>
+                <em class="green-text">+4 vs ayer</em>
+              </div>
+
+              <div class="stat">
+                <small>Pendientes</small>
+                <b>12</b>
+                <em class="orange-text">Para hoy</em>
+              </div>
+
+            </div>
+
+            <div class="map-grid">
+
+              <div class="map">
+                <div class="map-label">Actividad en campo</div>
+                <div class="route"></div>
+
+                <span class="pin p1"></span>
+                <span class="pin p2"></span>
+                <span class="pin p3"></span>
+              </div>
+
+              <div class="activity-card">
+                <div class="activity-title">Actividad reciente</div>
+
+                <div class="activity-row">
+                  Constructora Norte<br />
+                  <span class="badge green">Visita completada</span>
+                </div>
+
+                <div class="activity-row">
+                  Torre Central<br />
+                  <span class="badge orange">Seguimiento</span>
+                </div>
+
+                <div class="activity-row">
+                  Comercial ABC<br />
+                  <span class="badge green">Entrega confirmada</span>
+                </div>
+              </div>
+
+            </div>
+          </main>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- PROBLEMA -->
+  <section class="section section-alt" id="problema">
+    <div class="container problem-grid">
+
+      <div class="problem-intro">
+        <span class="eyebrow">
+          <span class="dot"></span>
+          El problema real
+        </span>
+
+        <h2>Cuando la operación crece, también crece el desorden.</h2>
+
+        <p class="lead">
+          El problema no es que tu equipo no trabaje. El problema es que la
+          información queda repartida entre personas, chats, planillas y llamadas.
+        </p>
+      </div>
+
+      <div class="problem-list">
+
+        <div class="problem">
+          <div class="problem-icon">01</div>
+          <div>
+            <strong>Clientes que nadie volvió a contactar</strong>
+            <span>
+              Seguimientos importantes se pierden porque dependen de la memoria de una persona.
+            </span>
+          </div>
+        </div>
+
+        <div class="problem">
+          <div class="problem-icon">02</div>
+          <div>
+            <strong>Vendedores trabajando desde WhatsApp o libretas</strong>
+            <span>
+              La información comercial no queda en un lugar que la empresa pueda consultar.
+            </span>
+          </div>
+        </div>
+
+        <div class="problem">
+          <div class="problem-icon">03</div>
+          <div>
+            <strong>Obras activas sin suficiente contexto</strong>
+            <span>
+              No siempre está claro cuándo fue la última visita, qué se habló o cuál es el próximo paso.
+            </span>
+          </div>
+        </div>
+
+        <div class="problem">
+          <div class="problem-icon">04</div>
+          <div>
+            <strong>Entregas que se recuerdan cuando el cliente reclama</strong>
+            <span>
+              Fechas, cantidades y responsables necesitan seguimiento continuo.
+            </span>
+          </div>
+        </div>
+
+        <div class="problem">
+          <div class="problem-icon">05</div>
+          <div>
+            <strong>Supervisores llamando para saber qué está pasando</strong>
+            <span>
+              Sin visibilidad centralizada, controlar la operación consume tiempo de todo el equipo.
+            </span>
+          </div>
+        </div>
+
+        <div class="problem">
+          <div class="problem-icon">06</div>
+          <div>
+            <strong>Gerencia decide con información incompleta</strong>
+            <span>
+              Cuando cada dato vive en un lugar distinto, es difícil detectar problemas y oportunidades a tiempo.
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUCIÓN -->
+  <section class="section section-dark" id="solucion">
+    <div class="container">
+
+      <span class="eyebrow">
+        <span class="dot"></span>
+        Todo conectado
+      </span>
+
+      <h2>UrbanTrack convierte acciones aisladas en una historia comercial completa.</h2>
+
+      <p class="lead">
+        Cada interacción se relaciona con el cliente, la obra y el trabajo realizado.
+        Así puedes entender qué pasó antes y qué debe ocurrir después.
+      </p>
+
+      <div class="flow">
+        <div class="flow-step"><div class="flow-icon">◎</div><b>Lead</b></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><div class="flow-icon">👥</div><b>Cliente</b></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><div class="flow-icon">🏗</div><b>Obra</b></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><div class="flow-icon">📍</div><b>Visita</b></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><div class="flow-icon">⏰</div><b>Seguimiento</b></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><div class="flow-icon">📦</div><b>Entrega</b></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step"><div class="flow-icon">▥</div><b>Historial</b></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- POR QUÉ URBANTRACK -->
+  <section class="section" id="diferencias">
+    <div class="container">
+
+      <span class="eyebrow">
+        <span class="dot"></span>
+        Por qué UrbanTrack
+      </span>
+
+      <h2>No es solo un CRM de escritorio.</h2>
+
+      <p class="lead">
+        UrbanTrack fue pensado para empresas donde la venta y la operación también ocurren fuera de la oficina.
+      </p>
+
+      <div class="cards">
+
+        <div class="card">
+          <div class="icon blue">01</div>
+          <h3>CRM + trabajo en campo</h3>
+          <p>
+            La gestión comercial y la actividad del vendedor viven dentro del mismo flujo.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon orange">02</div>
+          <h3>Ubicación con contexto</h3>
+          <p>
+            No es solo un punto en un mapa: sabes qué cliente visitó, qué obra atendió y qué resultado obtuvo.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon green">03</div>
+          <h3>Seguimiento que continúa</h3>
+          <p>
+            Notas, recordatorios, visitas, entregas y próximos pasos forman un historial único.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="icon dark">04</div>
+          <h3>Visibilidad sin perseguir al equipo</h3>
+          <p>
+            Supervisa avances y actividad sin depender de llamadas constantes para reconstruir el día.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ROLES -->
+  <section class="section section-dark" id="roles">
+    <div class="container">
+
+      <span class="eyebrow">
+        <span class="dot"></span>
+        Para cada rol
+      </span>
+
+      <h2>Cada persona ve lo que necesita para trabajar mejor.</h2>
+
+      <p class="lead">
+        La misma información puede servir para ejecutar, supervisar y tomar decisiones.
+      </p>
+
+      <div class="roles">
+
+        <div class="role">
+          <small>Vendedor</small>
+          <h3>Prioriza y registra</h3>
+          <p>
+            Consulta clientes, pendientes y visitas, y registra actividad directamente desde el teléfono.
+          </p>
+        </div>
+
+        <div class="role">
+          <small>Supervisor</small>
+          <h3>Controla sin perseguir</h3>
+          <p>
+            Ve actividad, seguimientos, visitas y obras activas sin depender de reportes manuales.
+          </p>
+        </div>
+
+        <div class="role">
+          <small>Administración</small>
+          <h3>Centraliza la operación</h3>
+          <p>
+            Gestiona clientes, proyectos, entregas, usuarios y datos operativos desde la web.
+          </p>
+        </div>
+
+        <div class="role">
+          <small>Gerencia</small>
+          <h3>Decide con contexto</h3>
+          <p>
+            Obtiene una fotografía más clara de la operación y de dónde se necesita atención.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DÍA CON URBANTRACK -->
+  <section class="section section-alt">
+    <div class="container">
+
+      <span class="eyebrow">
+        <span class="dot"></span>
+        Un día con UrbanTrack
+      </span>
+
+      <h2>Así se conecta el trabajo diario.</h2>
+
+      <p class="lead">
+        Desde el inicio de jornada hasta el seguimiento final,
+        cada paso deja información útil para el siguiente.
+      </p>
+
+      <div class="timeline">
+
+        <div class="time-row">
+          <div class="time">08:00</div>
+          <div class="timeline-line"><div class="time-dot"></div></div>
+          <div class="time-content">
+            <strong>El vendedor inicia su jornada</strong>
+            <span>Consulta clientes, pendientes, obras y visitas programadas.</span>
+          </div>
+        </div>
+
+        <div class="time-row">
+          <div class="time">10:30</div>
+          <div class="timeline-line"><div class="time-dot"></div></div>
+          <div class="time-content">
+            <strong>Visita una obra</strong>
+            <span>Registra check-in, notas, fotografías y el resultado de la visita.</span>
+          </div>
+        </div>
+
+        <div class="time-row">
+          <div class="time">12:00</div>
+          <div class="timeline-line"><div class="time-dot"></div></div>
+          <div class="time-content">
+            <strong>El supervisor ve la actividad</strong>
+            <span>La información ya está disponible sin tener que llamar al vendedor.</span>
+          </div>
+        </div>
+
+        <div class="time-row">
+          <div class="time">15:00</div>
+          <div class="timeline-line"><div class="time-dot"></div></div>
+          <div class="time-content">
+            <strong>Se programa un seguimiento</strong>
+            <span>El próximo paso queda asociado al cliente o a la obra.</span>
+          </div>
+        </div>
+
+        <div class="time-row">
+          <div class="time">17:30</div>
+          <div class="timeline-line"><div class="time-dot"></div></div>
+          <div class="time-content">
+            <strong>Finaliza la jornada</strong>
+            <span>La empresa conserva el historial del trabajo realizado durante el día.</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ANTES / DESPUÉS -->
+  <section class="section">
+    <div class="container">
+
+      <span class="eyebrow">
+        <span class="dot"></span>
+        Antes y después
+      </span>
+
+      <h2>De información dispersa a una operación conectada.</h2>
+
+      <div class="compare">
+
+        <div class="compare-box compare-before">
+          <div class="compare-title">Antes</div>
+
+          <div class="compare-list">
+            <div class="compare-item">✕ WhatsApp para seguimientos</div>
+            <div class="compare-item">✕ Excel para clientes y obras</div>
+            <div class="compare-item">✕ Notas y recordatorios personales</div>
+            <div class="compare-item">✕ Llamadas para saber dónde está el equipo</div>
+            <div class="compare-item">✕ Información en la cabeza del vendedor</div>
+          </div>
+        </div>
+
+        <div class="compare-arrow">→</div>
+
+        <div class="compare-box compare-after">
+          <div class="compare-title">Con UrbanTrack</div>
+
+          <div class="compare-list">
+            <div class="compare-item">✓ Clientes y leads</div>
+            <div class="compare-item">✓ Obras y proyectos</div>
+            <div class="compare-item">✓ Visitas y rutas</div>
+            <div class="compare-item">✓ Entregas y seguimientos</div>
+            <div class="compare-item">✓ Historial y visibilidad operativa</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PARA QUIÉN -->
+  <section class="section section-dark">
+    <div class="container">
+
+      <span class="eyebrow">
+        <span class="dot"></span>
+        ¿Para quién es?
+      </span>
+
+      <h2>Ideal para equipos comerciales que trabajan en campo.</h2>
+
+      <p class="lead">
+        Especialmente útil cuando vender implica visitar clientes, seguir obras,
+        coordinar entregas o supervisar equipos fuera de oficina.
+      </p>
+
+      <div class="segments">
+        <span class="segment">Constructoras</span>
+        <span class="segment">Distribuidoras</span>
+        <span class="segment">Materiales</span>
+        <span class="segment">Mayoristas</span>
+        <span class="segment">Servicios técnicos</span>
+        <span class="segment">Equipos comerciales B2B</span>
+        <span class="segment">Empresas con entregas</span>
+        <span class="segment">Operaciones con visitas frecuentes</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONFIANZA -->
+  <section class="section section-alt">
+    <div class="container">
+
+      <span class="eyebrow">
+        <span class="dot"></span>
+        Una plataforma para crecer
+      </span>
+
+      <h2>Menos dependencia de personas. Más continuidad para la empresa.</h2>
+
+      <p class="lead">
+        UrbanTrack ayuda a que la información pertenezca a la operación
+        y no quede atrapada en herramientas o conversaciones individuales.
+      </p>
+
+      <div class="trust-grid">
+
+        <div class="trust">
+          <b>Información centralizada</b>
+          <span>
+            El equipo trabaja sobre una misma fuente de información comercial y operativa.
+          </span>
         </div>
 
         <div class="trust">
-          <span>Clientes</span>
-          <span>Obras</span>
-          <span>Entregas</span>
-          <span>Rutas</span>
-          <span>Reportes</span>
+          <b>Web + móvil</b>
+          <span>
+            Administración y supervisión desde la web; registro de actividad desde el campo.
+          </span>
         </div>
+
+        <div class="trust">
+          <b>Seguimiento continuo</b>
+          <span>
+            Cada acción deja contexto para saber qué pasó y qué debe ocurrir después.
+          </span>
+        </div>
+
       </div>
+    </div>
+  </section>
 
-      <div class="product-frame" aria-label="Vista previa de UrbanTrack">
-        <div class="browser">
-          <div class="browser-top">
-            <span></span><span></span><span></span>
-          </div>
+  <!-- CTA -->
+  <div class="cta-wrap" id="contacto">
+    <div class="container">
+      <div class="cta">
 
-          <div class="mini-dashboard">
-            <aside class="mini-sidebar">
-              <div class="mini-brand">
-                <span class="logo" style="width:34px;height:34px;border-radius:12px;font-size:13px;">UT</span>
-                <span>UrbanTrack</span>
-              </div>
-
-              <div class="mini-nav">
-                <div class="active">▦ Dashboard</div>
-                <div>👥 Clientes</div>
-                <div>🏗 Obras</div>
-                <div>📦 Entregas</div>
-                <div>🗺 Rutas de seguimiento</div>
-                <div>📊 Reportes</div>
-              </div>
-            </aside>
-
-            <div class="mini-main">
-              <div class="mini-head">
-                <div>
-                  <h3>Dashboard operativo</h3>
-                  <p>Clientes, obras, entregas y actividad comercial en campo.</p>
-                </div>
-                <div class="mini-filter">Este mes ▾</div>
-              </div>
-
-              <div class="mini-kpis">
-                <article class="mini-kpi"><small>Leads</small><strong>124</strong></article>
-                <article class="mini-kpi"><small>Clientes activos</small><strong>842</strong></article>
-                <article class="mini-kpi"><small>Obras</small><strong>45</strong></article>
-                <article class="mini-kpi"><small>Seguimientos</small><strong>18</strong></article>
-              </div>
-
-              <div class="mini-status">
-                <span>Leads</span>
-                <span>Leads perdidos</span>
-                <span>Clientes activos</span>
-                <span>Clientes inactivos ocultos del mapa</span>
-              </div>
-
-              <div class="mini-map">
-                <div class="map-chip">Obras por zona: Santa Cruz</div>
-                <div class="pin green"></div>
-                <div class="pin orange"></div>
-                <div class="pin yellow"></div>
-                <div class="pin blue"></div>
-
-                <div class="map-tooltip">
-                  <small>● En ejecución</small>
-                  <strong>Obra Norte</strong>
-                  <p>Cliente: Constructora ABC<br>Zona: Norte<br>Responsable: Carlos Rojas<br>Próximo seguimiento: 10:30 AM</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="floating-phone">
-          <h3>Actividad reciente</h3>
-          <p>Últimos movimientos de clientes, obras y rutas.</p>
-
-          <div class="phone-stat">
-            <span>Seguimientos hoy</span>
-            <strong>12</strong>
-          </div>
-          <div class="phone-stat">
-            <span>Entregas pendientes</span>
-            <strong>05</strong>
-          </div>
-          <div class="phone-stat">
-            <span>Obras activas</span>
-            <strong>08</strong>
-          </div>
-
-          <button class="phone-btn">Ver actividad reciente</button>
-        </div>
-      </div>
-    </section>
-
-    <section class="problem">
-      <div class="problem-card">
         <div>
-          <h2>El problema real</h2>
-          <h3>Si no tienes control de tu operación, estás perdiendo oportunidades todos los días.</h3>
+          <h2>Conoce cómo UrbanTrack puede ordenar tu operación comercial.</h2>
+
           <p>
-            UrbanTrack te da visibilidad total sobre clientes, obras, entregas y rutas.
+            Cuéntanos cómo trabaja tu equipo y te mostramos cómo centralizar
+            clientes, obras, entregas y actividad en campo.
           </p>
         </div>
 
-        <div class="pain-list">
-          <div class="pain-item">¿No concretas clientes por falta de seguimiento?</div>
-          <div class="pain-item">¿Proyectos sin registro y sin seguimiento oportuno?</div>
-          <div class="pain-item">¿Entregas pendientes difíciles de controlar?</div>
-          <div class="pain-item">Obras activas sin una vista clara por zona o responsable.</div>
-          <div class="pain-item">¿Te cuesta controlar las rutas de tu personal?</div>
-          <div class="pain-item">¿Te falta claridad sobre ventas registradas y el seguimiento de lo vendido a cada cliente?</div>
-        </div>
+        <a class="btn" href="mailto:contacto@urbantrack.io">
+          Solicitar una demo
+        </a>
+
       </div>
-    </section>
+    </div>
+  </div>
 
-    <section id="features" class="features">
-      <div class="section-title">
-        <h2>Funcionalidades</h2>
-        <h3>Todo lo importante, visible y accionable.</h3>
-        <p>
-          Una plataforma web y móvil para organizar clientes, controlar obras,
-          registrar entregas y monitorear la actividad comercial en campo.
-        </p>
-      </div>
-
-      <div class="feature-grid">
-        <article class="feature-card">
-          <div class="feature-icon">👥</div>
-          <h3>Nunca pierdas un cliente</h3>
-          <p>Registra clientes y leads con teléfono, email, notas, ubicación, próximo contacto y recordatorios.</p>
-        </article>
-
-        <article class="feature-card">
-          <div class="feature-icon">🏗️</div>
-          <h3>Cada obra bajo control</h3>
-          <p>Gestiona proyectos por estado, avance, responsables, presupuesto, archivos, fotos y productos asociados.</p>
-        </article>
-
-        <article class="feature-card">
-          <div class="feature-icon">🚚</div>
-          <h3>Entregas sin sorpresas</h3>
-          <p>Controla productos, cantidades, fechas comprometidas, fechas entregadas y responsables de cada entrega.</p>
-        </article>
-
-        <article class="feature-card">
-          <div class="feature-icon">🗺️</div>
-          <h3>Obras visibles en mapa</h3>
-          <p>Visualiza obras por zona, estado, responsable y próximo seguimiento para priorizar la operación en campo.</p>
-        </article>
-
-        <article class="feature-card">
-          <div class="feature-icon">📍</div>
-          <h3>Tu equipo en campo</h3>
-          <p>Monitorea rutas de seguimiento, inicio y fin de jornada, check-in/check-out y visitas realizadas.</p>
-        </article>
-
-        <article class="feature-card">
-          <div class="feature-icon">📊</div>
-          <h3>Decisiones con datos</h3>
-          <p>Consulta reportes de ventas, productividad, entregas pendientes, obras activas, rutas realizadas y eficiencia de cierre.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="control" class="split">
-      <div class="split-inner control-layout">
-        <div>
-          <h2>Control operativo</h2>
-          <h3>Diseñado para equipos comerciales que trabajan fuera de la oficina.</h3>
-          <p>
-            UrbanTrack centraliza la información comercial y operativa para que supervisores,
-            vendedores y administradores trabajen con más visibilidad.
-          </p>
-
-          <ul class="checklist">
-            <li>Dashboard con indicadores clave de clientes, leads, obras y entregas.</li>
-            <li>Mapa interactivo enfocado en obras activas por zona y responsable.</li>
-            <li>Gestión web para administración y supervisión.</li>
-            <li>App móvil para registrar visitas, entregas y actividad en campo.</li>
-          </ul>
-
-          <div class="workflow compact-workflow">
-            <article class="workflow-card">
-              <span>1</span>
-              <div>
-                <h3>Registra</h3>
-                <p>Clientes, leads, obras, entregas y próximos seguimientos.</p>
-              </div>
-            </article>
-
-            <article class="workflow-card">
-              <span>2</span>
-              <div>
-                <h3>Visualiza</h3>
-                <p>Ubicación, estado, avance y actividad reciente.</p>
-              </div>
-            </article>
-
-            <article class="workflow-card">
-              <span>3</span>
-              <div>
-                <h3>Controla</h3>
-                <p>Rutas, visitas, productividad y reportes claros.</p>
-              </div>
-            </article>
-          </div>
-        </div>
-
-        <div class="control-showcase" aria-label="Vista web y móvil de UrbanTrack">
-          <div class="control-web-screen">
-            <div class="control-window-top">
-              <span></span><span></span><span></span>
-              <strong>Dashboard operativo</strong>
-            </div>
-
-            <div class="control-dashboard-body">
-              <aside class="control-menu">
-                <div class="control-menu-item active">▦ Dashboard</div>
-                <div class="control-menu-item">👥 Leads</div>
-                <div class="control-menu-item">🏗 Obras</div>
-                <div class="control-menu-item">📦 Entregas</div>
-                <div class="control-menu-item">🗺 Rutas</div>
-              </aside>
-
-              <div class="control-content">
-                <div class="control-content-head">
-                  <div>
-                    <small>Vista web</small>
-                    <h3>Seguimiento comercial y operativo</h3>
-                  </div>
-                  <span>Hoy</span>
-                </div>
-
-                <div class="control-stats">
-                  <article><small>Leads activos</small><strong>38</strong></article>
-                  <article><small>Obras activas</small><strong>12</strong></article>
-                  <article><small>Entregas pendientes</small><strong>07</strong></article>
-                </div>
-
-                <div class="control-board">
-                  <div class="board-card">
-                    <span class="dot orange"></span>
-                    <div>
-                      <strong>Obra Norte</strong>
-                      <p>Seguimiento programado · Carlos Rojas</p>
-                    </div>
-                  </div>
-                  <div class="board-card">
-                    <span class="dot green"></span>
-                    <div>
-                      <strong>Entrega confirmada</strong>
-                      <p>Cliente Comercial ABC · Zona Este</p>
-                    </div>
-                  </div>
-                  <div class="board-card">
-                    <span class="dot blue"></span>
-                    <div>
-                      <strong>Nuevo Lead</strong>
-                      <p>Solicitó cotización para materiales</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="control-mobile-phone" aria-label="Rutas de seguimiento en móvil">
-            <div class="phone-label">App móvil · Rutas de seguimiento</div>
-            <img src="routes-mobile.png" alt="Pantalla móvil con rutas de seguimiento en mapa" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="pricing" class="pricing">
-      <div class="section-title">
-          <h2>Planes.</h2>
-        <h3>Empieza a operar con más control.</h3>
-        <p>Planes simples para empresas que quieren ordenar su operación comercial y crecer con visibilidad.</p>
-      </div>
-
-      <div class="price-grid">
-        <article class="price-card">
-          <h3>Plan Starter</h3>
-          <p>Ideal para empresas que necesitan organizar clientes, obras y entregas.</p>
-          <strong>$130 / mes</strong>
-          <small>hasta 10 usuarios</small>
-
-          <ul>
-            <li>Clientes y leads</li>
-            <li>Obras y proyectos</li>
-            <li>Entregas</li>
-            <li>Recordatorios y seguimientos sobre clientes y obras</li>
-            <li>Mapa de obras activas</li>
-            <li>Reportes básicos</li>
-          </ul>
-
-          <a class="btn secondary" href="#contact">Hablar con un asesor</a>
-        </article>
-
-        <article class="price-card highlight">
-          <h3>Plan Pro</h3>
-          <p>Para equipos comerciales en campo que necesitan seguimiento y control avanzado.</p>
-          <strong>$200 / mes</strong>
-          <small>hasta 20 usuarios</small>
-
-          <ul>
-            <li>Todo lo del Plan Starter</li>
-            <li>Tracking de vendedores</li>
-            <li>Rutas de seguimiento y check-in/check-out</li>
-            <li>Historial de visitas</li>
-            <li>Reportes avanzados</li>
-          </ul>
-
-          <a class="btn primary" href="#contact">Solicitar demo</a>
-        </article>
-      </div>
-
-      <p class="note">Implementación inicial opcional según las necesidades de cada empresa.</p>
-    </section>
-
-    <section id="contact" class="cta">
-      <div class="cta-box">
-        <h2>Convierte tus visitas, obras y entregas en información clara para vender mejor.</h2>
-        <p>
-          Cuéntanos sobre tu operación comercial y un asesor te contactará para mostrarte cómo UrbanTrack puede ayudarte.
-        </p>
-
-        <div class="actions" style="justify-content:center">
-          <a class="btn primary" href="mailto:marketing@urbantrack.io?subject=Quiero%20una%20demo%20de%20UrbanTrack">Contactar a un asesor</a>
-          <a class="btn secondary" href="#features">Ver funcionalidades</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
+  <!-- FOOTER -->
   <footer>
-    <strong>UrbanTrack</strong>
-    <span>CRM para seguimiento de clientes, obras, entregas y monitoreo de rutas.</span>
+    <div class="container footer-row">
+
+      <a class="brand" href="#">
+        <span class="brand-mark">U</span>
+        <span>UrbanTrack</span>
+      </a>
+
+      <span>
+        CRM comercial y operativo para equipos que trabajan dentro y fuera de oficina.
+      </span>
+
+      <span>© 2026 UrbanTrack</span>
+    </div>
   </footer>
+
 </body>
 </html>
