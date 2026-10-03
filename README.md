@@ -9,6 +9,7 @@ Sitio comercial estático de UrbanTrack, listo para publicar en GitHub Pages.
 - `logo.svg`: identidad principal y favicon.
 - `routes-mobile.png`: captura del producto móvil.
 - `privacy.html`: política de privacidad.
+- `registro/`: portal independiente de registro, prueba gratuita y selección de plan.
 - `CNAME`: dominio personalizado.
 
 ## Desarrollo local

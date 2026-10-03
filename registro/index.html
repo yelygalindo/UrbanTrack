@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Crea tu cuenta de UrbanTrack y prueba la plataforma gratis durante 10 días."
+    />
+    <meta name="theme-color" content="#f7f5f0" />
+    <title>Crea tu cuenta | UrbanTrack</title>
+    <link rel="icon" type="image/svg+xml" href="../logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#registro">Ir al formulario</a>
+
+    <header class="signup-header">
+      <a class="brand" href="../" aria-label="UrbanTrack, volver al inicio">
+        <img src="../logo.svg" alt="" width="42" height="42" />
+        <span>UrbanTrack</span>
+      </a>
+      <a class="back-link" href="../">
+        <span aria-hidden="true">←</span> Volver al sitio
+      </a>
+    </header>
+
+    <main>
+      <section class="signup-intro">
+        <span class="eyebrow"><i></i> 10 días gratis · Sin tarjeta</span>
+        <h1>Ordena tu operación.<br /><em>Empieza hoy.</em></h1>
+        <p>
+          Crea tu empresa, invita a tu equipo y prueba UrbanTrack con todas las
+          herramientas necesarias para empezar.
+        </p>
+      </section>
+
+      <div class="signup-layout" id="registro">
+        <section class="form-card" aria-labelledby="form-title">
+          <div class="preview-note" role="status">
+            <span>Vista previa</span>
+            El registro automático se conectará a la API en la siguiente etapa.
+          </div>
+
+          <div class="stepper" aria-label="Progreso del registro">
+            <div class="stepper-item active" data-step-indicator="1">
+              <span>1</span>
+              <small>Tu cuenta</small>
+            </div>
+            <i></i>
+            <div class="stepper-item" data-step-indicator="2">
+              <span>2</span>
+              <small>Tu plan</small>
+            </div>
+            <i></i>
+            <div class="stepper-item" data-step-indicator="3">
+              <span>3</span>
+              <small>Confirmar</small>
+            </div>
+          </div>
+
+          <form id="signup-form" novalidate>
+            <div class="form-step active" data-step="1">
+              <div class="step-heading">
+                <span>PASO 1 DE 3</span>
+                <h2 id="form-title">Crea tu espacio de trabajo</h2>
+                <p>
+                  Esta cuenta administrará tu empresa y podrá invitar al resto
+                  del equipo.
+                </p>
+              </div>
+
+              <div class="field-grid">
+                <label>
+                  Nombre
+                  <input
+                    type="text"
+                    name="nombre"
+                    autocomplete="given-name"
+                    placeholder="Tu nombre"
+                    required
+                  />
+                  <span class="field-error">Ingresa tu nombre.</span>
+                </label>
+                <label>
+                  Apellido
+                  <input
+                    type="text"
+                    name="apellido"
+                    autocomplete="family-name"
+                    placeholder="Tu apellido"
+                    required
+                  />
+                  <span class="field-error">Ingresa tu apellido.</span>
+                </label>
+              </div>
+
+              <label>
+                Correo de trabajo
+                <input
+                  type="email"
+                  name="correo"
+                  autocomplete="email"
+                  placeholder="nombre@empresa.com"
+                  required
+                />
+                <span class="field-hint"
+                  >Te enviaremos un enlace para verificar tu cuenta.</span
+                >
+                <span class="field-error">Ingresa un correo válido.</span>
+              </label>
+
+              <label>
+                Nombre de la empresa
+                <input
+                  type="text"
+                  name="empresa"
+                  autocomplete="organization"
+                  placeholder="Ej. Constructora Norte"
+                  required
+                />
+                <span class="field-error"
+                  >Ingresa el nombre de tu empresa.</span
+                >
+              </label>
+
+              <label>
+                Contraseña
+                <span class="password-field">
+                  <input
+                    type="password"
+                    name="password"
+                    autocomplete="new-password"
+                    minlength="8"
+                    placeholder="Mínimo 8 caracteres"
+                    required
+                  />
+                  <button
+                    class="password-toggle"
+                    type="button"
+                    aria-label="Mostrar contraseña"
+                  >
+                    Ver
+                  </button>
+                </span>
+                <span class="field-error"
+                  >Usa una contraseña de al menos 8 caracteres.</span
+                >
+              </label>
+
+              <button class="button button-primary next-button" type="button">
+                Continuar <span aria-hidden="true">→</span>
+              </button>
+              <p class="login-copy">
+                ¿Ya tienes una cuenta?
+                <a href="https://app.urbantrack.io/">Inicia sesión</a>
+              </p>
+            </div>
+
+            <div class="form-step" data-step="2">
+              <div class="step-heading">
+                <span>PASO 2 DE 3</span>
+                <h2>¿Qué plan quieres probar?</h2>
+                <p>
+                  No pagarás nada hoy. Puedes cambiar de plan antes de que
+                  termine la prueba.
+                </p>
+              </div>
+
+              <div class="plan-list">
+                <label class="plan-option">
+                  <input type="radio" name="plan" value="starter" />
+                  <span class="radio-mark"></span>
+                  <span class="plan-copy">
+                    <strong>Inicial</strong>
+                    <small>Para comenzar a organizar tu operación.</small>
+                  </span>
+                  <span class="plan-price"><b>$10</b><small>/mes</small></span>
+                </label>
+
+                <label class="plan-option selected">
+                  <input
+                    type="radio"
+                    name="plan"
+                    value="professional"
+                    checked
+                  />
+                  <span class="radio-mark"></span>
+                  <span class="plan-copy">
+                    <span class="recommended">RECOMENDADO</span>
+                    <strong>Profesional</strong>
+                    <small>Para equipos que trabajan todos los días.</small>
+                  </span>
+                  <span class="plan-price"><b>$30</b><small>/mes</small></span>
+                </label>
+
+                <label class="plan-option">
+                  <input type="radio" name="plan" value="business" />
+                  <span class="radio-mark"></span>
+                  <span class="plan-copy">
+                    <strong>Empresa</strong>
+                    <small>Para operaciones con más alcance y control.</small>
+                  </span>
+                  <span class="plan-price"><b>$100</b><small>/mes</small></span>
+                </label>
+              </div>
+
+              <div class="trial-callout">
+                <span>✓</span>
+                <div>
+                  <strong>Tu prueba no necesita tarjeta</strong>
+                  <p>
+                    Te avisaremos antes de que termine. Solo pagarás si decides
+                    continuar.
+                  </p>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button
+                  class="button button-secondary back-button"
+                  type="button"
+                >
+                  Atrás
+                </button>
+                <button class="button button-primary next-button" type="button">
+                  Continuar <span aria-hidden="true">→</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="form-step" data-step="3">
+              <div class="step-heading">
+                <span>PASO 3 DE 3</span>
+                <h2>Todo listo para comenzar</h2>
+                <p>Revisa tu información antes de crear la prueba.</p>
+              </div>
+
+              <div class="review-card">
+                <div>
+                  <span>Empresa</span>
+                  <strong data-review="empresa">—</strong>
+                </div>
+                <div>
+                  <span>Administrador</span>
+                  <strong data-review="nombre">—</strong>
+                </div>
+                <div>
+                  <span>Correo</span>
+                  <strong data-review="correo">—</strong>
+                </div>
+                <div>
+                  <span>Plan seleccionado</span>
+                  <strong data-review="plan">Profesional · $30/mes</strong>
+                </div>
+              </div>
+
+              <div class="trial-timeline">
+                <div>
+                  <i class="timeline-dot active"></i>
+                  <span>Hoy</span>
+                  <strong>Comienza tu prueba</strong>
+                </div>
+                <div class="timeline-line"></div>
+                <div>
+                  <i class="timeline-dot"></i>
+                  <span data-trial-end>En 10 días</span>
+                  <strong>Decides si continuar</strong>
+                </div>
+              </div>
+
+              <label class="terms-check">
+                <input type="checkbox" name="terms" required />
+                <span></span>
+                <small>
+                  Acepto las condiciones de la prueba y la
+                  <a href="../privacy.html">política de privacidad</a>.
+                </small>
+              </label>
+              <p class="terms-error" aria-live="polite">
+                Debes aceptar los términos para continuar.
+              </p>
+
+              <div class="form-actions">
+                <button
+                  class="button button-secondary back-button"
+                  type="button"
+                >
+                  Atrás
+                </button>
+                <button class="button button-primary" type="submit">
+                  Crear mi prueba de 10 días
+                </button>
+              </div>
+              <p class="secure-copy">
+                <span aria-hidden="true">◇</span> No solicitaremos datos de pago
+                en este paso.
+              </p>
+            </div>
+          </form>
+
+          <div class="success-state" tabindex="-1" hidden>
+            <div class="success-icon">✓</div>
+            <span>SOLICITUD PREPARADA</span>
+            <h2>Tu espacio está casi listo.</h2>
+            <p>
+              En la siguiente etapa conectaremos este flujo con la API para
+              crear la empresa, verificar el correo e iniciar los 10 días de
+              prueba automáticamente.
+            </p>
+            <div class="success-summary">
+              <span>Empresa</span>
+              <strong data-success-company>—</strong>
+              <span>Plan</span>
+              <strong data-success-plan>—</strong>
+            </div>
+            <a class="button button-primary" href="../">Volver a UrbanTrack</a>
+          </div>
+        </section>
+
+        <aside class="signup-summary" aria-label="Resumen de la prueba">
+          <div class="summary-top">
+            <span>RESUMEN DE TU PRUEBA</span>
+            <div class="selected-plan">
+              <div>
+                <small>Plan seleccionado</small>
+                <strong data-summary-plan>Profesional</strong>
+              </div>
+              <b data-summary-price>$30<small>/mes</small></b>
+            </div>
+          </div>
+
+          <div class="summary-trial">
+            <span>PRIMEROS 10 DÍAS</span>
+            <strong>$0</strong>
+            <small>Sin tarjeta · Cancela cuando quieras</small>
+          </div>
+
+          <ul>
+            <li><span>✓</span> Clientes y oportunidades</li>
+            <li><span>✓</span> Obras, visitas y rutas</li>
+            <li><span>✓</span> Actividad en tiempo real</li>
+            <li><span>✓</span> Acceso web, Android y iOS</li>
+            <li><span>✓</span> Tus datos se conservan si decides continuar</li>
+          </ul>
+
+          <div class="summary-message">
+            <span>“</span>
+            <p>
+              Prueba la operación completa antes de decidir. Te avisaremos con
+              tiempo y nunca cobraremos sin tu autorización.
+            </p>
+          </div>
+
+          <a href="mailto:contacto@urbantrack.io"
+            >¿Necesitas ayuda? Escríbenos</a
+          >
+        </aside>
+      </div>
+    </main>
+
+    <footer>
+      <span>© 2026 UrbanTrack</span>
+      <a href="../privacy.html">Privacidad</a>
+      <a href="mailto:contacto@urbantrack.io">Contacto</a>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
