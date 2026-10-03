@@ -1,100 +1,589 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="UrbanTrack conecta clientes, obras, entregas, visitas y equipos en campo para que tengas control comercial y operativo en un solo lugar." />
-  <meta name="theme-color" content="#F97316" />
-  <title>UrbanTrack | CRM comercial y operativo</title>
-  <link rel="icon" type="image/svg+xml" href="assets/urbantrack-icon.svg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <div class="nav-wrap">
-    <div class="container">
-      <nav>
-        <a class="brand" href="#" aria-label="UrbanTrack inicio">
-          <span class="brand-mark"><img src="assets/urbantrack-icon.svg" alt="" /></span>
-          <span>Urban<span class="brand-accent">Track</span></span>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="UrbanTrack centraliza clientes, obras, visitas, entregas y equipos en campo en una sola plataforma."
+    />
+    <meta name="theme-color" content="#ff6b17" />
+    <meta
+      property="og:title"
+      content="UrbanTrack | Tu operación, siempre en movimiento"
+    />
+    <meta
+      property="og:description"
+      content="CRM y operación en campo para equipos comerciales que necesitan saber qué está pasando."
+    />
+    <meta property="og:type" content="website" />
+    <title>UrbanTrack | CRM y operación en campo</title>
+    <link rel="icon" type="image/svg+xml" href="logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Ir al contenido</a>
+
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="#inicio" aria-label="UrbanTrack, inicio">
+          <img src="logo.svg" alt="" width="44" height="44" />
+          <span>UrbanTrack</span>
         </a>
-        <div class="nav-links">
-          <a href="#problema">Problemas</a><a href="#solucion">Solución</a><a href="#diferencias">Por qué UrbanTrack</a><a href="#roles">Para tu equipo</a><a href="#contacto">Contacto</a>
-        </div>
-        <a class="btn btn-primary" href="#contacto">Solicitar demo</a>
-      </nav>
-    </div>
-  </div>
-
-  <header class="hero">
-    <div class="container hero-grid">
-      <div>
-        <span class="eyebrow"><span class="dot"></span>CRM comercial + operación en campo</span>
-        <h1>Tu operación comercial no debería depender de <span class="blue">Excel</span>, WhatsApp y llamadas.</h1>
-        <p class="lead">UrbanTrack conecta clientes, obras, entregas, visitas y equipos en campo para que sepas qué está pasando, qué está pendiente y dónde debes actuar.</p>
-        <div class="hero-actions"><a class="btn btn-primary" href="#contacto">Quiero conocer UrbanTrack</a><a class="btn btn-light" href="#solucion">Ver cómo funciona</a></div>
-        <div class="hero-tags"><span class="hero-tag">Clientes y leads</span><span class="hero-tag">Obras y entregas</span><span class="hero-tag">Visitas y rutas</span><span class="hero-tag">Web + móvil</span></div>
+        <nav class="nav-links" aria-label="Navegación principal">
+          <a href="#producto">Producto</a>
+          <a href="#beneficios">Beneficios</a>
+          <a href="#equipo">Para tu equipo</a>
+          <a href="#app">Descargar app</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+        <a
+          class="button button-small button-dark"
+          href="https://app.urbantrack.io/registro"
+          >Crear cuenta <span aria-hidden="true">↗</span></a
+        >
       </div>
-      <div class="dashboard-wrap"><div class="dashboard">
-        <aside class="sidebar">
-          <div class="side-brand"><img class="side-brand-icon" src="assets/urbantrack-icon.svg" alt="" />UrbanTrack</div>
-          <div class="side-item active">▦ Dashboard</div><div class="side-item">👥 Clientes</div><div class="side-item">🏗 Obras</div><div class="side-item">📦 Entregas</div><div class="side-item">📍 Visitas</div><div class="side-item">🗺 Rutas</div><div class="side-item">📊 Reportes</div>
-        </aside>
-        <main class="dash-main">
-          <div class="dash-head"><div><strong>Dashboard operativo</strong><br><small>Actividad comercial y en campo</small></div><small>Este mes ▾</small></div>
-          <div class="stats"><div class="stat"><small>Clientes activos</small><b>842</b><em class="blue-text">+18 este mes</em></div><div class="stat"><small>Obras</small><b>45</b><em class="orange-text">12 en seguimiento</em></div><div class="stat"><small>Visitas hoy</small><b>18</b><em class="green-text">+4 vs ayer</em></div><div class="stat"><small>Pendientes</small><b>12</b><em class="orange-text">Para hoy</em></div></div>
-          <div class="map-grid"><div class="map"><div class="map-label">Actividad en campo</div><div class="route"></div><span class="pin p1"></span><span class="pin p2"></span><span class="pin p3"></span></div><div class="activity-card"><div class="activity-title">Actividad reciente</div><div class="activity-row">Constructora Norte<br><span class="badge green">Visita completada</span></div><div class="activity-row">Torre Central<br><span class="badge orange">Seguimiento</span></div><div class="activity-row">Comercial ABC<br><span class="badge green">Entrega confirmada</span></div></div></div>
-        </main>
-      </div></div>
-    </div>
-  </header>
+    </header>
 
-  <section class="section section-alt" id="problema"><div class="container problem-grid">
-    <div class="problem-intro"><span class="eyebrow"><span class="dot"></span>El problema real</span><h2>Cuando la operación crece, también crece el desorden.</h2><p class="lead">El problema no es que tu equipo no trabaje. El problema es que la información queda repartida entre personas, chats, planillas y llamadas.</p></div>
-    <div class="problem-list">
-      <div class="problem"><div class="problem-icon">01</div><div><strong>Clientes que nadie volvió a contactar</strong><span>Seguimientos importantes se pierden porque dependen de la memoria de una persona.</span></div></div>
-      <div class="problem"><div class="problem-icon">02</div><div><strong>Vendedores trabajando desde WhatsApp o libretas perdiendo información</strong><span>La información comercial no queda en un lugar que la empresa pueda consultar.</span></div></div>
-      <div class="problem"><div class="problem-icon">03</div><div><strong>Obras activas con información dispersa o perdida, sin seguimiento</strong><span>No siempre está claro cuándo fue la última visita, qué se habló o cuál es el próximo paso.</span></div></div>
-      <div class="problem"><div class="problem-icon">04</div><div><strong>Entregas que se recuerdan cuando el cliente reclama</strong><span>Fechas, cantidades y responsables necesitan seguimiento continuo.</span></div></div>
-      <div class="problem"><div class="problem-icon">05</div><div><strong>Supervisores llamando para saber qué está pasando</strong><span>Sin visibilidad centralizada, controlar la operación consume tiempo de todo el equipo.</span></div></div>
-      <div class="problem"><div class="problem-icon">06</div><div><strong>Gerencia decide con información incompleta</strong><span>Cuando cada dato vive en un lugar distinto, es difícil detectar problemas y oportunidades a tiempo.</span></div></div>
-    </div>
-  </div></section>
+    <main id="contenido">
+      <section class="hero" id="inicio">
+        <div class="hero-glow"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <div class="eyebrow"><span></span> CRM + operación en campo</div>
+            <h1>Tu operación.<br /><em>Siempre en movimiento.</em></h1>
+            <p>
+              UrbanTrack conecta ventas y operaciones en campo. Registra
+              clientes, visitas y entregas desde el celular, y consulta el
+              avance de todo el equipo en un solo lugar.
+            </p>
+            <div class="hero-actions">
+              <a
+                class="button button-primary"
+                href="https://app.urbantrack.io/registro"
+                >Crear cuenta <span aria-hidden="true">→</span></a
+              >
+              <a class="text-link" href="#producto"
+                >Ver cómo funciona <span aria-hidden="true">↓</span></a
+              >
+            </div>
+            <div class="store-links store-links-hero">
+              <small>Descarga la app</small>
+              <a
+                class="store-badge"
+                href="https://play.google.com/store/apps/details?id=io.urbantrack.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Descargar UrbanTrack en Google Play"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m4.5 3.4 10.8 8.1a.62.62 0 0 1 0 1L4.5 20.6V3.4Z" />
+                  <path
+                    d="m4.5 3.4 13.8 7.7a1 1 0 0 1 0 1.8L4.5 20.6M14.5 11l-7.8 8.2M14.5 13 6.7 4.8"
+                  />
+                </svg>
+                <span>Disponible en<b>Google Play</b></span>
+              </a>
+              <span
+                class="store-badge store-badge-muted"
+                aria-label="UrbanTrack para iOS, próximamente"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M16.7 13.2c0-2.3 1.9-3.4 2-3.5a4.3 4.3 0 0 0-3.4-1.9c-1.5-.2-2.9.9-3.6.9-.7 0-1.8-.9-3-.9-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3.1-.7s1.9.7 3.1.7c1.3 0 2.1-1.1 2.8-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.6-1-2.6-3.5ZM14.3 6.3A4 4 0 0 0 15.2 3a4.1 4.1 0 0 0-2.8 1.4 3.8 3.8 0 0 0-1 2.8 3.4 3.4 0 0 0 2.9-.9Z"
+                  />
+                </svg>
+                <span>Próximamente en<b>App Store</b></span>
+              </span>
+            </div>
+            <div class="hero-proof" aria-label="Características principales">
+              <span><i>✓</i> Implementación simple</span>
+              <span><i>✓</i> Android y web</span>
+              <span><i>✓</i> Información en tiempo real</span>
+            </div>
+          </div>
 
-  <section class="section section-dark" id="solucion"><div class="container"><span class="eyebrow"><span class="dot"></span>Todo conectado</span><h2>UrbanTrack convierte acciones aisladas en una historia comercial completa.</h2><p class="lead">Cada interacción se relaciona con el cliente, la obra y el trabajo realizado. Así puedes entender qué pasó antes y qué debe ocurrir después.</p><div class="flow"><div class="flow-step"><div class="flow-icon">◎</div><b>Lead</b></div><div class="flow-arrow">→</div><div class="flow-step"><div class="flow-icon">👥</div><b>Cliente</b></div><div class="flow-arrow">→</div><div class="flow-step"><div class="flow-icon">🏗</div><b>Obra</b></div><div class="flow-arrow">→</div><div class="flow-step"><div class="flow-icon">📍</div><b>Visita</b></div><div class="flow-arrow">→</div><div class="flow-step"><div class="flow-icon">⏰</div><b>Seguimiento</b></div><div class="flow-arrow">→</div><div class="flow-step"><div class="flow-icon">📦</div><b>Entrega</b></div><div class="flow-arrow">→</div><div class="flow-step"><div class="flow-icon">▥</div><b>Historial</b></div></div></div></section>
+          <div
+            class="product-stage"
+            aria-label="Vista previa del panel de UrbanTrack"
+          >
+            <div class="stage-ring ring-one"></div>
+            <div class="stage-ring ring-two"></div>
+            <div class="dashboard-card">
+              <aside class="dash-sidebar">
+                <img src="logo.svg" alt="" width="38" height="38" />
+                <div class="dash-nav active"><span></span>Resumen</div>
+                <div class="dash-nav"><span></span>Clientes</div>
+                <div class="dash-nav"><span></span>Obras</div>
+                <div class="dash-nav"><span></span>Visitas</div>
+                <div class="dash-nav"><span></span>Entregas</div>
+              </aside>
+              <div class="dash-content">
+                <div class="dash-top">
+                  <div>
+                    <small>BUEN DÍA, MARTÍN</small
+                    ><strong>Panel operativo</strong>
+                  </div>
+                  <div class="avatar">MR</div>
+                </div>
+                <div class="kpi-grid">
+                  <article>
+                    <span>Clientes activos</span><b>842</b
+                    ><small class="up">↑ 12%</small>
+                  </article>
+                  <article>
+                    <span>Visitas hoy</span><b>18</b
+                    ><small>14 completadas</small>
+                  </article>
+                  <article>
+                    <span>Seguimientos</span><b>09</b
+                    ><small class="warning">Para hoy</small>
+                  </article>
+                </div>
+                <div class="dash-lower">
+                  <article class="activity-chart">
+                    <div class="card-heading">
+                      <strong>Actividad del equipo</strong
+                      ><small>Esta semana</small>
+                    </div>
+                    <div class="bars" aria-hidden="true">
+                      <i style="--h: 42%"></i><i style="--h: 67%"></i
+                      ><i style="--h: 54%"></i><i style="--h: 86%"></i
+                      ><i style="--h: 72%"></i
+                      ><i class="today" style="--h: 94%"></i
+                      ><i style="--h: 61%"></i>
+                    </div>
+                    <div class="bar-labels">
+                      <span>L</span><span>M</span><span>M</span><span>J</span
+                      ><span>V</span><span>S</span><span>D</span>
+                    </div>
+                  </article>
+                  <article class="next-visits">
+                    <div class="card-heading">
+                      <strong>Próximas visitas</strong><small>Ver todas</small>
+                    </div>
+                    <div class="visit">
+                      <i class="visit-dot orange"></i
+                      ><span
+                        ><b>Torre Central</b
+                        ><small>10:30 · En obra</small></span
+                      >
+                    </div>
+                    <div class="visit">
+                      <i class="visit-dot blue"></i
+                      ><span
+                        ><b>Constructora Norte</b
+                        ><small>12:15 · Reunión</small></span
+                      >
+                    </div>
+                    <div class="visit">
+                      <i class="visit-dot green"></i
+                      ><span
+                        ><b>Comercial ABC</b
+                        ><small>15:40 · Entrega</small></span
+                      >
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+            <div class="floating-status">
+              <span class="status-icon">✓</span
+              ><span
+                ><small>Visita completada</small
+                ><strong>Constructora Norte</strong></span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="container hero-strip">
+          <span>Una sola fuente de verdad para</span>
+          <b>Ventas</b><i></i><b>Operaciones</b><i></i><b>Supervisión</b><i></i
+          ><b>Gerencia</b>
+        </div>
+      </section>
 
-  <section class="section" id="diferencias"><div class="container"><span class="eyebrow"><span class="dot"></span>Por qué UrbanTrack</span><h2>No es solo un CRM de escritorio.</h2><p class="lead">UrbanTrack fue pensado para empresas donde la venta y la operación también ocurren fuera de la oficina.</p><div class="cards">
-    <div class="card"><div class="icon blue">01</div><h3>CRM + trabajo en campo</h3><p>La gestión comercial y la actividad del vendedor viven dentro del mismo flujo.</p></div>
-    <div class="card"><div class="icon orange">02</div><h3>Ubicación con información útil</h3><p>No es solo un punto en un mapa: sabes qué cliente visitó, qué obra atendió y qué resultado obtuvo.</p></div>
-    <div class="card"><div class="icon green">03</div><h3>Seguimiento que continúa</h3><p>Notas, recordatorios, visitas, entregas y próximos pasos forman un historial único.</p></div>
-    <div class="card"><div class="icon dark">04</div><h3>Visibilidad sin perseguir al equipo</h3><p>Supervisa avances y actividad sin depender de llamadas constantes para reconstruir el día.</p></div>
-  </div></div></section>
+      <section class="section problem-section">
+        <div class="container split-heading">
+          <div>
+            <span class="section-index">01 — EL PROBLEMA</span>
+            <h2>Tu equipo avanza.<br />La información, no siempre.</h2>
+          </div>
+          <p>
+            Cuando cada dato vive en una planilla, un chat o la memoria de
+            alguien, crecer también multiplica el desorden.
+          </p>
+        </div>
+        <div class="container problem-grid">
+          <article>
+            <span>01</span>
+            <h3>Seguimientos que se pierden</h3>
+            <p>
+              Clientes y oportunidades quedan sin respuesta porque el próximo
+              paso nunca quedó registrado.
+            </p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Operación invisible</h3>
+            <p>
+              Supervisores invierten horas llamando para reconstruir qué ocurrió
+              durante el día.
+            </p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Decisiones a ciegas</h3>
+            <p>
+              Gerencia recibe información tarde, incompleta y difícil de
+              convertir en acciones concretas.
+            </p>
+          </article>
+        </div>
+      </section>
 
-  <section class="section section-dark" id="roles"><div class="container"><span class="eyebrow"><span class="dot"></span>Para cada rol</span><h2>Cada persona ve lo que necesita para trabajar mejor.</h2><p class="lead">La misma información puede servir para ejecutar, supervisar y tomar decisiones.</p><div class="roles">
-    <div class="role"><small>Vendedor</small><h3>Prioriza y registra</h3><p>Consulta clientes, pendientes y visitas, y registra actividad directamente desde el teléfono.</p></div>
-    <div class="role"><small>Supervisor</small><h3>Controla sin perseguir</h3><p>Ve actividad, seguimientos, visitas y obras activas sin depender de reportes manuales.</p></div>
-    <div class="role"><small>Administración</small><h3>Centraliza la operación</h3><p>Gestiona clientes, proyectos, entregas, usuarios y datos operativos desde la web.</p></div>
-    <div class="role"><small>Gerencia</small><h3>Decide con claridad</h3><p>Ve un resumen claro de la operación y detecta rápidamente dónde se necesita atención.</p></div>
-  </div></div></section>
+      <section class="section product-section" id="producto">
+        <div class="container product-grid">
+          <div class="phone-column">
+            <div class="phone-orbit"></div>
+            <div class="phone-shell">
+              <div class="phone-speaker"></div>
+              <img
+                src="routes-mobile.png"
+                alt="Vista móvil de rutas y actividad geolocalizada en UrbanTrack"
+                loading="lazy"
+              />
+            </div>
+            <div class="route-badge">
+              <b>6 visitas</b><span>Ruta optimizada</span>
+            </div>
+          </div>
+          <div class="product-copy">
+            <span class="section-index light">02 — EL PRODUCTO</span>
+            <h2>Del escritorio a la calle, todo queda conectado.</h2>
+            <p class="product-lead">
+              UrbanTrack une el CRM con la operación real de tu equipo. Cada
+              visita, nota, entrega y seguimiento alimenta una historia
+              completa.
+            </p>
+            <div class="feature-list">
+              <article>
+                <div class="feature-icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                      d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h3>Clientes y oportunidades</h3>
+                  <p>Centraliza contactos, conversaciones y próximos pasos.</p>
+                </div>
+              </article>
+              <article>
+                <div class="feature-icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 1 1 18 0Z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                </div>
+                <div>
+                  <h3>Visitas y rutas</h3>
+                  <p>
+                    Planifica el recorrido y registra cada actividad desde el
+                    móvil.
+                  </p>
+                </div>
+              </article>
+              <article>
+                <div class="feature-icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M3 3v18h18M7 16l4-5 4 3 5-7" />
+                  </svg>
+                </div>
+                <div>
+                  <h3>Control en tiempo real</h3>
+                  <p>Ve el avance del equipo sin esperar reportes manuales.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <section class="section section-alt"><div class="container"><span class="eyebrow"><span class="dot"></span>Un día con UrbanTrack</span><h2>Así se conecta el trabajo diario.</h2><p class="lead">Desde el inicio de jornada hasta el seguimiento final, cada paso deja información útil para el siguiente.</p><div class="timeline">
-    <div class="time-row"><div class="time">08:00</div><div class="timeline-line"><div class="time-dot"></div></div><div class="time-content"><strong>El vendedor inicia su jornada</strong><span>Consulta clientes, pendientes, obras y visitas programadas.</span></div></div>
-    <div class="time-row"><div class="time">10:30</div><div class="timeline-line"><div class="time-dot"></div></div><div class="time-content"><strong>Visita una obra</strong><span>Registra check-in, notas, fotografías y el resultado de la visita.</span></div></div>
-    <div class="time-row"><div class="time">12:00</div><div class="timeline-line"><div class="time-dot"></div></div><div class="time-content"><strong>El supervisor ve la actividad</strong><span>La información ya está disponible sin tener que llamar al vendedor.</span></div></div>
-    <div class="time-row"><div class="time">15:00</div><div class="timeline-line"><div class="time-dot"></div></div><div class="time-content"><strong>Se programa un seguimiento</strong><span>El próximo paso queda asociado al cliente o a la obra.</span></div></div>
-    <div class="time-row"><div class="time">17:30</div><div class="timeline-line"><div class="time-dot"></div></div><div class="time-content"><strong>Finaliza la jornada</strong><span>La empresa conserva el historial del trabajo realizado durante el día.</span></div></div>
-  </div></div></section>
+      <section class="section workflow-section" id="beneficios">
+        <div class="container workflow-heading">
+          <span class="section-index">03 — UN FLUJO COMPLETO</span>
+          <h2>
+            Una acción lleva a la siguiente.<br /><em
+              >Nada se pierde en el camino.</em
+            >
+          </h2>
+        </div>
+        <div class="container workflow">
+          <article>
+            <span>01</span>
+            <div class="workflow-icon">◎</div>
+            <h3>Captura</h3>
+            <p>Registra el lead, cliente u obra.</p>
+          </article>
+          <div class="workflow-line"></div>
+          <article>
+            <span>02</span>
+            <div class="workflow-icon">⌖</div>
+            <h3>Visita</h3>
+            <p>Planifica y documenta la actividad.</p>
+          </article>
+          <div class="workflow-line"></div>
+          <article>
+            <span>03</span>
+            <div class="workflow-icon">↗</div>
+            <h3>Avanza</h3>
+            <p>Asigna tareas, entregas y seguimientos.</p>
+          </article>
+          <div class="workflow-line"></div>
+          <article>
+            <span>04</span>
+            <div class="workflow-icon">✓</div>
+            <h3>Decide</h3>
+            <p>Mide resultados con datos confiables.</p>
+          </article>
+        </div>
+        <div class="container outcome-grid">
+          <article>
+            <strong>Más contexto</strong>
+            <p>Todo el historial de cada cliente y obra en un mismo lugar.</p>
+          </article>
+          <article>
+            <strong>Más velocidad</strong>
+            <p>
+              Menos tiempo buscando datos y más tiempo moviendo oportunidades.
+            </p>
+          </article>
+          <article>
+            <strong>Más control</strong>
+            <p>
+              Visibilidad operativa sin perseguir a cada integrante del equipo.
+            </p>
+          </article>
+          <article class="outcome-accent">
+            <strong>Menos improvisación.<br />Más operación.</strong
+            ><span>Ese es el cambio.</span>
+          </article>
+        </div>
+      </section>
 
-  <section class="section"><div class="container"><span class="eyebrow"><span class="dot"></span>Antes y después</span><h2>De información dispersa a una operación conectada.</h2><div class="compare"><div class="compare-box compare-before"><div class="compare-title">Antes</div><div class="compare-list"><div class="compare-item">✕ WhatsApp para seguimientos</div><div class="compare-item">✕ Excel perdidos para clientes y obras</div><div class="compare-item">✕ Notas y recordatorios personales</div><div class="compare-item">✕ Llamadas para saber dónde está el equipo</div><div class="compare-item">✕ Información en la cabeza del vendedor</div></div></div><div class="compare-arrow">→</div><div class="compare-box compare-after"><div class="compare-title">Con UrbanTrack</div><div class="compare-list"><div class="compare-item">✓ Clientes y leads</div><div class="compare-item">✓ Obras y proyectos con seguimiento</div><div class="compare-item">✓ Visitas y rutas</div><div class="compare-item">✓ Entregas y seguimientos</div><div class="compare-item">✓ Historial y visibilidad operativa</div></div></div></div></div></section>
+      <section class="section team-section" id="equipo">
+        <div class="container split-heading">
+          <div>
+            <span class="section-index">04 — PARA TODO EL EQUIPO</span>
+            <h2>La misma información.<br />La vista correcta para cada rol.</h2>
+          </div>
+          <p>
+            UrbanTrack convierte el trabajo de cada persona en claridad para
+            toda la organización.
+          </p>
+        </div>
+        <div class="container team-grid">
+          <article>
+            <span class="role-number">01</span>
+            <h3>Vendedores</h3>
+            <p>
+              Organizan su día, registran visitas y nunca pierden el próximo
+              paso.
+            </p>
+            <b>Ejecutar mejor →</b>
+          </article>
+          <article>
+            <span class="role-number">02</span>
+            <h3>Supervisores</h3>
+            <p>Siguen avances y detectan bloqueos sin depender de llamadas.</p>
+            <b>Coordinar mejor →</b>
+          </article>
+          <article>
+            <span class="role-number">03</span>
+            <h3>Gerencia</h3>
+            <p>
+              Decide con indicadores claros y una visión completa de la
+              operación.
+            </p>
+            <b>Decidir mejor →</b>
+          </article>
+        </div>
+      </section>
 
-  <section class="section section-dark"><div class="container"><span class="eyebrow"><span class="dot"></span>¿Para quién es?</span><h2>Ideal para equipos comerciales que trabajan en campo.</h2><p class="lead">Especialmente útil cuando vender implica visitar clientes, seguir obras, coordinar entregas o supervisar equipos fuera de oficina.</p><div class="segments"><span class="segment">Constructoras</span><span class="segment">Distribuidoras</span><span class="segment">Materiales</span><span class="segment">Mayoristas</span><span class="segment">Servicios técnicos</span><span class="segment">Equipos comerciales B2B</span><span class="segment">Empresas con entregas</span><span class="segment">Operaciones con visitas frecuentes</span></div></div></section>
+      <section class="app-section" id="app">
+        <div class="container app-grid">
+          <div class="app-intro">
+            <span class="section-index">05 — EMPIEZA AHORA</span>
+            <h2>Tu primera visita,<br />registrada en minutos.</h2>
+            <p>
+              Descarga la app, crea tu cuenta y comienza a ordenar la operación
+              de tu equipo sin procesos complicados.
+            </p>
+            <ol class="app-steps">
+              <li>
+                <span>01</span>
+                <div>
+                  <strong>Descarga la app</strong>
+                  <p>Instala UrbanTrack desde Google Play.</p>
+                </div>
+              </li>
+              <li>
+                <span>02</span>
+                <div>
+                  <strong>Crea tu cuenta</strong>
+                  <p>Registra tu empresa y prepara a tu equipo.</p>
+                </div>
+              </li>
+              <li>
+                <span>03</span>
+                <div>
+                  <strong>Registra tu primera visita</strong>
+                  <p>Agrega un cliente y deja definido el próximo paso.</p>
+                </div>
+              </li>
+            </ol>
+            <div class="store-links">
+              <a
+                class="store-badge"
+                href="https://play.google.com/store/apps/details?id=io.urbantrack.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Descargar UrbanTrack en Google Play"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m4.5 3.4 10.8 8.1a.62.62 0 0 1 0 1L4.5 20.6V3.4Z" />
+                  <path
+                    d="m4.5 3.4 13.8 7.7a1 1 0 0 1 0 1.8L4.5 20.6M14.5 11l-7.8 8.2M14.5 13 6.7 4.8"
+                  />
+                </svg>
+                <span>Disponible en<b>Google Play</b></span>
+              </a>
+              <a
+                class="button button-primary"
+                href="https://app.urbantrack.io/registro"
+                >Crear cuenta</a
+              >
+            </div>
+          </div>
 
-  <section class="section section-alt"><div class="container"><span class="eyebrow"><span class="dot"></span>Una plataforma para crecer</span><h2>Menos dependencia de personas. Más continuidad para la empresa.</h2><p class="lead">UrbanTrack ayuda a que la información pertenezca a la operación y no quede atrapada en herramientas o conversaciones individuales.</p><div class="trust-grid"><div class="trust"><b>Información centralizada</b><span>El equipo trabaja sobre una misma fuente de información comercial y operativa.</span></div><div class="trust"><b>Web + móvil</b><span>Administración y supervisión desde la web; registro de actividad desde el campo.</span></div><div class="trust"><b>Seguimiento continuo</b><span>Cada acción deja información útil para saber qué pasó y qué debe ocurrir después.</span></div></div></div></section>
+          <form
+            class="contact-form"
+            id="contacto"
+            aria-labelledby="contact-title"
+          >
+            <span class="form-kicker">DEMOSTRACIÓN PERSONALIZADA</span>
+            <h3 id="contact-title">¿Quieres verlo con tu equipo?</h3>
+            <p>
+              Cuéntanos un poco sobre tu operación y te mostraremos cómo
+              UrbanTrack puede ayudarte.
+            </p>
+            <div class="form-row">
+              <label
+                >Nombre
+                <input name="nombre" required autocomplete="name" />
+              </label>
+              <label
+                >Empresa
+                <input name="empresa" required autocomplete="organization" />
+              </label>
+            </div>
+            <label
+              >Correo
+              <input name="correo" type="email" required autocomplete="email" />
+            </label>
+            <label
+              >Teléfono o WhatsApp
+              <input name="telefono" type="tel" autocomplete="tel" />
+            </label>
+            <label
+              >¿Cómo trabaja hoy tu equipo?
+              <textarea name="mensaje" rows="3"></textarea>
+            </label>
+            <button class="button button-primary" type="submit">
+              Solicitar una demo <span aria-hidden="true">→</span>
+            </button>
+            <small
+              >También puedes escribir a
+              <a href="mailto:contacto@urbantrack.io"
+                >contacto@urbantrack.io</a
+              ></small
+            >
+          </form>
+        </div>
+      </section>
 
-  <div class="cta-wrap" id="contacto"><div class="container"><div class="cta"><div><h2>Conoce cómo UrbanTrack puede ordenar tu operación comercial.</h2><p>Cuéntanos cómo trabaja tu equipo y te mostramos cómo centralizar clientes, obras, entregas y actividad en campo.</p></div><a class="btn" href="mailto:contacto@urbantrack.io">Solicitar una demo</a></div></div></div>
+      <section class="cta-section" id="registro">
+        <div class="container cta-card">
+          <div class="cta-mark">
+            <img src="logo.svg" alt="" width="108" height="108" />
+          </div>
+          <div class="cta-copy">
+            <span>¿LISTO PARA ORDENAR TU OPERACIÓN?</span>
+            <h2>Que tu equipo se mueva.<br />Sin perder el control.</h2>
+            <p>
+              Crea tu cuenta, descarga la app y conecta cada parte de tu
+              operación desde el primer día.
+            </p>
+          </div>
+          <div class="cta-actions">
+            <a
+              class="button button-white"
+              href="https://app.urbantrack.io/registro"
+              >Crear cuenta</a
+            >
+            <a class="button button-outline" href="#app">Descargar la app</a>
+          </div>
+        </div>
+      </section>
+    </main>
 
-  <footer><div class="container footer-row"><a class="brand" href="#"><span class="brand-mark"><img src="assets/urbantrack-icon.svg" alt="" /></span><span>Urban<span class="brand-accent">Track</span></span></a><span>CRM comercial y operativo para equipos que trabajan dentro y fuera de oficina.</span><span>© 2026 UrbanTrack</span></div></footer>
-</body>
+    <footer class="site-footer">
+      <div class="container footer-main">
+        <a class="brand brand-light" href="#inicio"
+          ><img src="logo.svg" alt="" width="44" height="44" /><span
+            >UrbanTrack</span
+          ></a
+        >
+        <p>
+          CRM comercial y operativo para equipos que trabajan dentro y fuera de
+          la oficina.
+        </p>
+        <a href="mailto:contacto@urbantrack.io">contacto@urbantrack.io</a>
+      </div>
+      <div class="container footer-bottom">
+        <span>© 2026 UrbanTrack. Todos los derechos reservados.</span
+        ><a href="privacy.html">Política de privacidad</a>
+      </div>
+    </footer>
+    <script>
+      document
+        .getElementById("contacto")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const form = new FormData(event.currentTarget);
+          const body = [
+            "Nombre: " + form.get("nombre"),
+            "Empresa: " + form.get("empresa"),
+            "Correo: " + form.get("correo"),
+            "Teléfono: " + (form.get("telefono") || "No indicado"),
+            "",
+            form.get("mensaje") || "Sin mensaje adicional",
+          ].join("\n");
+
+          window.location.href =
+            "mailto:contacto@urbantrack.io?subject=" +
+            encodeURIComponent("Quiero una demo de UrbanTrack") +
+            "&body=" +
+            encodeURIComponent(body);
+        });
+    </script>
+  </body>
 </html>
