@@ -924,18 +924,7 @@ h2 em {
     700 1rem Manrope,
     sans-serif;
 }
-.store-badge-muted {
-  cursor: default;
-  border-color: #d7d2ca;
-  background: transparent;
-  color: #706d68;
-}
-.store-badge-muted:hover {
-  transform: none;
-  border-color: #d7d2ca;
-  background: transparent;
-}
-.store-badge-muted svg {
+.store-badge[href*="apps.apple.com"] svg {
   fill: currentColor;
   stroke: none;
 }
