@@ -1,31 +1,23 @@
+const config = window.URBANTRACK_CONFIG;
 const signupForm = document.getElementById("signup-form");
 const formSteps = [...document.querySelectorAll(".form-step")];
 const indicators = [...document.querySelectorAll("[data-step-indicator]")];
-const planOptions = [...document.querySelectorAll(".plan-option")];
-const passwordInput = signupForm.elements.password;
-const passwordToggle = document.querySelector(".password-toggle");
+const choiceOptions = [...document.querySelectorAll(".choice-option")];
 const successState = document.querySelector(".success-state");
+const submitButton = signupForm.querySelector(".submit-button");
+const submitError = signupForm.querySelector(".submit-error");
 
-const plans = {
-  starter: {
-    name: "Inicial",
-    price: 10,
-  },
-  professional: {
-    name: "Profesional",
-    price: 30,
-  },
-  business: {
-    name: "Empresa",
-    price: 100,
-  },
+const teamSizes = {
+  "1-5": "1 a 5 personas",
+  "6-20": "6 a 20 personas",
+  "21-50": "21 a 50 personas",
+  "50+": "Más de 50 personas",
 };
 
 let currentStep = 1;
 
-function getSelectedPlan() {
-  const selected = signupForm.elements.plan.value;
-  return plans[selected] || plans.professional;
+function getTeamSize() {
+  return teamSizes[signupForm.elements.equipo.value] || "No indicado";
 }
 
 function setStep(nextStep) {
@@ -46,11 +38,8 @@ function setStep(nextStep) {
       indicator.removeAttribute("aria-current");
     }
 
-    if (indicatorStep < currentStep) {
-      indicator.querySelector("span").textContent = "✓";
-    } else {
-      indicator.querySelector("span").textContent = indicatorStep;
-    }
+    indicator.querySelector("span").textContent =
+      indicatorStep < currentStep ? "✓" : indicatorStep;
   });
 
   if (currentStep === 3) {
@@ -67,33 +56,27 @@ function validateFirstStep() {
   let isValid = true;
 
   fields.forEach((field) => {
+    field.value = field.value.trim();
     const fieldIsValid = field.checkValidity();
     field.classList.toggle("invalid", !fieldIsValid);
     isValid = fieldIsValid && isValid;
   });
 
   if (!isValid) {
-    const firstInvalid = formSteps[0].querySelector(".invalid");
-    firstInvalid?.focus();
+    formSteps[0].querySelector(".invalid")?.focus();
   }
 
   return isValid;
 }
 
-function updatePlanSelection() {
-  planOptions.forEach((option) => {
+function updateChoiceSelection() {
+  choiceOptions.forEach((option) => {
     option.classList.toggle("selected", option.querySelector("input").checked);
   });
-
-  const plan = getSelectedPlan();
-  document.querySelector("[data-summary-plan]").textContent = plan.name;
-  document.querySelector("[data-summary-price]").innerHTML =
-    `$${plan.price}<small>/mes</small>`;
 }
 
 function updateReview() {
   const formData = new FormData(signupForm);
-  const plan = getSelectedPlan();
 
   document.querySelector("[data-review='empresa']").textContent =
     formData.get("empresa") || "—";
@@ -102,13 +85,12 @@ function updateReview() {
     "—";
   document.querySelector("[data-review='correo']").textContent =
     formData.get("correo") || "—";
-  document.querySelector("[data-review='plan']").textContent =
-    `${plan.name} · $${plan.price}/mes`;
+  document.querySelector("[data-review='equipo']").textContent = getTeamSize();
 }
 
 function setTrialEndDate() {
   const trialEnd = new Date();
-  trialEnd.setDate(trialEnd.getDate() + 10);
+  trialEnd.setDate(trialEnd.getDate() + config.trialDays);
 
   document.querySelector("[data-trial-end]").textContent =
     new Intl.DateTimeFormat("es-BO", {
@@ -116,6 +98,84 @@ function setTrialEndDate() {
       month: "short",
       year: "numeric",
     }).format(trialEnd);
+}
+
+function getSignupData() {
+  const formData = new FormData(signupForm);
+
+  return {
+    firstName: formData.get("nombre"),
+    lastName: formData.get("apellido"),
+    email: formData.get("correo"),
+    company: formData.get("empresa"),
+    phone: formData.get("telefono"),
+    teamSize: formData.get("equipo"),
+    message: formData.get("mensaje")?.trim() || "",
+    trialDays: config.trialDays,
+    acceptedTerms: true,
+  };
+}
+
+// Crea la cuenta en la API. Devuelve la respuesta del backend, que puede
+// incluir `onboardingUrl` para llevar al usuario directo a la aplicación.
+async function createTrialAccount(data) {
+  const response = await fetch(config.signupApiUrl, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+    body: JSON.stringify(data),
+  });
+  const result = await response.json().catch(() => ({}));
+
+  if (!response.ok) {
+    throw new Error(result.message || "No se pudo crear la cuenta");
+  }
+
+  return result;
+}
+
+// Mientras no exista la API, el registro llega al equipo por correo para que
+// active la cuenta manualmente.
+async function sendSignupToTeam(data) {
+  await window.sendLead(`Nuevo registro de prueba · ${data.company}`, {
+    Nombre: `${data.firstName} ${data.lastName}`,
+    Correo: data.email,
+    Empresa: data.company,
+    Teléfono: data.phone,
+    "Tamaño del equipo": getTeamSize(),
+    Mensaje: data.message || "Sin mensaje adicional",
+    "Prueba solicitada": `${data.trialDays} días`,
+    _replyto: data.email,
+  });
+  return {};
+}
+
+function showSuccess(data, result) {
+  document.querySelector("[data-success-title]").textContent =
+    `¡Bienvenido, ${data.firstName}!`;
+
+  if (config.signupApiUrl) {
+    document.querySelector("[data-success-message]").textContent =
+      `Tu prueba de ${data.trialDays} días ya comenzó. Te enviamos un correo a ${data.email} para verificar tu cuenta y crear tu contraseña.`;
+    document.querySelector("[data-success-step-one]").textContent =
+      "Verifica tu correo y crea tu contraseña.";
+  } else {
+    document.querySelector("[data-success-message]").textContent =
+      `Recibimos el registro de ${data.company}. Activaremos tu espacio y te escribiremos a ${data.email} en menos de un día hábil.`;
+  }
+
+  if (result.onboardingUrl) {
+    const action = document.querySelector("[data-success-action]");
+    action.href = result.onboardingUrl;
+    action.textContent = "Ir a UrbanTrack";
+  }
+
+  signupForm.hidden = true;
+  document.querySelector(".stepper").hidden = true;
+  successState.hidden = false;
+  successState.focus();
 }
 
 document.querySelectorAll(".next-button").forEach((button) => {
@@ -142,18 +202,10 @@ signupForm
     });
   });
 
-planOptions.forEach((option) => {
-  option.querySelector("input").addEventListener("change", updatePlanSelection);
-});
-
-passwordToggle.addEventListener("click", () => {
-  const isPassword = passwordInput.type === "password";
-  passwordInput.type = isPassword ? "text" : "password";
-  passwordToggle.textContent = isPassword ? "Ocultar" : "Ver";
-  passwordToggle.setAttribute(
-    "aria-label",
-    isPassword ? "Ocultar contraseña" : "Mostrar contraseña",
-  );
+choiceOptions.forEach((option) => {
+  option
+    .querySelector("input")
+    .addEventListener("change", updateChoiceSelection);
 });
 
 signupForm.elements.terms.addEventListener("change", () => {
@@ -162,7 +214,7 @@ signupForm.elements.terms.addEventListener("change", () => {
     .classList.toggle("visible", !signupForm.elements.terms.checked);
 });
 
-signupForm.addEventListener("submit", (event) => {
+signupForm.addEventListener("submit", async (event) => {
   event.preventDefault();
 
   if (!signupForm.elements.terms.checked) {
@@ -171,18 +223,29 @@ signupForm.addEventListener("submit", (event) => {
     return;
   }
 
-  const plan = getSelectedPlan();
-  const company = signupForm.elements.empresa.value.trim();
+  // Los bots suelen completar el campo oculto; las personas no lo ven.
+  if (signupForm.elements._honey.value) {
+    return;
+  }
 
-  document.querySelector("[data-success-company]").textContent = company;
-  document.querySelector("[data-success-plan]").textContent =
-    `${plan.name} · $${plan.price}/mes después de la prueba`;
+  const data = getSignupData();
+  submitButton.disabled = true;
+  submitButton.textContent = "Enviando…";
+  submitError.hidden = true;
 
-  signupForm.hidden = true;
-  document.querySelector(".stepper").hidden = true;
-  successState.hidden = false;
-  successState.focus();
+  try {
+    const result = config.signupApiUrl
+      ? await createTrialAccount(data)
+      : await sendSignupToTeam(data);
+    showSuccess(data, result);
+  } catch {
+    submitError.innerHTML = `No pudimos completar tu registro. Inténtalo de nuevo o escríbenos a <a href="mailto:${config.contactEmail}">${config.contactEmail}</a>.`;
+    submitError.hidden = false;
+  } finally {
+    submitButton.disabled = false;
+    submitButton.textContent = `Comenzar mi prueba de ${config.trialDays} días`;
+  }
 });
 
 setTrialEndDate();
-updatePlanSelection();
+updateChoiceSelection();
