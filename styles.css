@@ -1337,7 +1337,11 @@ h2 em {
   overflow: hidden;
   padding: 58px 62px;
   border-radius: 20px;
-  background: var(--orange);
+  /* Degradado de naranja vivo a terracota con un brillo cálido, para que el
+     banner no sea un solo tono plano. */
+  background:
+    radial-gradient(circle at 74% 18%, rgba(255, 190, 140, 0.42), transparent 42%),
+    linear-gradient(118deg, #ff7a2e 0%, #f0600f 34%, #d24c08 68%, #9e3605 100%);
   color: #fff;
 }
 .cta-card:after {
@@ -1346,9 +1350,11 @@ h2 em {
   width: 360px;
   height: 360px;
   right: 12%;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 50%;
-  box-shadow: 0 0 0 70px rgba(255, 255, 255, 0.05);
+  box-shadow:
+    0 0 0 70px rgba(255, 255, 255, 0.06),
+    0 0 0 140px rgba(255, 255, 255, 0.03);
 }
 .cta-mark,
 .cta-copy,
@@ -1361,13 +1367,13 @@ h2 em {
   height: 94px;
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 24px;
-  box-shadow: 0 20px 40px rgba(133, 45, 0, 0.2);
+  box-shadow: 0 20px 40px rgba(110, 36, 0, 0.35);
 }
 .cta-copy > span {
+  color: #ffe1cc;
   font-size: 0.68rem;
   font-weight: 800;
   letter-spacing: 0.13em;
-  opacity: 0.78;
 }
 .cta-copy h2 {
   margin: 10px 0 13px;
@@ -1376,7 +1382,7 @@ h2 em {
 .cta-copy p {
   max-width: 620px;
   margin: 0;
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 0.93rem;
 }
 .cta-actions {
