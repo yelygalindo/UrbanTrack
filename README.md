@@ -12,7 +12,6 @@ Sitio comercial estático de UrbanTrack, listo para publicar en GitHub Pages.
 - `config.js`: destino de formularios y endpoint del registro.
 - `main.js`: menú móvil y formulario de demo.
 - `robots.txt`, `sitemap.xml`: indexación en buscadores.
-- `routes-mobile.png`: captura del producto móvil.
 - `privacy.html`: política de privacidad.
 - `registro/`: registro con prueba gratuita de 10 días.
 - `CNAME`: dominio personalizado.
