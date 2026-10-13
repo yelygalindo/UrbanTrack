@@ -779,24 +779,32 @@ h2 em {
   text-align: center;
 }
 .workflow article > span {
-  color: #aaa;
-  font-size: 0.68rem;
-  font-weight: 700;
+  color: var(--orange-dark);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 .workflow-icon {
   display: grid;
   width: 78px;
   height: 78px;
   place-items: center;
-  margin: 20px auto;
-  border: 1px solid #d8d4cc;
+  margin: 16px auto 20px;
+  border: 1px solid #f3d6c3;
   border-radius: 50%;
-  background: #fff;
-  color: var(--orange);
-  font:
-    500 1.7rem Manrope,
-    sans-serif;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.04);
+  background: #fff4ec;
+  box-shadow: 0 15px 30px rgba(233, 85, 7, 0.08);
+}
+.workflow-icon svg,
+.outcome-icon svg {
+  width: 30px;
+  height: 30px;
+  fill: none;
+  stroke: var(--orange-dark);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 .workflow h3 {
   margin: 0 0 7px;
@@ -813,10 +821,10 @@ h2 em {
   margin-top: -24px;
   background: repeating-linear-gradient(
     90deg,
-    #c6c1b7 0,
-    #c6c1b7 5px,
-    transparent 5px,
-    transparent 10px
+    #e9a77f 0,
+    #e9a77f 6px,
+    transparent 6px,
+    transparent 11px
   );
 }
 .outcome-grid {
@@ -826,36 +834,61 @@ h2 em {
   border: 1px solid var(--line);
 }
 .outcome-grid article {
-  min-height: 235px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   padding: 32px;
   border-right: 1px solid var(--line);
+  background: #fff;
 }
 .outcome-grid article:last-child {
   border: 0;
 }
+.outcome-icon {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 8px;
+  place-items: center;
+  border-radius: 12px;
+  background: #fff4ec;
+}
+.outcome-icon svg {
+  width: 22px;
+  height: 22px;
+}
 .outcome-grid strong {
   display: block;
-  margin-bottom: 70px;
   font:
     700 1.05rem Manrope,
     sans-serif;
 }
 .outcome-grid p {
+  margin: 0;
   color: var(--muted);
   font-size: 0.87rem;
 }
 .outcome-grid .outcome-accent {
-  background: var(--orange);
+  justify-content: space-between;
+  background:
+    radial-gradient(circle at 85% 15%, rgba(255, 190, 140, 0.4), transparent 50%),
+    linear-gradient(140deg, #ff7a2e 0%, #e95507 55%, #b84205 100%);
   color: #fff;
 }
 .outcome-grid .outcome-accent strong {
-  margin-bottom: 49px;
   font-size: 1.35rem;
   line-height: 1.25;
 }
-.outcome-accent span {
-  font-size: 0.8rem;
-  opacity: 0.78;
+.outcome-accent a {
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.5);
+  text-underline-offset: 4px;
+}
+.outcome-accent a:hover {
+  text-decoration-color: #fff;
 }
 .team-section {
   background: #ebe8e1;
@@ -1510,11 +1543,8 @@ h2 em {
   }
   .outcome-grid article,
   .outcome-grid article:nth-child(2) {
-    min-height: 190px;
+    padding: 26px 24px;
     border-right: 0;
-  }
-  .outcome-grid strong {
-    margin-bottom: 45px;
   }
   .cta-section {
     padding: 56px 0;
