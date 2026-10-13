@@ -134,78 +134,88 @@
             <div class="stage-ring ring-one"></div>
             <div class="stage-ring ring-two"></div>
             <div class="dashboard-card">
-              <aside class="dash-sidebar">
-                <img src="assets/logo-192.png" alt="" width="38" height="38" />
-                <div class="dash-nav active"><span></span>Resumen</div>
-                <div class="dash-nav"><span></span>Clientes</div>
-                <div class="dash-nav"><span></span>Obras</div>
-                <div class="dash-nav"><span></span>Visitas</div>
-                <div class="dash-nav"><span></span>Entregas</div>
+              <aside class="app-sidebar">
+                <div class="app-brand">
+                  <img src="assets/logo-192.png" alt="" width="28" height="28" />
+                  <b>UrbanTrack</b>
+                </div>
+                <div class="app-nav active"><i></i>Resumen</div>
+                <div class="app-nav"><i></i>Agenda</div>
+                <small class="app-nav-label">Operación</small>
+                <div class="app-nav"><i></i>Monitoreo</div>
+                <div class="app-nav"><i></i>Recorridos</div>
+                <small class="app-nav-label">Comercial</small>
+                <div class="app-nav"><i></i>Contactos</div>
+                <div class="app-nav"><i></i>Seguimientos</div>
+                <div class="app-nav"><i></i>Entregas</div>
               </aside>
-              <div class="dash-content">
-                <div class="dash-top">
-                  <div>
-                    <small>BUEN DÍA, MARTÍN</small
-                    ><strong>Panel operativo</strong>
-                  </div>
+              <div class="app-main">
+                <div class="app-topbar">
+                  <span>Resumen</span>
                   <div class="avatar">MR</div>
                 </div>
-                <div class="kpi-grid">
+                <div class="app-greeting">
+                  <strong>Buenos días, Martín</strong>
+                  <small>Así va la operación de hoy.</small>
+                </div>
+                <div class="app-metrics">
                   <article>
-                    <span>Clientes activos</span><b>842</b
-                    ><small class="up">↑ 12%</small>
+                    <span class="app-metric-icon">
+                      <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2M9.5 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8" /></svg>
+                    </span>
+                    <small>Contactos activos</small><b>842</b>
                   </article>
                   <article>
-                    <span>Visitas hoy</span><b>18</b
-                    ><small>14 completadas</small>
+                    <span class="app-metric-icon">
+                      <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6" /></svg>
+                    </span>
+                    <small>Seguimientos activos</small><b>64</b>
                   </article>
                   <article>
-                    <span>Seguimientos</span><b>09</b
-                    ><small class="warning">Para hoy</small>
+                    <span class="app-metric-icon">
+                      <svg viewBox="0 0 24 24"><path d="M3 7h11v10H3zM14 10h4l3 3v4h-7M7 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4M17 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4" /></svg>
+                    </span>
+                    <small>Entregas pendientes</small><b>12</b>
+                  </article>
+                  <article>
+                    <span class="app-metric-icon">
+                      <svg viewBox="0 0 24 24"><path d="M4 5h16v15H4zM4 10h16M9 3v4M15 3v4" /></svg>
+                    </span>
+                    <small>Seguimientos de hoy</small><b>9</b>
                   </article>
                 </div>
-                <div class="dash-lower">
-                  <article class="activity-chart">
-                    <div class="card-heading">
-                      <strong>Actividad del equipo</strong
-                      ><small>Esta semana</small>
+                <div class="app-lower">
+                  <article class="app-panel app-map-panel">
+                    <div class="app-panel-heading">
+                      <strong>Mapa de ubicaciones</strong><small>Hoy</small>
                     </div>
-                    <div class="bars" aria-hidden="true">
-                      <i style="--h: 42%"></i><i style="--h: 67%"></i
-                      ><i style="--h: 54%"></i><i style="--h: 86%"></i
-                      ><i style="--h: 72%"></i
-                      ><i class="today" style="--h: 94%"></i
-                      ><i style="--h: 61%"></i>
-                    </div>
-                    <div class="bar-labels">
-                      <span>L</span><span>M</span><span>M</span><span>J</span
-                      ><span>V</span><span>S</span><span>D</span>
-                    </div>
+                    <svg class="app-map" viewBox="0 0 300 150" aria-hidden="true">
+                      <rect width="300" height="150" fill="#eef2f6" />
+                      <path d="M0 108 C 70 96, 120 128, 190 112 S 270 90, 300 98" class="map-water" />
+                      <path d="M0 40 H300 M0 82 H300 M64 0 V150 M150 0 V150 M232 0 V150" class="map-road" />
+                      <path d="M20 0 L120 150 M300 18 L178 150" class="map-road thin" />
+                      <path d="M64 40 L150 82 L232 40 L232 82" class="map-route" />
+                      <circle cx="64" cy="40" r="7" class="pin green" />
+                      <circle cx="150" cy="82" r="7" class="pin orange" />
+                      <circle cx="232" cy="40" r="7" class="pin blue" />
+                      <circle cx="232" cy="82" r="5" class="pin muted" />
+                    </svg>
                   </article>
-                  <article class="next-visits">
-                    <div class="card-heading">
-                      <strong>Próximas visitas</strong><small>Ver todas</small>
+                  <article class="app-panel">
+                    <div class="app-panel-heading">
+                      <strong>Actividad reciente</strong><small>Ver toda</small>
                     </div>
-                    <div class="visit">
-                      <i class="visit-dot orange"></i
-                      ><span
-                        ><b>Torre Central</b
-                        ><small>10:30 · En obra</small></span
-                      >
+                    <div class="app-event">
+                      <i class="green"></i>
+                      <span><b>Visita completada</b><small>Torre Central · hace 5 min</small></span>
                     </div>
-                    <div class="visit">
-                      <i class="visit-dot blue"></i
-                      ><span
-                        ><b>Constructora Norte</b
-                        ><small>12:15 · Reunión</small></span
-                      >
+                    <div class="app-event">
+                      <i class="orange"></i>
+                      <span><b>Nota agregada</b><small>Constructora Norte · 10:42</small></span>
                     </div>
-                    <div class="visit">
-                      <i class="visit-dot green"></i
-                      ><span
-                        ><b>Comercial ABC</b
-                        ><small>15:40 · Entrega</small></span
-                      >
+                    <div class="app-event">
+                      <i class="blue"></i>
+                      <span><b>Entrega confirmada</b><small>Comercial ABC · 09:15</small></span>
                     </div>
                   </article>
                 </div>
@@ -272,14 +282,50 @@
             <div class="phone-orbit"></div>
             <div class="phone-shell">
               <div class="phone-speaker"></div>
-              <img
-                src="routes-mobile.png"
-                alt="Vista móvil de rutas y actividad geolocalizada en UrbanTrack"
-                loading="lazy"
-              />
+              <div
+                class="route-screen"
+                role="img"
+                aria-label="Vista móvil del recorrido del día en UrbanTrack, con el mapa de la ruta y las visitas realizadas"
+              >
+                <div class="route-status"><span>9:41</span><span>●●● 5G</span></div>
+                <div class="route-header">
+                  <small>Recorrido de hoy</small>
+                  <strong>Ana López</strong>
+                  <div class="route-stats">
+                    <span><b>6</b> visitas</span><span><b>18,4</b> km</span><span><b>5 h</b> en ruta</span>
+                  </div>
+                </div>
+                <svg class="route-map" viewBox="0 0 260 190" aria-hidden="true">
+                  <rect width="260" height="190" fill="#eef2f6" />
+                  <path d="M0 150 C 60 130, 110 168, 170 146 S 240 120, 260 128 V190 H0 Z" fill="#d8e6f3" />
+                  <path d="M0 46 H260 M0 104 H260 M52 0 V190 M132 0 V190 M210 0 V190" class="map-road" />
+                  <path d="M10 0 L110 190 M260 20 L150 190" class="map-road thin" />
+                  <path d="M52 46 L52 104 L132 104 L132 46 L210 46 L210 104" class="map-route" />
+                  <g class="route-stop done"><circle cx="52" cy="46" r="10" /><text x="52" y="50">1</text></g>
+                  <g class="route-stop done"><circle cx="52" cy="104" r="10" /><text x="52" y="108">2</text></g>
+                  <g class="route-stop done"><circle cx="132" cy="104" r="10" /><text x="132" y="108">3</text></g>
+                  <g class="route-stop current"><circle cx="132" cy="46" r="10" /><text x="132" y="50">4</text></g>
+                  <g class="route-stop"><circle cx="210" cy="46" r="10" /><text x="210" y="50">5</text></g>
+                  <g class="route-stop"><circle cx="210" cy="104" r="10" /><text x="210" y="108">6</text></g>
+                </svg>
+                <div class="route-sheet">
+                  <div class="route-item done">
+                    <i></i>
+                    <span><b>Torre Central</b><small>09:10 · Visita completada</small></span>
+                  </div>
+                  <div class="route-item current">
+                    <i></i>
+                    <span><b>Constructora Norte</b><small>10:45 · En curso</small></span>
+                  </div>
+                  <div class="route-item">
+                    <i></i>
+                    <span><b>Comercial ABC</b><small>12:30 · Pendiente</small></span>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="route-badge">
-              <b>6 visitas</b><span>Ruta optimizada</span>
+              <b>6 visitas</b><span>18,4 km recorridos hoy</span>
             </div>
           </div>
           <div class="product-copy">
