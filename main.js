@@ -51,6 +51,7 @@ contactForm.addEventListener("submit", async (event) => {
       Empresa: form.get("empresa"),
       Correo: form.get("correo"),
       Teléfono: form.get("telefono") || "No indicado",
+      Interés: form.get("interes"),
       Mensaje: form.get("mensaje") || "Sin mensaje adicional",
       _replyto: form.get("correo"),
     });
