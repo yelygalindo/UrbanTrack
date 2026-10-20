@@ -13,6 +13,7 @@ Sitio comercial estático de UrbanTrack, listo para publicar en GitHub Pages.
 - `main.js`: menú móvil y formulario de demo.
 - `robots.txt`, `sitemap.xml`: indexación en buscadores.
 - `privacy.html`: política de privacidad.
+- `manual/`: manual de usuario de la app móvil (`index.html`, `manual.css`, `manual.js` y las capturas en `pantallas/`). Usa `styles.css` para la cabecera, los botones y el pie.
 - `registro/`: solo redirige enlaces antiguos al registro de la aplicación.
 - `CNAME`: dominio personalizado.
 
