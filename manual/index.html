@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Manual de usuario de la app móvil UrbanTrackCRM: jornada, visitas con GPS, clientes, obras, entregas y trabajo sin conexión, paso a paso y con pantallas reales."
+    />
+    <meta name="theme-color" content="#ff6b17" />
+    <meta property="og:title" content="Manual de usuario · App móvil UrbanTrackCRM" />
+    <meta
+      property="og:description"
+      content="Aprende a usar la app UrbanTrackCRM en campo: jornada, visitas, clientes, obras y entregas."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://urbantrack.io/manual/" />
+    <meta property="og:image" content="https://urbantrack.io/assets/og-image.jpg" />
+    <meta property="og:locale" content="es_LA" />
+    <link rel="canonical" href="https://urbantrack.io/manual/" />
+    <title>Manual de usuario de la app | UrbanTrack</title>
+    <link rel="icon" type="image/png" href="../assets/logo-192.png" />
+    <link rel="apple-touch-icon" href="../assets/logo-192.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="manual.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Ir al contenido</a>
+
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="../" aria-label="UrbanTrackCRM, ir al sitio">
+          <img src="../assets/logo-192.png" alt="" width="44" height="44" />
+          <span>UrbanTrackCRM</span>
+        </a>
+        <nav class="nav-links" id="nav-links" aria-label="Secciones del manual">
+          <a href="#empezar">Empezar</a>
+          <a href="#visitas">Visitas</a>
+          <a href="#clientes">Clientes y obras</a>
+          <a href="#entregas">Entregas</a>
+          <a href="#sin-senal">Sin señal</a>
+          <a href="#ayuda">Ayuda</a>
+        </nav>
+        <div class="nav-actions">
+          <a class="button button-small button-dark" href="#descargar"
+            >Descargar app <span aria-hidden="true">↓</span></a
+          >
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="nav-links"
+            aria-label="Abrir menú"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <!-- Hero -->
+      <section class="m-hero">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="container m-hero-grid">
+          <div class="m-hero-copy">
+            <div class="eyebrow"><span></span> Manual de usuario · App móvil</div>
+            <h1>Tu día de campo, <em>paso a paso.</em></h1>
+            <p>
+              Todo lo que necesitas para usar UrbanTrackCRM en la calle: abrir
+              tu jornada, registrar visitas con GPS, cuidar a tus clientes y
+              obras, y seguir trabajando aunque te quedes sin señal.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#empezar"
+                >Empezar el recorrido <span aria-hidden="true">→</span></a
+              >
+              <a class="text-link" href="#problemas"
+                >Problemas frecuentes <span aria-hidden="true">→</span></a
+              >
+            </div>
+            <ul class="m-hero-facts" aria-label="Datos de la app">
+              <li><b>Android y iOS</b> una sola app</li>
+              <li><b>Sin conexión</b> guarda y envía después</li>
+              <li><b>Versión 1.1.0</b> pantallas reales</li>
+            </ul>
+          </div>
+          <div class="m-hero-stage">
+            <div class="stage-ring ring-one" aria-hidden="true"></div>
+            <div class="stage-ring ring-two" aria-hidden="true"></div>
+            <figure class="m-phone m-phone-hero">
+              <img
+                src="pantallas/06-home-visit.png"
+                width="780"
+                height="1688"
+                alt="Pantalla de Inicio con la jornada activa y una visita en curso"
+              />
+            </figure>
+            <div class="m-float m-float-top" aria-hidden="true">
+              <i class="m-dot m-dot-green"></i> Jornada activa · 2h 37m
+            </div>
+            <div class="m-float m-float-bottom" aria-hidden="true">
+              <i class="m-dot"></i> Visita en curso
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Day route -->
+      <section class="m-day" aria-labelledby="dia-titulo">
+        <div class="container">
+          <p class="section-index" id="dia-titulo">Un día con la app</p>
+          <ol class="m-day-steps">
+            <li>
+              <a href="#ingresar"><b>Ingresa</b><span>Tu correo y contraseña, una sola vez.</span></a>
+            </li>
+            <li>
+              <a href="#jornada"><b>Inicia tu jornada</b><span>Hora y GPS al empezar.</span></a>
+            </li>
+            <li>
+              <a href="#visitas"><b>Visita</b><span>Check-in, fotos y check-out.</span></a>
+            </li>
+            <li>
+              <a href="#clientes"><b>Registra</b><span>Notas, estados y recordatorios.</span></a>
+            </li>
+            <li>
+              <a href="#cerrar"><b>Cierra tu jornada</b><span>Duración y ubicación final.</span></a>
+            </li>
+          </ol>
+          <p class="m-terms">
+            <strong>Los nombres se adaptan a tu empresa.</strong> Según tu
+            rubro, la app puede llamar a tus clientes <em>Contactos</em> o
+            <em>Clientes</em>, y a tus proyectos <em>Seguimientos</em> u
+            <em>Obras</em>. Las pantallas muestran una empresa de construcción y
+            datos de ejemplo.
+          </p>
+        </div>
+      </section>
+
+      <!-- 01 Navigation -->
+      <section class="m-chapter" id="empezar">
+        <div class="container m-chapter-grid">
+          <div class="m-copy">
+            <p class="section-index">01 · Primeros pasos</p>
+            <h2>Todo a <em>un toque.</em></h2>
+            <p class="m-lead">
+              La barra inferior siempre está a mano. Solo verás las secciones
+              que tu empresa tiene activas y que tu usuario puede usar.
+            </p>
+            <dl class="m-tabs">
+              <div><dt>Inicio</dt><dd>Tu jornada, Nueva visita, tu recorrido y tus recordatorios.</dd></div>
+              <div><dt>Clientes</dt><dd>Tu cartera, con búsqueda, estados y llamada directa.</dd></div>
+              <div><dt>Obras</dt><dd>Mapa y lista de obras ordenadas por cercanía.</dd></div>
+              <div><dt>Entregas</dt><dd>Material comprometido y su recepción en obra.</dd></div>
+              <div><dt>Más</dt><dd>Sincronización, Historial, Mis rutas, Recordatorios, Soporte y Cerrar sesión.</dd></div>
+            </dl>
+          </div>
+          <div class="m-screens">
+            <figure class="m-shot">
+              <div class="m-phone"><img src="pantallas/03-home-closed.png" width="780" height="1688" loading="lazy" alt="Inicio con la jornada cerrada" /></div>
+              <figcaption><b>Inicio</b> Al abrir la app, antes de empezar.</figcaption>
+            </figure>
+            <figure class="m-shot">
+              <div class="m-phone"><img src="pantallas/20-more.png" width="780" height="1688" loading="lazy" alt="Pantalla Más" /></div>
+              <figcaption><b>Más</b> Tu perfil y el resto de opciones.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02 Sign in -->
+      <section class="m-chapter m-alt" id="ingresar">
+        <div class="container m-chapter-grid m-flip">
+          <div class="m-copy">
+            <p class="section-index">02 · Acceso</p>
+            <h2>Entra <em>una sola vez.</em></h2>
+            <p class="m-lead">
+              La sesión queda guardada de forma segura en el teléfono y se
+              renueva sola.
+            </p>
+            <ol class="m-steps">
+              <li>Escribe tu <b>correo electrónico</b> y tu <b>contraseña</b>. Toca el ojo para ver lo que escribiste.</li>
+              <li>Toca <span class="m-ui">Ingresar</span>. La primera vez puede tardar unos segundos.</li>
+            </ol>
+            <h3>¿Olvidaste tu contraseña?</h3>
+            <ol class="m-steps">
+              <li>Toca <span class="m-ui">¿Olvidaste tu contraseña?</span>, escribe tu correo y toca <span class="m-ui">Enviar instrucciones</span>.</li>
+              <li>Si el enlace del correo no abre la app, toca <span class="m-ui">Ya tengo un token</span> y pégalo.</li>
+              <li>Crea tu nueva contraseña (mínimo 8 caracteres) y toca <span class="m-ui">Actualizar contraseña</span>.</li>
+            </ol>
+          </div>
+          <div class="m-screens">
+            <figure class="m-shot">
+              <div class="m-phone"><img src="pantallas/01-login.png" width="780" height="1688" loading="lazy" alt="Pantalla de ingreso" /></div>
+              <figcaption><b>Ingreso</b> Correo, contraseña y recuperación.</figcaption>
+            </figure>
+            <figure class="m-shot">
+              <div class="m-phone"><img src="pantallas/02-forgot-password.png" width="780" height="1688" loading="lazy" alt="Recuperar contraseña" /></div>
+              <figcaption><b>Recuperar</b> Las instrucciones llegan a tu correo.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 Workday -->
+      <section class="m-chapter" id="jornada">
+        <div class="container m-chapter-grid">
+          <div class="m-copy">
+            <p class="section-index">03 · Al empezar el día</p>
+            <h2>Inicia tu <em>jornada.</em></h2>
+            <p class="m-lead">
+              La jornada marca tu horario de trabajo. Mientras está abierta
+              puedes registrar visitas y la app guarda tu recorrido.
+            </p>
+            <ol class="m-steps">
+              <li>En <b>Inicio</b>, con el estado <b>Cerrada</b>, toca <span class="m-ui m-ui-orange">Iniciar jornada</span>. Se guardan la hora del teléfono y tu GPS.</li>
+              <li>Si tu empresa usa seguimiento GPS, la primera vez verás <b>Ubicación durante tu jornada</b>. Toca <span class="m-ui">Aceptar y continuar</span> y elige <b>Permitir siempre</b>. En Android acepta también las notificaciones.</li>
+              <li>La tarjeta cambia a <b>Jornada activa</b> con la duración, y aparece el botón <b>Nueva visita</b>.</li>
+            </ol>
+            <div class="m-note m-note-ok">
+              <strong>Tu ubicación solo se registra con la jornada abierta.</strong>
+              El registro se detiene en cuanto la finalizas.
+            </div>
+            <div class="m-note m-note-warn">
+              <strong>Sin ubicación no se abre la jornada.</strong>
+              Si el GPS está apagado o negaste el permiso, la app te explica cómo corregirlo.
+            </div>
+          </div>
+          <div class="m-screens">
+            <figure class="m-shot">
+              <div class="m-phone"><img src="pantallas/03-home-closed.png" width="780" height="1688" loading="lazy" alt="Jornada cerrada con el botón Iniciar jornada" /></div>
+              <figcaption><b>Antes</b> Estado “Cerrada”.</figcaption>
+            </figure>
+            <figure class="m-shot">
+              <div class="m-phone"><img src="pantallas/04-home-active.png" width="780" height="1688" loading="lazy" alt="Jornada activa con duración y Nueva visita" /></div>
+              <figcaption><b>Después</b> Jornada activa y Nueva visita.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04 Visits (dark band) -->
+      <section class="m-chapter m-dark" id="visitas">
+        <div class="container">
+          <div class="m-wide-head">
+            <div>
+              <p class="section-index light">04 · En la calle</p>
+              <h2>Una visita, <em>tres toques.</em></h2>
+            </div>
+            <p class="m-lead">
+              Cada visita tiene un inicio (check-in) y un cierre (check-out).
+              La app guarda la hora real del teléfono y el GPS en ambos
+              momentos.
+            </p>
+          </div>
+          <ol class="m-flow">
+            <li>
+              <figure class="m-shot">
+                <div class="m-phone"><img src="pantallas/05-check-in.png" width="780" height="1688" loading="lazy" alt="Iniciar visita" /></div>
+              </figure>
+              <h3><span>1</span> Llega y haz check-in</h3>
+              <p>Toca <b>Nueva visita</b>, elige un cliente o una obra, agrega una nota si quieres y toca <b>Confirmar check-in</b>.</p>
+            </li>
+            <li>
+              <figure class="m-shot">
+                <div class="m-phone"><img src="pantallas/06-home-visit.png" width="780" height="1688" loading="lazy" alt="Visita en curso en Inicio" /></div>
+              </figure>
+              <h3><span>2</span> Trabaja la visita</h3>
+              <p>La tarjeta <b>Visita en curso</b> queda en Inicio. En la ficha de la obra usa <b>Agregar fotos</b> para dejar evidencia.</p>
+            </li>
+            <li>
+              <figure class="m-shot">
+                <div class="m-phone"><img src="pantallas/07-check-out.png" width="780" height="1688" loading="lazy" alt="Finalizar visita" /></div>
+              </figure>
+              <h3><span>3</span> Cierra con check-out</h3>
+              <p>Elige cómo terminó (Gestión realizada, Requiere seguimiento, No fue atendido, Reprogramada u Otro), agrega notas y toca <b>Confirmar check-out</b>.</p>
+            </li>
+          </ol>
+          <p class="m-dark-note">
+            <strong>Una visita a la vez.</strong> Si ya tienes una en curso,
+            las fichas muestran “Hay otra visita en curso” con el botón
+            <b>Ir</b> para volver a ella y cerrarla.
+          </p>
+        </div>
+      </section>
+
+      <!-- 05 Customers -->
+      <section class="m-chapter" id="clientes">
+        <div class="container m-chapter-grid">
+          <div class="m-copy">
+            <p class="section-index">05 · Tu cartera</p>
+            <h2>Clientes, <em>siempre a mano.</em></h2>
+            <p class="m-lead">
+              Encuentra a cualquier cliente en segundos y contáctalo sin salir
+              de la app.
+            </p>
+            <ul class="m-list">
+              <li><b>Busca</b> por nombre, empresa o teléfono, o filtra por estado: Prospecto, Contactado, Activo…</li>
+              <li><b>Contacta</b> con Llamar, WhatsApp, Correo o Cómo llegar desde la ficha.</li>
+              <li><b>Cambia el estado comercial</b> desde el menú desplegable de la ficha.</li>
+              <li><b>Agrega recordatorios y notas</b> con el botón + en Actividad del cliente. En Historial ves todo lo que pasó.</li>
+            </ul>
+            <h3>Registrar un cliente</h3>
+            <ol class="m-steps">
+              <li>Toca <span class="m-ui">+</span> y completa nombre, empresa y teléfono.</li>
+              <li>Ajusta el punto en el mapa o toca <span class="m-ui">Usar ubicación actual</span>.</li>
+              <li>Guarda. Quedas asignado como vendedor automáticamente.</li>
+            </ol>
+          </div>
+          <div class="m-screens m-screens-3">
+            <figure class="m-shot">
+              <div class="m-phone"><img src="pantallas/08-customers.png" width="780" height="1688" loading="lazy" alt="Lista de clientes" /></div>
+              <figcaption><b>Lista</b> Búsqueda y filtros.</figcaption>
+            </figure>
+            <figure class="m-shot">
+              <div class="m-phone m-scroll" tabindex="0" aria-label="Ficha del cliente, desliza para ver más"><img src="pantallas/09-customer-detail.png" width="780" height="2867" loading="lazy" alt="Ficha completa del cliente" /></div>
+              <figcaption><b>Ficha</b> Desliza dentro del teléfono.</figcaption>
+            </figure>
+            <figure class="m-shot">
+              <div class="m-phone"><img src="pantallas/10-customer-form.png" width="780" height="1688" loading="lazy" alt="Registrar cliente" /></div>
+              <figcaption><b>Nuevo</b> Datos y ubicación.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- 06 Projects -->
+      <section class="m-chapter m-alt" id="obras">
+        <div class="container m-chapter-grid m-flip">
+          <div class="m-copy">
+            <p class="section-index">06 · Proyectos</p>
+            <h2>Cada obra, <em>en un solo lugar.</em></h2>
+            <p class="m-lead">
+              Ubicación, avance, monto, estado, fotos, archivos y todas las
+              visitas que se le hicieron.
+            </p>
+            <ul class="m-list">
+              <li><b>Mapa y Más cercanas</b>: tus obras con un punto de color por estado y la distancia a cada una.</li>
+              <li><b>Cambia el estado</b> tocando su etiqueta, por ejemplo En progreso.</li>
+              <li><b>Accesos rápidos</b>: Cómo llegar, Cliente, Adjuntar (fotos, PDF, Excel o Word) y Visitas.</li>
+              <li><b>Notas, recordatorios e historial</b> de la obra, más abajo en la ficha.</li>
+            </ul>
+            <h3>Registrar una obra</h3>
+            <ol class="m-steps">
+              <li>Toca <span class="m-ui">+</span>, escribe el nombre y elige el cliente o <b>Sin cliente por ahora</b>.</li>
+              <li>Completa monto estimado, avance y fechas si los tienes.</li>
+              <li>Confirma la ubicación y toca <span class="m-ui">Guardar obra</span>.</li>
+            </ol>
+          </div>
+          <div class="m-screens m-screens-3">
+            <figure class="m-shot">
+              <div class="m-phone"><img src="pantallas/11-projects.png" width="780" height="1688" loading="lazy" alt="Lista y mapa de obras" /></div>
+              <figcaption><b>Obras</b> Mapa y cercanía.</figcaption>
+            </figure>
+            <figure class="m-shot">
+              <div class="m-phone m-scroll" tabindex="0" aria-label="Ficha de la obra, desliza para ver más"><img src="pantallas/12-project-detail.png" width="780" height="2867" loading="lazy" alt="Ficha completa de la obra" /></div>
+              <figcaption><b>Ficha</b> Desliza dentro del teléfono.</figcaption>
+            </figure>
+            <figure class="m-shot">
+              <div class="m-phone"><img src="pantallas/13-project-form.png" width="780" height="1688" loading="lazy" alt="Registrar obra" /></div>
+              <figcaption><b>Nueva</b> Datos generales y comerciales.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- 07 Deliveries -->
+      <section class="m-chapter" id="entregas">
+        <div class="container m-chapter-grid">
+          <div class="m-copy">
+            <p class="section-index">07 · Material en obra</p>
+            <h2>Entregas <em>sin papeles.</em></h2>
+            <p class="m-lead">
+              Si tu empresa usa el módulo de entregas, ves lo comprometido para
+              cada obra y registras lo que realmente llegó.
+            </p>
+            <ul class="m-list">
+              <li><b>Filtra</b> por Activas, Pendientes, Parciales o Entregadas.</li>
+              <li><b>Crea una entrega</b> con <span class="m-ui">+</span>: obra, productos, cantidades y fecha comprometida.</li>
+            </ul>
+            <h3>Registrar la recepción</h3>
+            <ol class="m-steps">
+              <li>Abre la entrega y toca <span class="m-ui m-ui-orange">Registrar recepción</span>.</li>
+              <li>Indica cuánto llegó con <b>−</b> y <b>+</b>, o toca <b>Todo</b>.</li>
+              <li>Saca fotos del comprobante (hasta 10) y toca <span class="m-ui">Confirmar recepción</span>.</li>
+            </ol>
+          </div>
+          <div class="m-screens m-screens-3">
+            <figure class="m-shot">
+              <div class="m-phone"><img src="pantallas/14-deliveries.png" width="780" height="1688" loading="lazy" alt="Lista de entregas" /></div>
+              <figcaption><b>Entregas</b> Estado y avance.</figcaption>
+            </figure>
+            <figure class="m-shot">
+              <div class="m-phone"><img src="pantallas/15-delivery-detail.png" width="780" height="1688" loading="lazy" alt="Detalle de la entrega" /></div>
+              <figcaption><b>Detalle</b> Recibido y faltante.</figcaption>
+            </figure>
+            <figure class="m-shot">
+              <div class="m-phone"><img src="pantallas/16-delivery-receipt.png" width="780" height="1688" loading="lazy" alt="Nueva recepción" /></div>
+              <figcaption><b>Recepción</b> Cantidades y fotos.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- 08–09 Reminders, history, routes -->
+      <section class="m-chapter m-alt" id="seguimiento">
+        <div class="container">
+          <div class="m-wide-head">
+            <div>
+              <p class="section-index">08 · Que nada se escape</p>
+              <h2>Recordatorios, historial <em>y tus rutas.</em></h2>
+            </div>
+            <p class="m-lead">
+              Lo que tienes pendiente, lo que ya hiciste y por dónde pasaste.
+            </p>
+          </div>
+          <div class="m-cards">
+            <article class="m-card">
+              <div class="m-phone"><img src="pantallas/17-reminders.png" width="780" height="1688" loading="lazy" alt="Recordatorios" /></div>
+              <h3>Recordatorios</h3>
+              <p>En Inicio y en <b>Más → Recordatorios</b>, agrupados en Hoy, Próximos y Vencidos. Toca el círculo para marcarlo como hecho. Los de obras están en cada obra.</p>
+            </article>
+            <article class="m-card">
+              <div class="m-phone"><img src="pantallas/19-history.png" width="780" height="1688" loading="lazy" alt="Historial del día" /></div>
+              <h3>Historial</h3>
+              <p>En <b>Más → Historial</b>: tu jornada, visitas, notas y evidencias del día, ordenadas por hora. Cambia de día con las flechas.</p>
+            </article>
+            <article class="m-card">
+              <div class="m-phone"><img src="pantallas/18-routes.png" width="780" height="1688" loading="lazy" alt="Mis rutas" /></div>
+              <h3>Mis rutas</h3>
+              <p>Tu recorrido en el mapa: inicio en verde, fin en rojo y cada visita en morado. Elige Hoy o Ayer.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10 Offline -->
+      <section class="m-chapter" id="sin-senal">
+        <div class="container m-chapter-grid">
+          <div class="m-copy">
+            <p class="section-index">09 · Sin señal</p>
+            <h2>Trabaja <em>sin conexión.</em></h2>
+            <p class="m-lead">
+              En sótanos, obras alejadas o zonas sin cobertura la app guarda
+              todo en el teléfono y lo envía sola cuando vuelve la señal.
+            </p>
+            <ul class="m-list">
+              <li><b>Funcionan sin conexión</b>: jornada, clientes nuevos, notas, recordatorios, check-in, check-out y fotos de visitas.</li>
+              <li><b>Se envían en orden</b> y sin duplicarse, aunque cierres la app.</li>
+              <li><b>El número rojo sobre Más</b> indica cuántos registros esperan. En Sincronización puedes tocar <span class="m-ui">Intentar sincronizar ahora</span>.</li>
+            </ul>
+            <div class="m-note m-note-warn">
+              <strong>No desinstales la app si tienes registros pendientes.</strong>
+              Hasta que se sincronicen solo están en tu teléfono. Si cierras sesión se conservan para cuando vuelvas a entrar.
+            </div>
+          </div>
+          <div class="m-screens">
+            <figure class="m-shot">
+              <div class="m-phone"><img src="pantallas/24-more-pending.png" width="780" height="1688" loading="lazy" alt="Más con registros pendientes" /></div>
+              <figcaption><b>Aviso</b> Pendientes sobre Más.</figcaption>
+            </figure>
+            <figure class="m-shot">
+              <div class="m-phone"><img src="pantallas/23-sync.png" width="780" height="1688" loading="lazy" alt="Sincronización con registros pendientes" /></div>
+              <figcaption><b>Sincronización</b> Qué falta enviar.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- 11 Close workday -->
+      <section class="m-chapter m-alt" id="cerrar">
+        <div class="container m-chapter-grid m-flip">
+          <div class="m-copy">
+            <p class="section-index">10 · Al terminar el día</p>
+            <h2>Cierra tu <em>jornada.</em></h2>
+            <p class="m-lead">
+              Registra tu hora de salida y detiene el seguimiento de ubicación.
+            </p>
+            <ol class="m-steps">
+              <li>Si tienes una visita en curso, finalízala primero.</li>
+              <li>En Inicio toca <span class="m-ui">Finalizar jornada</span>. Verás <b>¿Terminaste por hoy?</b> con la duración.</li>
+              <li>Espera <b>GPS verificado</b> en la ubicación de cierre. Si no aparece, toca <span class="m-ui">Reintentar ubicación</span>.</li>
+              <li>Toca <span class="m-ui m-ui-red">Cerrar jornada</span>.</li>
+            </ol>
+          </div>
+          <div class="m-screens m-screens-1">
+            <figure class="m-shot">
+              <div class="m-phone"><img src="pantallas/22-close-workday.png" width="780" height="1688" loading="lazy" alt="Finalizar jornada" /></div>
+              <figcaption><b>Finalizar jornada</b> Duración y ubicación de cierre.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- 12 Help -->
+      <section class="m-chapter" id="ayuda">
+        <div class="container m-chapter-grid">
+          <div class="m-copy">
+            <p class="section-index">11 · Ayuda</p>
+            <h2>Estamos <em>para ayudarte.</em></h2>
+            <h3>Escribir a soporte</h3>
+            <ol class="m-steps">
+              <li>En <b>Más</b> toca <span class="m-ui">Soporte</span> y elige: Problema técnico, Duda de uso, Cuenta y accesos o Sugerencia.</li>
+              <li>Escribe el asunto y qué pasó. Deja marcado <b>Incluir datos técnicos</b>.</li>
+              <li>Toca <span class="m-ui m-ui-orange">Enviar consulta</span>. Recibirás un número de referencia y la respuesta llegará a tu correo.</li>
+            </ol>
+            <h3>Probar el seguimiento GPS</h3>
+            <p>Si tu empresa usa seguimiento, verás <b>Probar GPS</b> en la tarjeta de la jornada. Revisa permisos, GPS, notificaciones y batería, y te dice qué corregir.</p>
+            <h3>Cerrar sesión</h3>
+            <p>En <b>Más</b> toca <span class="m-ui">Cerrar sesión</span>. Si tienes pendientes o la jornada abierta, la app te avisa antes.</p>
+          </div>
+          <div class="m-screens">
+            <figure class="m-shot">
+              <div class="m-phone"><img src="pantallas/21-support.png" width="780" height="1688" loading="lazy" alt="Soporte" /></div>
+              <figcaption><b>Soporte</b> Tipo, asunto y mensaje.</figcaption>
+            </figure>
+            <figure class="m-shot">
+              <div class="m-phone"><img src="pantallas/20-more.png" width="780" height="1688" loading="lazy" alt="Más con Cerrar sesión" /></div>
+              <figcaption><b>Más</b> Soporte y Cerrar sesión.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="m-chapter m-alt" id="problemas">
+        <div class="container m-faq-grid">
+          <div>
+            <p class="section-index">12 · Si algo no sale</p>
+            <h2>Problemas <em>frecuentes.</em></h2>
+          </div>
+          <div class="m-faq">
+            <details>
+              <summary>No puedo iniciar la jornada</summary>
+              <p>Revisa que la ubicación del teléfono esté encendida y que la app tenga permiso de ubicación. Si lo negaste, actívalo en Ajustes → Aplicaciones → UrbanTrackCRM → Permisos → Ubicación, y vuelve a tocar Iniciar jornada.</p>
+            </details>
+            <details>
+              <summary>“Mis rutas” muestra huecos en mi recorrido</summary>
+              <p>Usa Probar GPS. Lo más común es que el permiso esté en “solo mientras usas la app” (debe ser Permitir siempre), que las notificaciones estén apagadas o que Android ahorre batería con la app. En Ajustes de batería busca UrbanTrackCRM y quítale las restricciones.</p>
+            </details>
+            <details>
+              <summary>No me deja iniciar una visita</summary>
+              <p>Necesitas la jornada abierta y ninguna otra visita en curso. El aviso “Hay otra visita en curso” te lleva a ella con Ir: finalízala y empieza la nueva.</p>
+            </details>
+            <details>
+              <summary>Tengo registros pendientes que no se envían</summary>
+              <p>Conéctate a una red estable y entra a Más → Sincronización para tocar Intentar sincronizar ahora. Algunos registros esperan a otro (una foto se envía después de su check-in) y salen solos en orden.</p>
+            </details>
+            <details>
+              <summary>No veo Entregas, Historial o Mis rutas</summary>
+              <p>La app muestra solo las secciones que tu empresa tiene activas y que tu usuario puede usar. Pídeselas al administrador de tu empresa.</p>
+            </details>
+            <details>
+              <summary>No recuerdo mi contraseña</summary>
+              <p>Toca ¿Olvidaste tu contraseña? en la pantalla de ingreso y sigue el correo. Si el enlace no abre la app, usa Ya tengo un token y pega el token.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Download / help CTA -->
+      <section class="m-cta" id="descargar">
+        <div class="container m-cta-card">
+          <div>
+            <p class="section-index light">Descarga la app</p>
+            <h2>¿Listo para <em>salir a la calle?</em></h2>
+            <p>Instala UrbanTrackCRM e ingresa con la cuenta que te dio tu empresa.</p>
+          </div>
+          <div class="store-links">
+            <a class="store-badge" href="https://play.google.com/store/apps/details?id=io.urbantrack.crm.app" target="_blank" rel="noopener noreferrer" aria-label="Descargar UrbanTrackCRM en Google Play">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4.5 3.4 10.8 8.1a.62.62 0 0 1 0 1L4.5 20.6V3.4Z" /><path d="m4.5 3.4 13.8 7.7a1 1 0 0 1 0 1.8L4.5 20.6M14.5 11l-7.8 8.2M14.5 13 6.7 4.8" /></svg>
+              <span>Disponible en<b>Google Play</b></span>
+            </a>
+            <a class="store-badge" href="https://apps.apple.com/bo/app/urbantrackcrm/id6805187687" target="_blank" rel="noopener noreferrer" aria-label="Descargar UrbanTrackCRM en App Store">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.7 13.2c0-2.3 1.9-3.4 2-3.5a4.3 4.3 0 0 0-3.4-1.9c-1.5-.2-2.9.9-3.6.9-.7 0-1.8-.9-3-.9-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3.1-.7s1.9.7 3.1.7c1.3 0 2.1-1.1 2.8-2.3.9-1.3 1.3-2.6 1.3-2.7-.1 0-2.6-1-2.6-3.5ZM14.3 6.3A4 4 0 0 0 15.2 3a4.1 4.1 0 0 0-2.8 1.4 3.8 3.8 0 0 0-1 2.8 3.4 3.4 0 0 0 2.9-.9Z" /></svg>
+              <span>Disponible en<b>App Store</b></span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-main">
+        <a class="brand brand-light" href="../"
+          ><img src="../assets/logo-192.png" alt="" width="44" height="44" /><span
+            >UrbanTrackCRM</span
+          ></a
+        >
+        <p>
+          CRM comercial y operativo que hace crecer a la empresa y simplifica
+          el trabajo de su equipo, dentro y fuera de la oficina.
+        </p>
+        <div class="footer-contact">
+          <a
+            class="whatsapp-link"
+            href="https://wa.me/59172196093?text=Hola%2C%20tengo%20una%20duda%20sobre%20la%20app%20UrbanTrackCRM"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Escribir a UrbanTrack por WhatsApp"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.4-.3Z"
+              />
+            </svg>
+            WhatsApp
+          </a>
+          <a href="mailto:contacto@urbantrack.io">contacto@urbantrack.io</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© 2026 UrbanTrack. Todos los derechos reservados.</span>
+        <span class="footer-links"><a href="../">Inicio</a><a href="../privacy.html">Política de privacidad</a></span>
+      </div>
+    </footer>
+    <script src="manual.js"></script>
+  </body>
+</html>
