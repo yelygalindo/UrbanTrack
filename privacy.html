@@ -248,7 +248,7 @@
         UrbanTrackCRM, cómo se utiliza, cómo se protege y qué opciones existen
         respecto de dichos datos.
       </p>
-      <div class="updated">Última actualización: 21 de agosto de 2026</div>
+      <div class="updated">Última actualización: 23 de octubre de 2026</div>
     </section>
     <main>
       <div class="layout">
@@ -348,6 +348,26 @@
               UrbanTrackCRM solicita acceso a la ubicación únicamente cuando
               resulta necesario para las funcionalidades habilitadas.
             </p>
+            <h3>Seguimiento durante la jornada</h3>
+            <p>
+              Mientras el vendedor tiene una jornada abierta, la aplicación
+              registra su ubicación precisa de forma continua, también cuando la
+              app está cerrada o en segundo plano y con la pantalla bloqueada.
+              Las posiciones se envían al servidor de seguimiento de la empresa
+              y se utilizan para registrar el recorrido y mostrarlo en "Mis
+              rutas" al propio vendedor y a la empresa.
+            </p>
+            <p>
+              El registro comienza solo después de que el vendedor acepta el
+              aviso de ubicación dentro de la aplicación y concede el permiso
+              correspondiente, y se detiene al finalizar la jornada o al cerrar
+              sesión. En Android se muestra una notificación mientras el
+              seguimiento está activo.
+            </p>
+            <p>
+              Las posiciones y los registros técnicos del seguimiento se
+              conservan durante 90 días y después se eliminan.
+            </p>
             <p>
               La información de ubicación no se vende ni se utiliza para
               publicidad dirigida.
@@ -390,7 +410,16 @@
                 información necesaria para prevenir operaciones duplicadas;
               </li>
               <li>
-                información necesaria para mantener la integridad de los datos.
+                información necesaria para mantener la integridad de los datos;
+              </li>
+              <li>
+                un identificador de instalación generado por la aplicación, que
+                no es el identificador de publicidad del dispositivo;
+              </li>
+              <li>
+                diagnósticos del seguimiento de la jornada: estado de permisos,
+                GPS y batería, fabricante y modelo del dispositivo y registros
+                técnicos que pueden incluir posiciones.
               </li>
             </ul>
             <p>
@@ -485,6 +514,11 @@
               anonimizada o conservada durante el periodo requerido por las
               obligaciones aplicables.
             </p>
+            <p>
+              Las posiciones registradas durante la jornada y los diagnósticos
+              del seguimiento se conservan durante 90 días y después se
+              eliminan.
+            </p>
           </section>
           <section id="baja">
             <h2>10. Baja de empresas y cuentas de usuario</h2>
@@ -520,7 +554,11 @@
               dispositivo para habilitar funciones específicas.
             </p>
             <ul>
-              <li>ubicación;</li>
+              <li>ubicación, incluso en segundo plano durante la jornada;</li>
+              <li>
+                actividad física, para detectar si el dispositivo está detenido
+                o en movimiento y ahorrar batería;
+              </li>
               <li>cámara;</li>
               <li>acceso a fotografías seleccionadas;</li>
               <li>notificaciones.</li>
