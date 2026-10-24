@@ -27,7 +27,7 @@ La demo se envía con [FormSubmit](https://formsubmit.co) a `contacto@urbantrack
 
 ## Registro de prueba gratuita
 
-El registro con prueba de 10 días vive en la aplicación (proyecto SalesTracking-Web), en `https://app.urbantrack.io/trial-signup`. Los botones "Prueba gratis" y "Crear cuenta" de la landing apuntan ahí.
+El registro con prueba de 30 días vive en la aplicación (proyecto SalesTracking-Web), en `https://app.urbantrack.io/trial-signup`. Los botones "Prueba gratis" y "Crear cuenta" de la landing apuntan ahí.
 
 ## Publicación
 
