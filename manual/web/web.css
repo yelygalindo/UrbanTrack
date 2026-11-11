@@ -2,51 +2,35 @@
   Manual de la plataforma web.
   Se carga después de ../../styles.css y ../manual.css: reutiliza sus capítulos,
   pasos, notas y preguntas frecuentes. Lo propio de esta página usa el prefijo "w-":
-  sobre todo la ventana de navegador que enmarca cada captura de pantalla.
-  Las capturas están en capturas/ y se generan con datos de ejemplo (ver README).
+  sobre todo las escenas: cada pantalla de la app en su ventana, con un detalle
+  ampliado. Las escenas están en capturas/ y las arma
+  scripts/capturas-manual-web/componer.mjs con datos de ejemplo.
 */
 
-/* ---------- Browser window ---------- */
+/* ---------- Scenes ---------- */
 
-.w-browser {
-  overflow: hidden;
-  margin: 0;
-  border: 1px solid #d3d0c8;
-  border-radius: 16px;
-  background: #fff;
-  box-shadow: 0 30px 60px -30px rgba(21, 21, 21, 0.4);
-}
-.w-bar {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 9px 12px;
-  border-bottom: 1px solid #e6e3dc;
-  background: #f3f1ec;
-}
-.w-bar i {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: #d9d5cc;
-}
-.w-bar span {
-  flex: 1;
-  margin-left: 8px;
-  padding: 4px 10px;
-  overflow: hidden;
-  border-radius: 7px;
-  background: #fff;
-  color: #777;
-  font-size: 10.5px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.w-shot {
+.w-scene {
   display: block;
   width: 100%;
   height: auto;
-  background: #f4f6f9;
+  border-radius: 20px;
+  background: #f4efe7;
+  box-shadow: 0 30px 60px -30px rgba(21, 21, 21, 0.45);
+}
+
+/* Wider image column than the mobile manual: the scenes carry more detail. */
+@media (min-width: 1061px) {
+  .m-chapter-grid {
+    grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+    gap: 56px;
+  }
+  .m-chapter-grid.m-flip {
+    grid-template-columns: minmax(0, 1.18fr) minmax(0, 0.82fr);
+  }
+  .m-chapter-grid .w-shots {
+    position: sticky;
+    top: 104px;
+  }
 }
 
 /* Browser windows with their caption */
@@ -71,8 +55,7 @@
 }
 
 /* Dark band */
-.m-dark .w-browser {
-  border-color: #333;
+.m-dark .w-scene {
   box-shadow: 0 30px 60px -28px rgba(0, 0, 0, 0.9);
 }
 .w-duo {

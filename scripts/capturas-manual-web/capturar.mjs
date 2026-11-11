@@ -1,4 +1,5 @@
-// Saca las capturas del manual web (manual/web/capturas) con datos de ejemplo.
+// Paso 1: saca las pantallas crudas (PNG en alta resolución) en scripts/capturas-manual-web/crudas/.
+// Después, componer.mjs arma con ellas las imágenes del manual web y las del video.
 // Uso, desde la raíz del repositorio:
 //   1. En SalesTrackingWeb: VITE_API_BASE_URL=http://127.0.0.1:5000 npx vite --host 127.0.0.1 --port 4173
 //   2. node scripts/capturas-manual-web/capturar.mjs [nombre...]
@@ -17,7 +18,7 @@ const { chromium } = require("@playwright/test");
 
 const APP = "http://127.0.0.1:4173";
 const API = "http://127.0.0.1:5000";
-const outDir = join(here, "../../manual/web/capturas");
+const outDir = join(here, "crudas");
 const only = process.argv.slice(2);
 mkdirSync(outDir, { recursive: true });
 
@@ -194,7 +195,7 @@ const shots = [
   { name: "carga-masiva", path: "/customers/import" },
   { name: "productividad", path: "/operations/productivity" },
   { name: "embudo", path: "/projects/pipeline" },
-  { name: "informes", path: "/report-studio/generate" },
+  { name: "informes", path: "/report-studio/generate?template=t-1&project=p-1" },
   { name: "usuarios", path: "/admin/users" },
   { name: "soporte", path: "/support" },
 ];
@@ -202,7 +203,7 @@ const shots = [
 const browser = await chromium.launch();
 for (const shot of shots.filter((s) => !only.length || only.includes(s.name))) {
   const [w, h] = shot.size ?? [1440, 900];
-  const context = await browser.newContext({ viewport: { width: w, height: h }, deviceScaleFactor: 1.25, locale: "es-BO", timezoneId: "America/La_Paz" });
+  const context = await browser.newContext({ viewport: { width: w, height: h }, deviceScaleFactor: 2, locale: "es-BO", timezoneId: "America/La_Paz" });
   const page = await context.newPage();
   page.on("pageerror", (e) => console.log("ERROR JS", shot.name, e.message));
 
@@ -212,18 +213,7 @@ for (const shot of shots.filter((s) => !only.length || only.includes(s.name))) {
   await page.waitForLoadState("networkidle");
   await page.waitForTimeout(1200); await page.waitForFunction(() => [...document.querySelectorAll(".leaflet-tile, .leaflet-marker-icon")].filter((t) => t.tagName === "IMG").every((t) => t.complete), null, { timeout: 15000 }).catch(() => console.log("mosaicos lentos"));
   if (shot.run) { await shot.run(page); await page.waitForLoadState("networkidle"); await page.waitForTimeout(1500); await page.waitForFunction(() => [...document.querySelectorAll(".leaflet-tile, .leaflet-marker-icon")].filter((t) => t.tagName === "IMG").every((t) => t.complete), null, { timeout: 15000 }).catch(() => {}); }
-  const png = await page.screenshot();
-  // PNG → WebP con el propio navegador, sin dependencias extra.
-  const webp = await page.evaluate(async (b64) => {
-    const img = new Image();
-    img.src = "data:image/png;base64," + b64;
-    await img.decode();
-    const c = document.createElement("canvas");
-    c.width = img.width; c.height = img.height;
-    c.getContext("2d").drawImage(img, 0, 0);
-    return c.toDataURL("image/webp", 0.86).split(",")[1];
-  }, png.toString("base64"));
-  writeFileSync(join(outDir, `${shot.name}.webp`), Buffer.from(webp, "base64"));
+  writeFileSync(join(outDir, `${shot.name}.png`), await page.screenshot());
   console.log("OK", shot.name);
   await context.close();
 }
