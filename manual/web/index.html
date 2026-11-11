@@ -1,0 +1,929 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Manual de usuario de la plataforma web UrbanTrackCRM: contactos, seguimientos, agenda, equipo en vivo, rutas, entregas, informes y configuración, paso a paso."
+    />
+    <meta name="theme-color" content="#ff6b17" />
+    <meta property="og:title" content="Manual de usuario · Plataforma web UrbanTrackCRM" />
+    <meta
+      property="og:description"
+      content="Aprende a usar UrbanTrackCRM desde la oficina: cartera, agenda, equipo en vivo, rutas, entregas e informes."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://urbantrack.io/manual/web/" />
+    <meta property="og:image" content="https://urbantrack.io/assets/og-image.jpg" />
+    <meta property="og:locale" content="es_LA" />
+    <link rel="canonical" href="https://urbantrack.io/manual/web/" />
+    <title>Manual de la plataforma web | UrbanTrack</title>
+    <link rel="icon" type="image/png" href="../../assets/logo-192.png" />
+    <link rel="apple-touch-icon" href="../../assets/logo-192.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="../manual.css" />
+    <link rel="stylesheet" href="web.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Ir al contenido</a>
+
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="../../" aria-label="UrbanTrackCRM, ir al sitio">
+          <img src="../../assets/logo-192.png" alt="" width="44" height="44" />
+          <span>UrbanTrackCRM</span>
+        </a>
+        <nav class="nav-links" id="nav-links" aria-label="Secciones del manual">
+          <a href="#empezar">Empezar</a>
+          <a href="#contactos">Comercial</a>
+          <a href="#equipo">Campo</a>
+          <a href="#analisis">Análisis</a>
+          <a href="#configuracion">Configuración</a>
+          <a href="#ayuda">Ayuda</a>
+        </nav>
+        <div class="nav-actions">
+          <a class="button button-small button-dark" href="https://app.urbantrack.io/" target="_blank" rel="noopener"
+            >Ir a la app <span aria-hidden="true">↗</span></a
+          >
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="nav-links"
+            aria-label="Abrir menú"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <!-- Hero -->
+      <section class="m-hero">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <div class="container m-hero-grid">
+          <div class="m-hero-copy">
+            <nav class="w-switch" aria-label="Elegir manual">
+              <a href="../">App móvil</a>
+              <a href="./" aria-current="page">Plataforma web</a>
+            </nav>
+            <div class="eyebrow"><span></span> Manual de usuario · Plataforma web</div>
+            <h1>Tu operación, <em>desde la oficina.</em></h1>
+            <p>
+              Todo lo que necesitas para dirigir a tu equipo desde el
+              navegador: ordenar tu cartera, agendar seguimientos, ver al
+              personal de campo en vivo, planificar rutas, controlar entregas y
+              sacar informes.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#empezar"
+                >Empezar el recorrido <span aria-hidden="true">→</span></a
+              >
+              <a class="text-link" href="#problemas"
+                >Problemas frecuentes <span aria-hidden="true">→</span></a
+              >
+            </div>
+            <ul class="m-hero-facts" aria-label="Datos de la plataforma">
+              <li><b>Cualquier navegador</b> sin instalar nada</li>
+              <li><b>En vivo</b> tu equipo en el mapa</li>
+              <li><b>Excel y PDF</b> carga, exporta e informa</li>
+            </ul>
+          </div>
+          <div class="m-hero-stage">
+            <div class="stage-ring ring-one" aria-hidden="true"></div>
+            <div class="stage-ring ring-two" aria-hidden="true"></div>
+            <figure class="w-browser" style="position: relative; z-index: 2; width: 100%" aria-label="Ilustración de la pantalla Resumen">
+              <div class="w-bar" aria-hidden="true"><i></i><i></i><i></i><span>app.urbantrack.io</span></div>
+              <div class="w-app" aria-hidden="true">
+                <div class="w-side" data-on="Resumen"></div>
+                <div class="w-main">
+                  <div class="w-head"><strong>Buenos días, Ana</strong><span class="w-btn">Ctrl K</span></div>
+                  <div class="w-kpis">
+                    <div><b>128</b><small>Contactos activos</small></div>
+                    <div><b>34</b><small>Seguimientos abiertos</small></div>
+                    <div><b>6</b><small>Entregas pendientes</small></div>
+                    <div><b>9</b><small>Recordatorios de hoy</small></div>
+                  </div>
+                  <div class="w-split">
+                    <div class="w-map"><i style="left: 22%; top: 30%"></i><i class="g" style="left: 55%; top: 48%"></i><i style="left: 74%; top: 22%"></i><i class="g" style="left: 38%; top: 70%"></i></div>
+                    <div class="w-panel"><b>Próximos seguimientos</b><p>Llamar a Constructora Sur</p><p>Enviar cotización</p><p>Visita a obra Norte</p></div>
+                  </div>
+                </div>
+              </div>
+            </figure>
+            <div class="m-float m-float-top" aria-hidden="true">
+              <i class="m-dot m-dot-green"></i> 5 trabajando ahora
+            </div>
+            <div class="m-float m-float-bottom" aria-hidden="true">
+              <i class="m-dot"></i> 2 entregas urgentes
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Day route -->
+      <section class="m-day" aria-labelledby="dia-titulo">
+        <div class="container">
+          <p class="section-index" id="dia-titulo">Un día en la plataforma</p>
+          <ol class="m-day-steps">
+            <li>
+              <a href="#ingresar"><b>Ingresa</b><span>Con tu correo, desde cualquier navegador.</span></a>
+            </li>
+            <li>
+              <a href="#resumen"><b>Mira el Resumen</b><span>Indicadores, pendientes y entregas urgentes.</span></a>
+            </li>
+            <li>
+              <a href="#equipo"><b>Sigue a tu equipo</b><span>Quién trabaja, dónde y qué visita.</span></a>
+            </li>
+            <li>
+              <a href="#contactos"><b>Gestiona tu cartera</b><span>Contactos, seguimientos y agenda.</span></a>
+            </li>
+            <li>
+              <a href="#analisis"><b>Analiza</b><span>Productividad, embudo e informes PDF.</span></a>
+            </li>
+          </ol>
+          <p class="m-terms">
+            <strong>Los nombres se adaptan a tu empresa.</strong> Según tu
+            rubro, la plataforma puede llamar a tus clientes <em>Contactos</em>
+            o <em>Clientes</em>, y a tus proyectos <em>Seguimientos</em> u
+            <em>Obras</em>. Este manual usa los nombres generales. Además, solo
+            verás las secciones que tu empresa tiene activas y que tu rol
+            permite usar.
+          </p>
+        </div>
+      </section>
+
+      <!-- 01 Navigation -->
+      <section class="m-chapter" id="empezar">
+        <div class="container m-chapter-grid">
+          <div class="m-copy">
+            <p class="section-index">01 · Primeros pasos</p>
+            <h2>Todo en el <em>menú lateral.</em></h2>
+            <p class="m-lead">
+              El menú de la izquierda agrupa las secciones por tema. Arriba ves
+              en qué página estás y, a la derecha, tu perfil.
+            </p>
+            <dl class="m-tabs">
+              <div><dt>Inicio</dt><dd><b>Resumen</b> del día y <b>Agenda</b> del equipo.</dd></div>
+              <div><dt>Comercial</dt><dd><b>Contactos</b>, <b>Seguimientos</b> y <b>Catálogo</b> de productos.</dd></div>
+              <div><dt>Campo</dt><dd><b>Equipo en vivo</b>, <b>Rutas</b>, <b>Historial</b> y <b>Entregas</b>.</dd></div>
+              <div><dt>Análisis</dt><dd><b>Productividad</b>, <b>Embudo</b> e <b>Informes</b> PDF.</dd></div>
+              <div><dt>Ajustes</dt><dd><b>Configuración</b> de usuarios, sucursales y la operación.</dd></div>
+            </dl>
+            <h3>Atajos útiles</h3>
+            <ul class="m-list">
+              <li><b>Búsqueda rápida:</b> pulsa <kbd>Ctrl</kbd> + <kbd>K</kbd> y escribe el nombre de una página o de un contacto para ir directo.</li>
+              <li><b>Contraer menú:</b> deja solo los íconos para ganar espacio en pantallas pequeñas.</li>
+              <li><b>Tu perfil</b> (arriba a la derecha): tus roles, <b>Ayuda y soporte</b> y <b>Cerrar sesión</b>.</li>
+              <li><b>En el celular</b>, la plataforma muestra una barra inferior con los accesos principales y <b>Más</b>.</li>
+            </ul>
+          </div>
+          <div class="w-shots">
+            <figure>
+              <div class="w-browser" aria-hidden="true">
+                <div class="w-bar"><i></i><i></i><i></i><span>app.urbantrack.io</span></div>
+                <div class="w-app">
+                  <div class="w-side" data-on="Resumen"></div>
+                  <div class="w-main">
+                    <div class="w-head"><strong>Búsqueda rápida</strong><span class="w-btn">Esc</span></div>
+                    <div class="w-row"><span class="w-input">Busca una página o un contacto…</span></div>
+                    <div class="w-panel"><b>Páginas</b><p>Agenda</p><p>Contactos</p><p>Equipo en vivo</p></div>
+                    <div class="w-panel"><b>Contactos</b><p>Constructora Sur · Juan Pérez</p><p>Ferretería Central</p></div>
+                  </div>
+                </div>
+              </div>
+              <figcaption><b>Ctrl + K</b> · Ve a cualquier página o contacto.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02 Sign in -->
+      <section class="m-chapter m-alt" id="ingresar">
+        <div class="container m-chapter-grid m-flip">
+          <div class="m-copy">
+            <p class="section-index">02 · Acceso</p>
+            <h2>Entra desde <em>cualquier navegador.</em></h2>
+            <p class="m-lead">
+              Abre <b>app.urbantrack.io</b> en Chrome, Edge, Safari o Firefox.
+              Usa la misma cuenta que en la app móvil.
+            </p>
+            <ol class="m-steps">
+              <li>Escribe tu <b>correo electrónico</b> y tu <b>contraseña</b>. Usa el ojo para ver lo que escribiste.</li>
+              <li>Haz clic en <span class="m-ui m-ui-orange">Iniciar sesión</span>.</li>
+            </ol>
+            <h3>¿Te invitaron por correo?</h3>
+            <ol class="m-steps">
+              <li>Abre el enlace de la invitación que te llegó.</li>
+              <li>Completa tu <b>nombre completo</b> y crea tu <b>contraseña</b>.</li>
+              <li>Haz clic en <span class="m-ui">Aceptar invitación</span> y luego inicia sesión.</li>
+            </ol>
+            <h3>¿Olvidaste tu contraseña?</h3>
+            <ol class="m-steps">
+              <li>En el ingreso, haz clic en <span class="m-ui">¿Olvidaste tu contraseña?</span> y escribe tu correo.</li>
+              <li>Abre el enlace del correo, escribe la <b>nueva contraseña</b> y confírmala.</li>
+            </ol>
+            <div class="m-note m-note-ok">
+              <strong>¿Tu empresa aún no usa UrbanTrack?</strong>
+              Desde el ingreso, <b>Prueba gratis 30 días</b> registra tu empresa
+              y te envía un correo para activar tu cuenta de administrador.
+            </div>
+          </div>
+          <div class="w-shots">
+            <figure>
+              <div class="w-browser" aria-hidden="true">
+                <div class="w-bar"><i></i><i></i><i></i><span>app.urbantrack.io/login</span></div>
+                <div class="w-main" style="min-height: 280px; place-content: center; justify-items: center; background: #fff">
+                  <strong style="font: 800 16px Manrope, system-ui, sans-serif">Inicia sesión</strong>
+                  <span class="w-input" style="width: 220px; flex: none">Correo electrónico</span>
+                  <span class="w-input" style="width: 220px; flex: none">Contraseña</span>
+                  <span class="w-btn pri" style="width: 220px; text-align: center">Iniciar sesión</span>
+                  <span style="color: var(--orange-dark); font-weight: 700">¿Olvidaste tu contraseña?</span>
+                  <span style="color: #888">Prueba gratis 30 días</span>
+                </div>
+              </div>
+              <figcaption><b>Ingreso</b> · Correo, contraseña y recuperación.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 Dashboard -->
+      <section class="m-chapter" id="resumen">
+        <div class="container m-chapter-grid">
+          <div class="m-copy">
+            <p class="section-index">03 · Al empezar el día</p>
+            <h2>El <em>Resumen.</em></h2>
+            <p class="m-lead">
+              Es la primera pantalla: cómo va el trabajo del equipo de un
+              vistazo, con enlaces a lo que necesita atención.
+            </p>
+            <ul class="m-list">
+              <li><b>Indicadores:</b> contactos activos, seguimientos abiertos, entregas pendientes, vencidas y del mes, y recordatorios de hoy.</li>
+              <li><b>Mapa de ubicaciones:</b> los seguimientos que tienen ubicación registrada.</li>
+              <li><b>Actividad reciente:</b> lo último que hizo el equipo. Usa <b>Ver toda</b> para el detalle.</li>
+              <li><b>Próximos seguimientos</b> y <b>Entregas urgentes</b>, con lo vencido marcado.</li>
+              <li><b>Avance de seguimientos:</b> en qué porcentaje va cada uno.</li>
+            </ul>
+          </div>
+          <div class="w-shots">
+            <figure>
+              <div class="w-browser" aria-hidden="true">
+                <div class="w-bar"><i></i><i></i><i></i><span>app.urbantrack.io</span></div>
+                <div class="w-app">
+                  <div class="w-side" data-on="Resumen"></div>
+                  <div class="w-main">
+                    <div class="w-head"><strong>Indicadores operacionales</strong></div>
+                    <div class="w-kpis">
+                      <div><b>128</b><small>Contactos activos</small></div>
+                      <div><b>34</b><small>Seguimientos abiertos</small></div>
+                      <div><b>2</b><small>Entregas vencidas</small></div>
+                      <div><b>9</b><small>Recordatorios de hoy</small></div>
+                    </div>
+                    <div class="w-split">
+                      <div class="w-panel"><b>Actividad reciente</b><p>Visita finalizada · Obra Norte</p><p>Nota agregada · Ferretería Central</p><p>Recordatorio completado</p></div>
+                      <div class="w-panel"><b>Entregas urgentes</b><p>Edificio Mirador · <span style="color: #dc3d4b">Vencida</span></p><p>Casa Los Pinos · Mañana</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <figcaption><b>Resumen</b> · El estado del equipo al abrir la plataforma.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04 Contacts -->
+      <section class="m-chapter m-alt" id="contactos">
+        <div class="container m-chapter-grid m-flip">
+          <div class="m-copy">
+            <p class="section-index">04 · Comercial</p>
+            <h2>Tu cartera de <em>contactos.</em></h2>
+            <p class="m-lead">
+              Todas las personas y organizaciones que atiende tu equipo, con su
+              estado, responsable y todo lo que pasó con cada una.
+            </p>
+            <ul class="m-list">
+              <li><b>Vistas:</b> Todos, Prospectos o Activos.</li>
+              <li><b>Busca</b> por nombre, empresa o correo, y filtra por estado o por vendedor.</li>
+              <li><b>Contacta</b> por WhatsApp o correo directamente desde la lista.</li>
+              <li><b>Cambia el estado</b> desde la lista. Si te equivocas, usa <b>Deshacer</b> en el aviso.</li>
+              <li><b>Abre la ficha CRM</b> para ver datos comerciales, último y próximo contacto, dirección y ubicación en el mapa.</li>
+              <li><b>En la ficha</b> agrega notas y recordatorios, revisa la <b>Actividad reciente</b> y descarga los comprobantes en ZIP.</li>
+            </ul>
+            <h3>Registrar un contacto</h3>
+            <ol class="m-steps">
+              <li>Haz clic en <span class="m-ui m-ui-orange">+ Nuevo contacto</span>.</li>
+              <li>Completa los <b>datos del cliente</b>, su ubicación y el <b>seguimiento inicial</b> (estado y próximo paso).</li>
+              <li>Haz clic en <span class="m-ui">Guardar cliente</span>.</li>
+            </ol>
+          </div>
+          <div class="w-shots">
+            <figure>
+              <div class="w-browser" aria-hidden="true">
+                <div class="w-bar"><i></i><i></i><i></i><span>app.urbantrack.io/customers</span></div>
+                <div class="w-app">
+                  <div class="w-side" data-on="Contactos"></div>
+                  <div class="w-main">
+                    <div class="w-head"><strong>Contactos</strong><span><span class="w-btn">⋯</span> <span class="w-btn pri">+ Nuevo contacto</span></span></div>
+                    <div class="w-row"><span class="w-chip on">Todos</span><span class="w-chip">Prospectos</span><span class="w-chip">Activos</span></div>
+                    <div class="w-row"><span class="w-input">Buscar por nombre, empresa o correo</span><span class="w-btn">Todos los estados</span></div>
+                    <div class="w-table">
+                      <div><span>Cliente</span><span>Contacto</span><span>Estado</span><span>Responsable</span></div>
+                      <div><span>Constructora Sur</span><span>Juan Pérez</span><em>Activo</em><span>Ana R.</span></div>
+                      <div><span>Ferretería Central</span><span>María Gil</span><em class="b">Prospecto</em><span>Luis M.</span></div>
+                      <div><span>Inmobiliaria Alto</span><span>Carlos Vaca</span><em class="o">Contactado</em><span>Ana R.</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <figcaption><b>Contactos</b> · Vistas, búsqueda, filtros y acciones.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05 Projects -->
+      <section class="m-chapter" id="seguimientos">
+        <div class="container m-chapter-grid">
+          <div class="m-copy">
+            <p class="section-index">05 · Comercial</p>
+            <h2>Cada seguimiento, <em>de principio a fin.</em></h2>
+            <p class="m-lead">
+              Lo que tu equipo gestiona para cada contacto: una obra, una
+              oportunidad o un proyecto, con su avance, monto, archivos y
+              visitas.
+            </p>
+            <ul class="m-list">
+              <li><b>Vistas:</b> Todos, Activos o Completados. Busca por nombre o cliente y filtra por estado o responsable.</li>
+              <li><b>Asigna en bloque:</b> marca varios con la casilla y usa <b>Asignar responsable</b>.</li>
+              <li><b>La ficha</b> tiene pestañas: <b>Resumen</b> (datos, ubicación y avance), <b>Actividad</b> (visitas, notas y recordatorios), <b>Archivos</b> y <b>Entrega</b>.</li>
+              <li><b>Archivos:</b> sube fotos o documentos PDF, Excel y Word, elige una <b>portada</b> y descárgalos en ZIP. También ves las fotos de las visitas y los comprobantes de entregas.</li>
+              <li><b>Ver embudo</b> te lleva al reporte de avance de todos los seguimientos.</li>
+            </ul>
+            <h3>Registrar un seguimiento</h3>
+            <ol class="m-steps">
+              <li>Haz clic en <span class="m-ui m-ui-orange">+ Nuevo seguimiento</span>.</li>
+              <li>Completa nombre, cliente, responsable, monto estimado, fechas y ubicación.</li>
+              <li>Haz clic en <span class="m-ui">Guardar proyecto</span>.</li>
+            </ol>
+            <div class="m-note m-note-warn">
+              <strong>Posibles duplicados.</strong>
+              Si dos registros tienen el mismo nombre o están a menos de 100
+              metros, verás un aviso arriba de la lista. Ábrelo, elige quién
+              queda a cargo y haz clic en <b>Confirmar</b>.
+            </div>
+          </div>
+          <div class="w-shots">
+            <figure>
+              <div class="w-browser" aria-hidden="true">
+                <div class="w-bar"><i></i><i></i><i></i><span>app.urbantrack.io/projects</span></div>
+                <div class="w-app">
+                  <div class="w-side" data-on="Seguimientos"></div>
+                  <div class="w-main">
+                    <div class="w-head"><strong>Edificio Mirador</strong><em class="w-chip on" style="font-style: normal">En progreso</em></div>
+                    <div class="w-row"><span class="w-chip on">Resumen</span><span class="w-chip">Actividad</span><span class="w-chip">Archivos</span><span class="w-chip">Entrega</span></div>
+                    <div class="w-split">
+                      <div class="w-panel"><b>Datos principales</b><p>Cliente · Constructora Sur</p><p>Monto estimado · Bs 480.000</p><p>Cierre estimado · 30/03</p></div>
+                      <div class="w-map"><i style="left: 45%; top: 38%"></i></div>
+                    </div>
+                    <div class="w-panel"><b>Avance del proyecto · 65%</b><div class="w-bars"><div><span>Avance</span><s style="width: 65%"></s></div></div></div>
+                  </div>
+                </div>
+              </div>
+              <figcaption><b>Ficha del seguimiento</b> · Resumen, actividad, archivos y entrega.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- 06 Agenda -->
+      <section class="m-chapter m-alt" id="agenda">
+        <div class="container m-chapter-grid m-flip">
+          <div class="m-copy">
+            <p class="section-index">06 · Que nada se escape</p>
+            <h2>La agenda <em>del equipo.</em></h2>
+            <p class="m-lead">
+              Todos los recordatorios del mes en un calendario, para ver quién
+              tiene qué pendiente y cuándo.
+            </p>
+            <ul class="m-list">
+              <li><b>Cambia de mes</b> con las flechas y filtra por responsable o por Pendientes, Completados o Todos.</li>
+              <li><b>Haz clic en un recordatorio</b> para ver la fecha, el responsable y el estado.</li>
+              <li><b>Márcalo como completado</b> o usa <b>Reprogramar recordatorio</b> para elegir una nueva fecha y hora.</li>
+            </ul>
+            <h3>Programar un recordatorio</h3>
+            <ol class="m-steps">
+              <li>Haz clic en <span class="m-ui m-ui-orange">Programar recordatorio</span> o en un día del calendario.</li>
+              <li>Elige el <b>contacto</b>, el <b>responsable</b> y la <b>fecha y hora</b>, y describe el pendiente.</li>
+              <li>Haz clic en <span class="m-ui">Programar</span>. El responsable lo verá también en su app.</li>
+            </ol>
+          </div>
+          <div class="w-shots">
+            <figure>
+              <div class="w-browser" aria-hidden="true">
+                <div class="w-bar"><i></i><i></i><i></i><span>app.urbantrack.io/reminders</span></div>
+                <div class="w-app">
+                  <div class="w-side" data-on="Agenda"></div>
+                  <div class="w-main">
+                    <div class="w-head"><strong>‹ Noviembre ›</strong><span class="w-btn pri">Programar recordatorio</span></div>
+                    <div class="w-cal">
+                      <span class="h">Lun</span><span class="h">Mar</span><span class="h">Mié</span><span class="h">Jue</span><span class="h">Vie</span><span class="h">Sáb</span><span class="h">Dom</span>
+                      <span>3<u class="d">Llamar</u></span><span>4</span><span>5<u>Cotizar</u></span><span>6</span><span>7<u>Visita</u></span><span>8</span><span>9</span>
+                      <span>10<u>Reunión</u></span><span>11</span><span>12<u>Seguir</u></span><span>13</span><span>14<u>Llamar</u></span><span>15</span><span>16</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <figcaption><b>Agenda</b> · Recordatorios del mes de todo el equipo.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- 07 Live team (dark band) -->
+      <section class="m-chapter m-dark" id="equipo">
+        <div class="container">
+          <div class="m-wide-head">
+            <div>
+              <p class="section-index light">07 · Campo</p>
+              <h2>Tu equipo, <em>en vivo.</em></h2>
+            </div>
+            <p class="m-lead">
+              Mientras el personal tiene la jornada abierta en la app móvil, aquí
+              ves dónde está, qué visita y si algo falla. Se actualiza solo.
+            </p>
+          </div>
+          <div class="w-duo">
+            <div>
+              <div class="w-browser" aria-hidden="true">
+                <div class="w-bar"><i></i><i></i><i></i><span>app.urbantrack.io/operations/dashboard</span></div>
+                <div class="w-app">
+                  <div class="w-side" data-on="Equipo en vivo"></div>
+                  <div class="w-main">
+                    <div class="w-kpis">
+                      <div><b>5</b><small>Trabajando ahora</small></div>
+                      <div><b>2</b><small>Finalizó jornada</small></div>
+                      <div><b>9</b><small>Total equipo</small></div>
+                      <div><b>1</b><small>Incidencias</small></div>
+                    </div>
+                    <div class="w-map"><i class="g" style="left: 18%; top: 30%"></i><i class="g" style="left: 46%; top: 56%"></i><i class="g" style="left: 70%; top: 26%"></i><i class="r" style="left: 82%; top: 66%"></i></div>
+                  </div>
+                </div>
+              </div>
+              <h3>Estado del equipo</h3>
+              <ul class="m-list">
+                <li><b>Resumen operativo:</b> cuántos están trabajando, cuántos finalizaron y cuántos tienen ubicación.</li>
+                <li><b>Responsables de hoy:</b> filtra por Todos, Trabajando, Finalizó o Sin actividad, o elige a una persona.</li>
+                <li><b>Ubicación del equipo:</b> la última posición de cada jornada activa en el mapa.</li>
+                <li><b>Incidencias:</b> jornadas sin cerrar, sin ubicación o con señal atrasada, y celulares que reportan errores.</li>
+              </ul>
+            </div>
+            <div>
+              <div class="w-browser" aria-hidden="true">
+                <div class="w-bar"><i></i><i></i><i></i><span>app.urbantrack.io/operations/active</span></div>
+                <div class="w-app">
+                  <div class="w-side" data-on="Equipo en vivo"></div>
+                  <div class="w-main">
+                    <div class="w-head"><strong>Actividad en curso</strong></div>
+                    <div class="w-table">
+                      <div><span>Responsable</span><span>Inicio</span><span>Visita</span><span>Últ. act.</span></div>
+                      <div><span>Ana R.</span><span>08:02</span><em>Obra Norte</em><span>hace 2 min</span></div>
+                      <div><span>Luis M.</span><span>08:15</span><em class="o">Sin visita</em><span>hace 5 min</span></div>
+                      <div><span>Pedro S.</span><span>08:40</span><em>Ferretería C.</em><span>hace 1 min</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3>Visitas en curso</h3>
+              <ul class="m-list">
+                <li><b>Quién tiene jornada activa</b>, a qué hora empezó y su última ubicación.</li>
+                <li><b>Qué está visitando ahora</b> y cuándo se actualizó por última vez.</li>
+              </ul>
+            </div>
+          </div>
+          <p class="m-dark-note">
+            <strong>La ubicación solo existe con la jornada abierta.</strong>
+            Si alguien no aparece en el mapa, revisa en <b>Incidencias</b> si su
+            celular dejó de reportar y pídele usar <b>Probar GPS</b> en la app.
+          </p>
+        </div>
+      </section>
+
+      <!-- 08 Routes -->
+      <section class="m-chapter" id="rutas">
+        <div class="container m-chapter-grid">
+          <div class="m-copy">
+            <p class="section-index">08 · Campo</p>
+            <h2>Planifica <em>las rutas.</em></h2>
+            <p class="m-lead">
+              Arma las paradas de cada responsable por día. El personal de
+              campo ve su ruta planificada.
+            </p>
+            <ol class="m-steps">
+              <li>En <b>Rutas</b>, elige el <b>responsable</b> y el <b>día</b>.</li>
+              <li>Busca un contacto o seguimiento y agrégalo como parada.</li>
+              <li>Ordena con <b>Subir</b> y <b>Bajar</b>, o usa <span class="m-ui">Ordenar por cercanía</span>. La primera parada se mantiene como inicio.</li>
+              <li>Haz clic en <span class="m-ui m-ui-orange">Guardar ruta</span>.</li>
+            </ol>
+            <div class="m-note m-note-warn">
+              <strong>Guarda antes de cambiar de día o de persona.</strong>
+              Si tienes cambios sin guardar, la plataforma te pregunta si
+              quieres descartarlos.
+            </div>
+          </div>
+          <div class="w-shots">
+            <figure>
+              <div class="w-browser" aria-hidden="true">
+                <div class="w-bar"><i></i><i></i><i></i><span>app.urbantrack.io/operations/routes</span></div>
+                <div class="w-app">
+                  <div class="w-side" data-on="Rutas"></div>
+                  <div class="w-main">
+                    <div class="w-head"><strong>Rutas</strong><span class="w-btn pri">Guardar ruta</span></div>
+                    <div class="w-split">
+                      <div class="w-panel"><b>Paradas</b><p>1 · Constructora Sur</p><p>2 · Obra Norte</p><p>3 · Ferretería Central</p><p><span class="w-btn">Ordenar por cercanía</span></p></div>
+                      <div class="w-map">
+                        <svg viewBox="0 0 100 100" preserveAspectRatio="none"><polyline points="20,30 50,60 78,28" fill="none" stroke="#ff6b17" stroke-width="2" stroke-dasharray="4 3" vector-effect="non-scaling-stroke" /></svg>
+                        <i class="g" style="left: calc(20% - 6px); top: calc(30% - 6px)"></i><i style="left: calc(50% - 6px); top: calc(60% - 6px)"></i><i style="left: calc(78% - 6px); top: calc(28% - 6px)"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <figcaption><b>Rutas</b> · Paradas del día y su orden en el mapa.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- 09 History -->
+      <section class="m-chapter m-alt" id="historial">
+        <div class="container m-chapter-grid m-flip">
+          <div class="m-copy">
+            <p class="section-index">09 · Campo</p>
+            <h2>Lo que pasó, <em>con hora y lugar.</em></h2>
+            <p class="m-lead">
+              El Historial tiene dos pestañas: los recorridos y jornadas de cada
+              persona, y las actividades de todo el equipo.
+            </p>
+            <h3>Recorridos y jornadas</h3>
+            <ol class="m-steps">
+              <li>Elige un <b>responsable</b> y un rango (por ejemplo <b>Ayer</b> o <b>Últimos 7 días</b>).</li>
+              <li>Revisa cada día: horario, tiempo trabajado, tramos y ubicaciones registradas.</li>
+              <li>Abre un día para ver la <b>Ruta del día</b> en el mapa y cada visita con su check-in, check-out, permanencia, resultado y notas.</li>
+            </ol>
+            <h3>Actividades</h3>
+            <p>
+              Todo lo que se registró en la plataforma y en la app (notas,
+              visitas, recordatorios, cambios de estado), filtrable por fechas,
+              responsable y tipo de actividad. Usa <b>Cargar más actividades</b>
+              para ir más atrás.
+            </p>
+          </div>
+          <div class="w-shots">
+            <figure>
+              <div class="w-browser" aria-hidden="true">
+                <div class="w-bar"><i></i><i></i><i></i><span>app.urbantrack.io/operations/history</span></div>
+                <div class="w-app">
+                  <div class="w-side" data-on="Historial"></div>
+                  <div class="w-main">
+                    <div class="w-row"><span class="w-chip on">Recorridos y jornadas</span><span class="w-chip">Actividades</span></div>
+                    <div class="w-row"><span class="w-btn">Ana R.</span><span class="w-chip">Ayer</span><span class="w-chip on">Últimos 7 días</span></div>
+                    <div class="w-split">
+                      <div class="w-panel"><b>Detalle del día</b><p>Horario · 08:02 – 17:45</p><p>Trabajado · 9h 43m</p><p>Obra Norte · 45 min</p><p>Ferretería C. · 20 min</p></div>
+                      <div class="w-map">
+                        <svg viewBox="0 0 100 100" preserveAspectRatio="none"><polyline points="15,70 35,40 55,55 80,25" fill="none" stroke="#496ee8" stroke-width="2" vector-effect="non-scaling-stroke" /></svg>
+                        <i class="g" style="left: calc(15% - 6px); top: calc(70% - 6px)"></i><i class="v" style="left: calc(35% - 6px); top: calc(40% - 6px)"></i><i class="v" style="left: calc(55% - 6px); top: calc(55% - 6px)"></i><i class="r" style="left: calc(80% - 6px); top: calc(25% - 6px)"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <figcaption><b>Historial</b> · Jornadas, recorrido y visitas de cada día.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10 Deliveries -->
+      <section class="m-chapter" id="entregas">
+        <div class="container m-chapter-grid">
+          <div class="m-copy">
+            <p class="section-index">10 · Material en obra</p>
+            <h2>Entregas, <em>de la promesa a la recepción.</em></h2>
+            <p class="m-lead">
+              Si tu empresa usa el módulo de entregas, aquí registras lo
+              comprometido para cada seguimiento y controlas lo que llegó.
+            </p>
+            <ul class="m-list">
+              <li><b>Filtra</b> por estado y por sucursal. Cada entrega muestra fecha comprometida, responsable, estado y cumplimiento (A tiempo o Vencida).</li>
+              <li><b>En el detalle</b> compara lo comprometido con lo recibido y lo pendiente de cada producto.</li>
+              <li><b>Cambia el estado</b> con <b>Aplicar estado</b> solo cuando corresponda al avance real.</li>
+              <li><b>Comprobantes:</b> las fotos y PDF de cada recepción, para ver o descargar en ZIP.</li>
+            </ul>
+            <h3>Crear una entrega</h3>
+            <ol class="m-steps">
+              <li>Haz clic en <span class="m-ui m-ui-orange">Nueva entrega</span>.</li>
+              <li>Elige el seguimiento, la sucursal de origen y la fecha comprometida, y agrega observaciones si hace falta.</li>
+              <li>Agrega los productos con su cantidad y haz clic en <span class="m-ui">Guardar entrega</span>.</li>
+            </ol>
+            <h3>Registrar una recepción</h3>
+            <ol class="m-steps">
+              <li>Abre la entrega y haz clic en <span class="m-ui">Registrar recepción</span>.</li>
+              <li>Indica qué cantidades llegaron en este momento y adjunta hasta 10 fotos o PDF.</li>
+              <li>Haz clic en <span class="m-ui m-ui-orange">Confirmar recepción</span>.</li>
+            </ol>
+          </div>
+          <div class="w-shots">
+            <figure>
+              <div class="w-browser" aria-hidden="true">
+                <div class="w-bar"><i></i><i></i><i></i><span>app.urbantrack.io/deliveries</span></div>
+                <div class="w-app">
+                  <div class="w-side" data-on="Entregas"></div>
+                  <div class="w-main">
+                    <div class="w-head"><strong>Detalle de entrega</strong><span class="w-btn pri">Registrar recepción</span></div>
+                    <div class="w-panel"><b>Avance de recepción · 60%</b><div class="w-bars"><div><span>Recibido</span><s style="width: 60%"></s></div></div></div>
+                    <div class="w-table">
+                      <div><span>Producto</span><span>Comprometido</span><span>Recibido</span><span>Pendiente</span></div>
+                      <div><span>Cemento 50 kg</span><span>200</span><span>120</span><em class="o">80</em></div>
+                      <div><span>Fierro 12 mm</span><span>50</span><span>50</span><em>0</em></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <figcaption><b>Entrega</b> · Comprometido, recibido y pendiente.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- 11 Catalog, imports and exports -->
+      <section class="m-chapter m-alt" id="carga-masiva">
+        <div class="container m-chapter-grid m-flip">
+          <div class="m-copy">
+            <p class="section-index">11 · Datos en volumen</p>
+            <h2>Catálogo, carga masiva <em>y Excel.</em></h2>
+            <p class="m-lead">
+              Sube tu base desde Excel en lugar de cargarla uno por uno, y
+              exporta tus listados cuando los necesites.
+            </p>
+            <ul class="m-list">
+              <li><b>Catálogo:</b> en las pestañas <b>Productos</b> y <b>Unidades</b> creas, editas y desactivas lo que usan las entregas. Una unidad puede <b>permitir cantidades decimales</b>.</li>
+              <li><b>Exportar:</b> en el menú <span class="m-ui">⋯</span> de Contactos o Seguimientos elige <b>Exportar</b>, marca las columnas y haz clic en <b>Exportar Excel</b>. Se exportan los registros con los filtros aplicados.</li>
+            </ul>
+            <h3>Carga masiva desde Excel</h3>
+            <ol class="m-steps">
+              <li>En el menú <span class="m-ui">⋯</span> del listado elige <b>Carga masiva</b>. Si no tienes el formato, usa <b>Descargar plantilla</b>.</li>
+              <li><b>Sube tu Excel</b> (XLSX) arrastrándolo o con <b>Seleccionar archivo</b>.</li>
+              <li><b>Relaciona columnas:</b> revisa a qué campo va cada columna o elige <b>No importar</b>.</li>
+              <li><b>Revisa y carga:</b> corrige las filas con error o advertencia directamente en la tabla y haz clic en <b>Cargar</b>.</li>
+            </ol>
+            <div class="m-note m-note-ok">
+              <strong>Nada se pierde.</strong>
+              Al terminar verás cuántos registros se cargaron, cuántos se
+              omitieron y cuáles tuvieron errores. Usa <b>Descargar errores</b>
+              para corregirlos y volver a cargarlos.
+            </div>
+          </div>
+          <div class="w-shots">
+            <figure>
+              <div class="w-browser" aria-hidden="true">
+                <div class="w-bar"><i></i><i></i><i></i><span>app.urbantrack.io/customers/import</span></div>
+                <div class="w-app">
+                  <div class="w-side" data-on="Contactos"></div>
+                  <div class="w-main">
+                    <div class="w-head"><strong>Carga masiva de contactos</strong><span class="w-btn">Descargar plantilla</span></div>
+                    <div class="w-wizard"><span class="on">1 · Sube tu Excel</span><span>2 · Relaciona columnas</span><span>3 · Revisa y carga</span></div>
+                    <div class="w-drop"><b>Arrastra tu Excel aquí</b><span>o selecciona un archivo desde tu equipo</span><span class="w-btn">Seleccionar archivo</span><small>Formato permitido: XLSX</small></div>
+                  </div>
+                </div>
+              </div>
+              <figcaption><b>Carga masiva</b> · Tres pasos con validación por fila.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- 12 Analysis -->
+      <section class="m-chapter" id="analisis">
+        <div class="container">
+          <div class="m-wide-head">
+            <div>
+              <p class="section-index">12 · Análisis</p>
+              <h2>Mide, compara <em>e informa.</em></h2>
+            </div>
+            <p class="m-lead">
+              Tres herramientas para saber cómo va el equipo y entregar
+              documentos con la imagen de tu empresa.
+            </p>
+          </div>
+          <div class="m-cards">
+            <article class="m-card">
+              <div class="w-browser" aria-hidden="true" style="margin-bottom: 24px">
+                <div class="w-bar"><i></i><i></i><i></i><span>…/operations/productivity</span></div>
+                <div class="w-main"><div class="w-bars"><div><span>Ana R.</span><s style="width: 90%"></s></div><div><span>Luis M.</span><s style="width: 70%"></s></div><div><span>Pedro S.</span><s style="width: 55%"></s></div></div></div>
+              </div>
+              <h3>Productividad</h3>
+              <p>Por responsable y periodo: jornadas trabajadas, horas de jornada, clientes atendidos, obras cerradas y recordatorios cumplidos, a tiempo o vencidos.</p>
+            </article>
+            <article class="m-card">
+              <div class="w-browser" aria-hidden="true" style="margin-bottom: 24px">
+                <div class="w-bar"><i></i><i></i><i></i><span>…/projects/pipeline</span></div>
+                <div class="w-main"><div class="w-bars"><div><span>Nuevos</span><s style="width: 95%"></s></div><div><span>En progreso</span><s style="width: 65%"></s></div><div><span>Cerrados</span><s style="width: 30%"></s></div></div></div>
+              </div>
+              <h3>Embudo</h3>
+              <p>Todos los seguimientos por etapa, con su avance y fecha de cierre. Marca los cierres vencidos y se filtra por responsable.</p>
+            </article>
+            <article class="m-card">
+              <div class="w-browser" aria-hidden="true" style="margin-bottom: 24px">
+                <div class="w-bar"><i></i><i></i><i></i><span>…/report-studio/generate</span></div>
+                <div class="w-main"><div class="w-panel"><b>Elige una plantilla</b><p>Acta de visita</p><p>Informe de obra</p></div><span class="w-btn pri" style="justify-self: start">Generar PDF</span></div>
+              </div>
+              <h3>Informes PDF</h3>
+              <p>En <b>Generar informe</b> elige una plantilla y el registro, y haz clic en <b>Generar PDF</b>. En <b>Plantillas</b> el administrador diseña la hoja A4 con textos, logos, fotos, tablas y campos, o parte de <b>Usar diseño de ejemplo</b>.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 13 Settings -->
+      <section class="m-chapter m-alt" id="configuracion">
+        <div class="container">
+          <div class="m-wide-head">
+            <div>
+              <p class="section-index">13 · Para administradores</p>
+              <h2>Configura <em>tu empresa.</em></h2>
+            </div>
+            <p class="m-lead">
+              En <b>Configuración</b> el menú lateral muestra solo las páginas
+              que tu rol puede administrar.
+            </p>
+          </div>
+          <div class="m-cards w-cards-4">
+            <article class="m-card">
+              <div class="w-card-icon" aria-hidden="true">1</div>
+              <h3>Usuarios e invitaciones</h3>
+              <p>Con <b>Invitar usuario</b> envías un acceso por correo con su rol inicial. En <b>Usuarios</b> cambias roles o desactivas cuentas, y en <b>Invitaciones</b> reenvías o cancelas las pendientes.</p>
+            </article>
+            <article class="m-card">
+              <div class="w-card-icon" aria-hidden="true">2</div>
+              <h3>Sucursales y personal</h3>
+              <p>Crea sucursales, asígnales personal con sus permisos en esa sede y define quién puede despachar entregas desde cada una.</p>
+            </article>
+            <article class="m-card">
+              <div class="w-card-icon" aria-hidden="true">3</div>
+              <h3>Operación por rubro</h3>
+              <p>Elige el rubro, cambia los nombres del menú (singular y plural), activa o desactiva <b>Entregas</b>, <b>Catálogo</b> y el <b>seguimiento GPS</b> durante la jornada.</p>
+            </article>
+            <article class="m-card">
+              <div class="w-card-icon" aria-hidden="true">4</div>
+              <h3>Campos y zona horaria</h3>
+              <p><b>Campos personalizados</b> agrega preguntas propias a los formularios de clientes, obras y visitas. <b>Zona horaria</b> define cómo se muestran fechas y horas para toda la empresa.</p>
+            </article>
+          </div>
+          <div class="w-roles">
+            <div><b>Vendedor · personal de campo</b><p>Trabaja desde la app móvil: jornada, visitas, sus contactos y su ruta.</p></div>
+            <div><b>Supervisor</b><p>Sigue al equipo en vivo, revisa historial, agenda y reportes.</p></div>
+            <div><b>Administrador</b><p>Todo lo anterior más usuarios, sucursales y configuración de la empresa.</p></div>
+          </div>
+          <p class="w-illus">Los permisos exactos de cada rol los define tu empresa; si te falta una sección, pídesela a tu administrador.</p>
+        </div>
+      </section>
+
+      <!-- 14 Help -->
+      <section class="m-chapter" id="ayuda">
+        <div class="container m-chapter-grid">
+          <div class="m-copy">
+            <p class="section-index">14 · Ayuda</p>
+            <h2>Estamos <em>para ayudarte.</em></h2>
+            <h3>Escribir a soporte</h3>
+            <ol class="m-steps">
+              <li>Abre tu perfil (arriba a la derecha) y elige <span class="m-ui">Ayuda y soporte</span>.</li>
+              <li>Elige el <b>tipo de consulta</b>, escribe un asunto breve y describe qué intentabas hacer, qué esperabas y qué pasó. Puedes adjuntar capturas.</li>
+              <li>Deja marcado <b>Incluir datos técnicos</b> y haz clic en <span class="m-ui m-ui-orange">Enviar consulta</span>. La respuesta llega a tu correo.</li>
+            </ol>
+            <p>
+              En la misma página puedes <b>Chatear por WhatsApp</b> o copiar el
+              correo de soporte para escribir desde tu propio programa.
+            </p>
+            <h3>Cerrar sesión</h3>
+            <p>Abre tu perfil y haz clic en <b>Cerrar sesión</b>. Hazlo siempre en computadoras compartidas.</p>
+          </div>
+          <div class="w-shots">
+            <figure>
+              <div class="w-browser" aria-hidden="true">
+                <div class="w-bar"><i></i><i></i><i></i><span>app.urbantrack.io/support</span></div>
+                <div class="w-app">
+                  <div class="w-side" data-on=""></div>
+                  <div class="w-main">
+                    <div class="w-head"><strong>Ayuda y soporte</strong><span class="w-btn">Chatear por WhatsApp</span></div>
+                    <div class="w-row"><span class="w-chip on">Problema técnico</span><span class="w-chip">Duda de uso</span><span class="w-chip">Cuenta y accesos</span></div>
+                    <span class="w-input">Ej.: No puedo registrar una visita</span>
+                    <span class="w-input" style="min-height: 60px">Describe qué intentabas hacer…</span>
+                    <div class="w-head"><span>☑ Incluir datos técnicos</span><span class="w-btn pri">Enviar consulta</span></div>
+                  </div>
+                </div>
+              </div>
+              <figcaption><b>Ayuda y soporte</b> · Tipo, asunto, mensaje y adjuntos.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="m-chapter m-alt" id="problemas">
+        <div class="container m-faq-grid">
+          <div>
+            <p class="section-index">15 · Si algo no sale</p>
+            <h2>Problemas <em>frecuentes.</em></h2>
+          </div>
+          <div class="m-faq">
+            <details>
+              <summary>No veo una sección del menú</summary>
+              <p>La plataforma muestra solo las secciones que tu empresa tiene activas y que tu rol permite. Si llegas a una página sin permiso verás un aviso. Pídele el acceso al administrador de tu empresa.</p>
+            </details>
+            <details>
+              <summary>Alguien de mi equipo no aparece en el mapa</summary>
+              <p>Solo se ve a quien tiene la jornada abierta en la app móvil y el GPS funcionando. Revisa Incidencias en Equipo en vivo y pídele usar Probar GPS en la app. Comprueba también que el seguimiento GPS esté activo en Operación por rubro.</p>
+            </details>
+            <details>
+              <summary>Las fechas u horas no coinciden</summary>
+              <p>Todas las horas se muestran en la zona horaria de la empresa. Un administrador puede revisarla en Configuración → Zona horaria.</p>
+            </details>
+            <details>
+              <summary>La carga masiva marca filas con error</summary>
+              <p>Corrige la celda directamente en la tabla de revisión y usa Volver a validar, o deja esas filas fuera y cárgalas después. Al final puedes descargar los registros no cargados con su motivo.</p>
+            </details>
+            <details>
+              <summary>La invitación no llegó o el enlace no funciona</summary>
+              <p>Revisa la carpeta de spam. Las invitaciones vencen: un administrador puede reenviarla desde Configuración → Invitaciones; al reenviarla, el enlace anterior deja de funcionar.</p>
+            </details>
+            <details>
+              <summary>No recuerdo mi contraseña</summary>
+              <p>Haz clic en ¿Olvidaste tu contraseña? en el ingreso, escribe tu correo y sigue el enlace que te llega para crear una nueva.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="m-cta" id="abrir">
+        <div class="container m-cta-card">
+          <div>
+            <p class="section-index light">Plataforma web</p>
+            <h2>¿Listo para <em>dirigir tu equipo?</em></h2>
+            <p>Ingresa con la cuenta que te dio tu empresa. Tu equipo de campo trabaja con la <a href="../" style="color: #fff; text-decoration: underline">app móvil</a>.</p>
+          </div>
+          <a class="button button-primary" href="https://app.urbantrack.io/" target="_blank" rel="noopener"
+            >Abrir app.urbantrack.io <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-main">
+        <a class="brand brand-light" href="../../"
+          ><img src="../../assets/logo-192.png" alt="" width="44" height="44" /><span
+            >UrbanTrackCRM</span
+          ></a
+        >
+        <p>
+          CRM comercial y operativo que hace crecer a la empresa y simplifica
+          el trabajo de su equipo, dentro y fuera de la oficina.
+        </p>
+        <div class="footer-contact">
+          <a
+            class="whatsapp-link"
+            href="https://wa.me/59172196093?text=Hola%2C%20tengo%20una%20duda%20sobre%20la%20plataforma%20web%20UrbanTrackCRM"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Escribir a UrbanTrack por WhatsApp"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.4-.3Z"
+              />
+            </svg>
+            WhatsApp
+          </a>
+          <a href="mailto:contacto@urbantrack.io">contacto@urbantrack.io</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© 2026 UrbanTrack. Todos los derechos reservados.</span>
+        <span class="footer-links"><a href="../../">Inicio</a><a href="../">Manual app móvil</a><a href="../../privacy.html">Política de privacidad</a></span>
+      </div>
+    </footer>
+    <script src="../manual.js"></script>
+    <script src="web.js"></script>
+  </body>
+</html>

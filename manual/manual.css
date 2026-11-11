@@ -186,6 +186,34 @@ html {
   box-shadow: 0 0 0 4px rgba(30, 157, 101, 0.15);
 }
 
+/* ---------- Switch between manuals (app móvil / plataforma web) ---------- */
+
+.w-switch {
+  display: flex;
+  width: max-content;
+  max-width: 100%;
+  gap: 4px;
+  margin-bottom: 26px;
+  padding: 4px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.w-switch a {
+  padding: 7px 14px;
+  border-radius: 999px;
+  color: var(--muted);
+}
+.w-switch a:hover {
+  color: var(--ink);
+}
+.w-switch a[aria-current] {
+  background: var(--ink);
+  color: #fff;
+}
+
 /* ---------- Day route ---------- */
 
 .m-day {
@@ -320,15 +348,19 @@ html {
 .m-steps {
   counter-reset: step;
 }
+/* Block layout (not grid) so inline labels like .m-ui stay inside the sentence. */
 .m-steps li {
   counter-increment: step;
-  display: grid;
-  grid-template-columns: 32px minmax(0, 1fr);
-  gap: 14px;
+  position: relative;
+  min-height: 32px;
+  padding: 4px 0 0 46px;
   color: #3d3d3d;
 }
 .m-steps li::before {
   content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
   display: grid;
   place-items: center;
   width: 32px;
@@ -654,6 +686,13 @@ html {
   }
   .m-flow {
     gap: 28px;
+  }
+}
+
+/* Between the full menu and the hamburger, tighten the links so the header fits. */
+@media (min-width: 821px) and (max-width: 1000px) {
+  .nav-links {
+    gap: 20px;
   }
 }
 
