@@ -2,7 +2,8 @@
   Manual de la plataforma web.
   Se carga después de ../../styles.css y ../manual.css: reutiliza sus capítulos,
   pasos, notas y preguntas frecuentes. Lo propio de esta página usa el prefijo "w-":
-  sobre todo las ventanas de navegador que ilustran cada pantalla.
+  sobre todo la ventana de navegador que enmarca cada captura de pantalla.
+  Las capturas están en capturas/ y se generan con datos de ejemplo (ver README).
 */
 
 /* ---------- Browser window ---------- */
@@ -14,9 +15,6 @@
   border-radius: 16px;
   background: #fff;
   box-shadow: 0 30px 60px -30px rgba(21, 21, 21, 0.4);
-  font-size: 11px;
-  line-height: 1.35;
-  color: #2a2a2a;
 }
 .w-bar {
   display: flex;
@@ -44,313 +42,14 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.w-app {
-  display: grid;
-  grid-template-columns: 128px minmax(0, 1fr);
-  min-height: 300px;
-}
-.w-side {
-  display: grid;
-  align-content: start;
-  gap: 1px;
-  padding: 12px 8px;
-  background: #171717;
-  color: #b4b4b4;
-}
-.w-side b {
-  margin: 8px 6px 3px;
-  color: #6f6f6f;
-  font-size: 9px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-.w-side b:first-child {
-  margin-top: 0;
-}
-.w-side span {
-  padding: 4px 7px;
-  border-radius: 6px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.w-side .on {
-  background: var(--orange);
-  color: #fff;
-  font-weight: 700;
-}
-.w-main {
-  display: grid;
-  align-content: start;
-  gap: 10px;
-  min-width: 0;
-  padding: 14px;
-  background: #f7f6f3;
-}
-.w-head {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 6px;
-}
-.w-head strong {
-  font-family: Manrope, system-ui, sans-serif;
-  font-size: 14px;
-}
-.w-btn {
-  display: inline-block;
-  padding: 3px 8px;
-  border: 1px solid #dedbd4;
-  border-radius: 6px;
-  background: #fff;
-  font-weight: 700;
-  white-space: nowrap;
-}
-.w-btn.pri {
-  border-color: var(--orange);
-  background: var(--orange);
-  color: #fff;
-}
-.w-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-}
-.w-chip {
-  padding: 2px 8px;
-  border: 1px solid #dedbd4;
-  border-radius: 999px;
-  background: #fff;
-  color: #555;
-}
-.w-chip.on {
-  border-color: var(--ink);
-  background: var(--ink);
-  color: #fff;
-}
-.w-input {
-  flex: 1 1 120px;
-  padding: 4px 8px;
-  border: 1px solid #dedbd4;
-  border-radius: 6px;
-  background: #fff;
-  color: #999;
-}
-
-/* Table */
-.w-table {
-  display: grid;
-  overflow: hidden;
-  border: 1px solid #e3e0d9;
-  border-radius: 8px;
-  background: #fff;
-}
-.w-table div {
-  display: grid;
-  grid-template-columns: 1.4fr 1fr 0.8fr 0.8fr;
-  gap: 6px;
-  padding: 6px 8px;
-  border-top: 1px solid #efede7;
-}
-.w-table div:first-child {
-  border-top: 0;
-  background: #faf9f6;
-  color: #888;
-  font-weight: 700;
-}
-.w-table em {
-  font-style: normal;
-  justify-self: start;
-  padding: 0 6px;
-  border-radius: 999px;
-  background: #e4f4ec;
-  color: #0f5a3a;
-  font-weight: 700;
-}
-.w-table em.o {
-  background: var(--m-orange-soft);
-  color: var(--orange-dark);
-}
-.w-table em.b {
-  background: #eef2fd;
-  color: #2b3f80;
-}
-
-/* Cards, KPIs and panels */
-.w-kpis {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 6px;
-}
-.w-kpis div,
-.w-panel {
-  padding: 8px;
-  border: 1px solid #e3e0d9;
-  border-radius: 8px;
-  background: #fff;
-}
-.w-kpis b {
+.w-shot {
   display: block;
-  font-family: Manrope, system-ui, sans-serif;
-  font-size: 15px;
-}
-.w-kpis small {
-  color: #888;
-}
-.w-split {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: 8px;
-}
-.w-panel > b {
-  display: block;
-  margin-bottom: 6px;
-}
-.w-panel p {
-  margin: 0;
-  padding: 4px 0;
-  border-top: 1px solid #efede7;
-  color: #555;
-}
-.w-panel p:first-of-type {
-  border-top: 0;
-}
-
-/* Map */
-.w-map {
-  position: relative;
-  min-height: 130px;
-  overflow: hidden;
-  border: 1px solid #e3e0d9;
-  border-radius: 8px;
-  background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px) 0 0 / 22px 22px,
-    linear-gradient(rgba(0, 0, 0, 0.04) 1px, transparent 1px) 0 0 / 22px 22px,
-    #eef0ea;
-}
-.w-map::before {
-  content: "";
-  position: absolute;
-  left: -10%;
-  top: 55%;
-  width: 120%;
-  height: 10px;
-  background: #fff;
-  transform: rotate(-12deg);
-}
-.w-map i {
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  background: var(--orange);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-}
-.w-map i.g {
-  background: var(--green);
-}
-.w-map i.v {
-  background: #7a4fd6;
-}
-.w-map i.r {
-  background: #dc3d4b;
-}
-.w-map svg {
-  position: absolute;
-  inset: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
+  background: #f4f6f9;
 }
 
-/* Calendar */
-.w-cal {
-  display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
-  gap: 3px;
-}
-.w-cal span {
-  min-height: 30px;
-  padding: 3px;
-  border: 1px solid #e3e0d9;
-  border-radius: 5px;
-  background: #fff;
-  color: #999;
-  font-size: 9px;
-}
-.w-cal span.h {
-  min-height: auto;
-  border: 0;
-  background: none;
-  font-weight: 700;
-  text-align: center;
-}
-.w-cal span u {
-  display: block;
-  margin-top: 2px;
-  padding: 1px 3px;
-  border-radius: 3px;
-  background: var(--m-orange-soft);
-  color: var(--orange-dark);
-  text-decoration: none;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.w-cal span u.d {
-  background: #e4f4ec;
-  color: #0f5a3a;
-}
-
-/* Steps of a wizard */
-.w-wizard {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 6px;
-}
-.w-wizard span {
-  padding: 6px;
-  border-top: 3px solid #dedbd4;
-  color: #888;
-  font-weight: 700;
-}
-.w-wizard span.on {
-  border-color: var(--orange);
-  color: var(--ink);
-}
-.w-drop {
-  display: grid;
-  place-items: center;
-  gap: 4px;
-  min-height: 110px;
-  border: 2px dashed #d3d0c8;
-  border-radius: 10px;
-  background: #fff;
-  color: #777;
-  text-align: center;
-}
-
-/* Funnel / bars */
-.w-bars {
-  display: grid;
-  gap: 6px;
-}
-.w-bars div {
-  display: grid;
-  grid-template-columns: 80px minmax(0, 1fr);
-  align-items: center;
-  gap: 8px;
-}
-.w-bars s {
-  display: block;
-  height: 12px;
-  border-radius: 4px;
-  background: var(--orange);
-  text-decoration: none;
-}
-
-/* Two browser windows side by side or stacked */
+/* Browser windows with their caption */
 .w-shots {
   display: grid;
   gap: 28px;
@@ -396,7 +95,11 @@
   color: #b9b9b9;
 }
 
-/* Settings cards */
+/* Settings */
+.w-settings-shot {
+  max-width: 980px;
+  margin: 0 auto 36px;
+}
 .w-cards-4 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 20px;
@@ -472,21 +175,6 @@ kbd {
     flex-basis: min(260px, 78vw);
   }
   .w-roles {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 560px) {
-  .w-app {
-    grid-template-columns: 1fr;
-  }
-  .w-side {
-    display: none;
-  }
-  .w-kpis {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .w-split {
     grid-template-columns: 1fr;
   }
 }

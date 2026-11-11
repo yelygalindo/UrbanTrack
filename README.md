@@ -14,7 +14,8 @@ Sitio comercial estático de UrbanTrack, listo para publicar en GitHub Pages.
 - `robots.txt`, `sitemap.xml`: indexación en buscadores.
 - `privacy.html`: política de privacidad.
 - `manual/`: manual de usuario de la app móvil (`index.html`, `manual.css`, `manual.js` y las capturas en `pantallas/`). Usa `styles.css` para la cabecera, los botones y el pie.
-- `manual/web/`: manual de la plataforma web (`app.urbantrack.io`). Reutiliza `styles.css` y `../manual.css`; `web.css` y `web.js` dibujan las ventanas de navegador que ilustran cada pantalla.
+- `manual/web/`: manual de la plataforma web (`app.urbantrack.io`). Reutiliza `styles.css` y `../manual.css`; `web.css` enmarca en una ventana de navegador las capturas de `capturas/`.
+- `scripts/capturas-manual-web/`: vuelve a sacar esas capturas con la app web en local y una API simulada con datos de ejemplo (instrucciones al inicio de `capturar.mjs`).
 - `registro/`: solo redirige enlaces antiguos al registro de la aplicación.
 - `CNAME`: dominio personalizado.
 
