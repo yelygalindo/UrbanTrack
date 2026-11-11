@@ -8,7 +8,7 @@ const day = (offset, hour = 14, min = 0) => {
 };
 export { day };
 
-const C = [-17.3895, -66.1568]; // Cochabamba
+const C = [-17.7833, -63.1821]; // Santa Cruz de la Sierra
 const at = (dLat, dLng) => [+(C[0] + dLat).toFixed(5), +(C[1] + dLng).toFixed(5)];
 
 export const user = {
@@ -16,8 +16,8 @@ export const user = {
   externalId: "usr-admin",
   username: "gabriela",
   fullName: "Gabriela Torrez",
-  email: "gabriela@constructoraandina.bo",
-  company: { id: 2, externalId: "cmp-1", name: "Constructora Andina", trialEndsAtUtc: null },
+  email: "gabriela@comercialdeloriente.bo",
+  company: { id: 2, externalId: "cmp-1", name: "Comercial del Oriente", trialEndsAtUtc: null },
   roles: ["admin"],
   permissions: [
     "dashboard.read", "customers.read", "customers.create", "customers.update", "customers.delete",
@@ -27,17 +27,17 @@ export const user = {
     "visits.read", "sellers.read", "routes.read", "routes.manage", "timeline.read",
     "deliveries.read", "deliveries.create", "deliveries.update", "reports.read",
     "report-documents.generate", "report-templates.manage", "users.read", "users.update",
-    "invitations.create", "branches.read", "branches.update", "companies.update", "roles.read",
+    "invitations.create", "branches.read", "branches.update", "companies.read", "companies.update", "roles.read",
     "workdays.manage", "project-duplicates.manage",
   ],
 };
 
 export const sellers = [
-  { externalId: "s-ana", displayName: "Ana Rojas", email: "ana@constructoraandina.bo" },
-  { externalId: "s-luis", displayName: "Luis Mendoza", email: "luis@constructoraandina.bo" },
-  { externalId: "s-carla", displayName: "Carla Vargas", email: "carla@constructoraandina.bo" },
-  { externalId: "s-pedro", displayName: "Pedro Suárez", email: "pedro@constructoraandina.bo" },
-  { externalId: "s-jorge", displayName: "Jorge Quiroga", email: "jorge@constructoraandina.bo" },
+  { externalId: "s-ana", displayName: "Ana Rojas", email: "ana@comercialdeloriente.bo" },
+  { externalId: "s-luis", displayName: "Luis Mendoza", email: "luis@comercialdeloriente.bo" },
+  { externalId: "s-carla", displayName: "Carla Vargas", email: "carla@comercialdeloriente.bo" },
+  { externalId: "s-pedro", displayName: "Pedro Suárez", email: "pedro@comercialdeloriente.bo" },
+  { externalId: "s-jorge", displayName: "Jorge Quiroga", email: "jorge@comercialdeloriente.bo" },
 ];
 const S = Object.fromEntries(sellers.map((s) => [s.externalId, s]));
 
@@ -56,18 +56,18 @@ export const projectStatuses = [
 ];
 
 const rawCustomers = [
-  ["Ferretería El Constructor", "Marco Antezana", "s-ana", 3, -1, 2, at(0.004, 0.006)],
-  ["Inmobiliaria Los Pinos", "Silvia Camacho", "s-luis", 3, -3, 1, at(-0.012, 0.01)],
-  ["Edificio Torre Blanca", "Ricardo Paz", "s-carla", 2, -2, 0, at(0.009, -0.011)],
-  ["Colegio San Agustín", "Hna. Teresa Ruiz", "s-ana", 1, -6, 3, at(-0.006, -0.004)],
-  ["Hotel Cochabamba Plaza", "Daniel Arce", "s-pedro", 3, 0, 4, at(0.002, -0.002)],
-  ["Clínica Los Ángeles", "Dra. Mónica Salinas", "s-jorge", 2, -4, 2, at(0.015, 0.004)],
-  ["Condominio Valle Verde", "Fernando Ledezma", "s-luis", 3, -1, 5, at(-0.018, -0.015)],
-  ["Supermercado Fidalga Norte", "Patricia Guzmán", "s-carla", 1, -9, 7, at(0.021, 0.012)],
-  ["Universidad Privada del Valle", "Ing. Óscar Rivero", "s-pedro", 2, -5, 1, at(-0.003, 0.019)],
-  ["Mueblería Artesanal Quillacollo", "Rosa Mamani", "s-jorge", 4, -30, null, at(-0.01, -0.03)],
+  ["Ferretería El Tornillo", "Ing. Marco Antezana", "s-ana", 3, -1, 2, at(0.004, 0.006)],
+  ["Inmobiliaria Las Palmas", "Silvia Camacho", "s-luis", 3, -3, 1, at(-0.012, 0.01)],
+  ["Edificio Torre Equipetrol", "Arq. Ricardo Paz", "s-carla", 2, -2, 0, at(0.009, -0.011)],
+  ["Colegio Santa Rosa", "Hna. Teresa Ruiz", "s-ana", 1, -6, 3, at(-0.006, -0.004)],
+  ["Hotel Jardín del Oriente", "Daniel Arce", "s-pedro", 3, 0, 4, at(0.002, -0.002)],
+  ["Clínica Urubó Salud", "Dra. Mónica Salinas", "s-jorge", 2, -4, 2, at(0.015, 0.004)],
+  ["Condominio Los Mangales", "Fernando Ledezma", "s-luis", 3, -1, 5, at(-0.018, -0.015)],
+  ["Supermercado Don Lucho", "Patricia Guzmán", "s-carla", 1, -9, 7, at(0.021, 0.012)],
+  ["Instituto Técnico Oriental", "Ing. Óscar Rivero", "s-pedro", 2, -5, 1, at(-0.003, 0.019)],
+  ["Mueblería Artesanal Warnes", "Rosa Mamani", "s-jorge", 4, -30, null, at(-0.01, -0.03)],
   ["Panadería La Espiga", "Julio Céspedes", "s-ana", 3, -2, 6, at(0.007, 0.015)],
-  ["Centro Comercial Hupermall", "Valeria Montaño", "s-luis", 2, -7, 2, at(0.012, -0.02)],
+  ["Centro Comercial Las Brisas", "Valeria Montaño", "s-luis", 2, -7, 2, at(0.012, -0.02)],
 ];
 export const customers = rawCustomers.map(([company, name, seller, statusId, last, next, [lat, lng]], i) => ({
   id: i + 1,
@@ -75,7 +75,7 @@ export const customers = rawCustomers.map(([company, name, seller, statusId, las
   code: `CLI-${String(1040 + i)}`,
   name,
   companyName: company,
-  phone: `+591 7${String(1234567 + i * 13579).slice(0, 7)}`,
+  phone: `7${String(1234567 + i * 13579).slice(0, 7)}`,
   email: `${name.split(" ").slice(-2, -1)[0] || name}`.toLowerCase().normalize("NFD").replace(/[^a-z]/g, "") + "@gmail.com",
   status: customerStatuses.find((s) => s.value === statusId).label,
   statusId,
@@ -83,7 +83,7 @@ export const customers = rawCustomers.map(([company, name, seller, statusId, las
   seller: { id: null, externalId: seller, name: S[seller].displayName },
   lastContactAtUtc: day(last, 15),
   nextContactAtUtc: next === null ? null : day(next, 13),
-  address: `Av. ${["América", "Blanco Galindo", "Heroínas", "Ayacucho", "Pando", "Libertador Bolívar"][i % 6]} #${120 + i * 37}, Cochabamba`,
+  address: `Av. ${["Banzer", "Cristo Redentor", "San Martín", "Alemana", "Beni", "Santos Dumont"][i % 6]} #${120 + i * 37}, Santa Cruz`,
   latitude: lat,
   longitude: lng,
   updatedAtUtc: day(-1),
@@ -92,18 +92,18 @@ export const customers = rawCustomers.map(([company, name, seller, statusId, las
 }));
 
 const rawProjects = [
-  ["Ampliación Torre Blanca, bloque B", 2, 3, "s-carla", 2, 65, 185000],
-  ["Remodelación Hotel Plaza, piso 4", 4, 5, "s-pedro", 2, 40, 96000],
-  ["Condominio Valle Verde, fase 2", 6, 7, "s-luis", 3, 15, 420000],
-  ["Aulas nuevas Colegio San Agustín", 3, 4, "s-ana", 1, 0, 78000],
-  ["Clínica Los Ángeles, área de emergencias", 5, 6, "s-jorge", 3, 10, 260000],
-  ["Fachada Ferretería El Constructor", 0, 1, "s-ana", 4, 100, 34000],
-  ["Estacionamiento Hupermall", 11, 12, "s-luis", 2, 55, 310000],
-  ["Laboratorios Univalle", 8, 9, "s-pedro", 1, 0, 150000],
-  ["Galpón Panadería La Espiga", 10, 11, "s-ana", 2, 80, 52000],
-  ["Sucursal Fidalga Norte", 7, 8, "s-carla", 5, 0, 205000],
-  ["Departamentos Los Pinos, torre 3", 1, 2, "s-luis", 4, 100, 530000],
-  ["Showroom Mueblería Quillacollo", 9, 10, "s-jorge", 1, 0, 41000],
+  ["Ampliación Torre Equipetrol, bloque B", 2, 3, "s-carla", 2, 65, 185000],
+  ["Remodelación Hotel Jardín, piso 4", 4, 5, "s-pedro", 2, 40, 96000],
+  ["Condominio Los Mangales, fase 2", 6, 7, "s-luis", 3, 15, 420000],
+  ["Aulas nuevas Colegio Santa Rosa", 3, 4, "s-ana", 1, 0, 78000],
+  ["Clínica Urubó, área de emergencias", 5, 6, "s-jorge", 3, 10, 260000],
+  ["Fachada Ferretería El Tornillo", 0, 1, "s-ana", 4, 100, 34000],
+  ["Estacionamiento Las Brisas", 11, 12, "s-luis", 2, 55, 310000],
+  ["Laboratorios Instituto Oriental", 8, 9, "s-pedro", 1, 0, 150000],
+  ["Tinglado Panadería La Espiga", 10, 11, "s-ana", 2, 80, 52000],
+  ["Sucursal Don Lucho Norte", 7, 8, "s-carla", 5, 0, 205000],
+  ["Departamentos Las Palmas, torre 3", 1, 2, "s-luis", 4, 100, 530000],
+  ["Showroom Mueblería Warnes", 9, 10, "s-jorge", 1, 0, 41000],
 ];
 export const projects = rawProjects.map(([name, ci, _n, seller, statusId, progress, amount], i) => {
   const c = customers[ci];
@@ -112,7 +112,7 @@ export const projects = rawProjects.map(([name, ci, _n, seller, statusId, progre
     externalId: `p-${i + 1}`,
     code: `OBR-${String(310 + i)}`,
     name,
-    description: "Provisión de cemento, fierro y agregados según cronograma de obra.",
+    description: "Provisión de calamina, pintura y revestimientos según el cronograma de la obra.",
     customerExternalId: c.externalId,
     customerName: c.companyName,
     sellerExternalId: seller,
@@ -134,13 +134,13 @@ export const projects = rawProjects.map(([name, ci, _n, seller, statusId, progre
 });
 
 export const products = [
-  ["Cemento IP-30", "bolsa"], ["Fierro corrugado 12 mm", "barra"], ["Arena fina", "m³"],
-  ["Ladrillo 6 huecos", "pieza"], ["Grava 3/4", "m³"], ["Cerámica 45×45", "m²"],
+  ["Calamina trapezoidal 28", "hoja"], ["Pintura premium de 20 L", "balde"], ["Revestimiento para exteriores", "m²"],
+  ["Cemento IP-30", "bolsa"], ["Fierro corrugado 12 mm", "barra"], ["Teja colonial", "pieza"],
 ];
 
 const reminderTexts = [
-  "Llamar para confirmar pedido de cemento", "Visita técnica de avance", "Enviar cotización de fierro",
-  "Reunión con el arquitecto", "Confirmar fecha de entrega", "Presentar catálogo de cerámicas",
+  "Llamar para confirmar pedido de calamina", "Visita técnica de avance", "Enviar cotización de pintura",
+  "Reunión con el arquitecto", "Confirmar fecha de entrega", "Presentar catálogo de revestimientos",
   "Seguimiento a la propuesta", "Revisar planos de la fase 2", "Cobro de la segunda cuota",
 ];
 export const reminders = Array.from({ length: 26 }, (_, i) => {
@@ -192,13 +192,13 @@ export const activeSellers = [
 }));
 
 export const visitsToday = [
-  [customers[10], "s-ana", 12, 20, 12, 55, "Pedido de 120 bolsas de cemento"],
+  [customers[10], "s-ana", 12, 20, 12, 55, "Pedido de 80 hojas de calamina"],
   [customers[0], "s-ana", 14, 5, null, null, null],
-  [customers[1], "s-luis", 12, 30, 13, 10, "Interesados en fierro para torre 3"],
+  [customers[1], "s-luis", 12, 30, 13, 10, "Interesados en calamina para la torre 3"],
   [customers[6], "s-luis", 14, 9, null, null, null],
   [customers[4], "s-pedro", 14, 13, null, null, null],
   [customers[2], "s-carla", 13, 5, 13, 50, "Revisión de avance, bloque B"],
-  [customers[7], "s-carla", 13, 58, 14, 15, "Dejé catálogo de cerámicas"],
+  [customers[7], "s-carla", 13, 58, 14, 15, "Dejé el catálogo de pinturas"],
 ].map(([c, s, h, m, oh, om, result], i) => ({
   externalId: `v-${i + 1}`,
   customerExternalId: c.externalId,

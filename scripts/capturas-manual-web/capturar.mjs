@@ -39,7 +39,7 @@ const deliveries = D.projects.slice(0, 7).map((p, i) => {
   const statusId = i === 0 ? 2 : i % 3 === 1 ? 3 : 1;
   return {
     id: i + 1, externalId: `d-${i + 1}`, projectExternalId: p.externalId, projectName: p.name,
-    originBranchExternalId: "br-1", originBranchName: i % 2 ? "Depósito Sacaba" : "Depósito Central",
+    originBranchExternalId: "br-1", originBranchName: i % 2 ? "Depósito Norte" : "Depósito Parque Industrial",
     sellerExternalId: p.sellerExternalId, sellerName: p.sellerName, statusId,
     statusName: ["", "Pendiente", "Parcial", "Entregado"][statusId],
     committedDateUtc: D.day(i - 2), deliveredDateUtc: statusId === 3 ? D.day(-1) : null,
@@ -59,8 +59,8 @@ function api(path, q) {
       return {
         industryCode: "construction", industryName: "Construcción", source: "industry",
         labels: {
-          customer: { singular: "Contacto", plural: "Contactos" },
-          project: { singular: "Seguimiento", plural: "Seguimientos" },
+          customer: { singular: "Cliente", plural: "Clientes" },
+          project: { singular: "Obra", plural: "Obras" },
           visit: { singular: "Visita", plural: "Visitas" },
         },
         modules: { deliveries: true, catalog: true, tracking: true },
@@ -75,11 +75,11 @@ function api(path, q) {
         metrics: { activeCustomers: 184, activeProjects: 37, pendingDeliveries: 12, overdueDeliveries: 2, completedDeliveriesThisMonth: 29, todayFollowUps: 6 },
         projectLocations: D.projects.map((p) => ({ projectExternalId: p.externalId, name: p.name, customerName: p.customerName, sellerExternalId: p.sellerExternalId, sellerName: p.sellerName, statusId: p.statusId, statusName: p.statusName, progressPercentage: p.progressPercentage, latitude: p.latitude, longitude: p.longitude })),
         recentActivity: [
-          ["Ampliación Torre Blanca, bloque B", "ProjectVisitCheckOutCreated", "Revisión de avance, bloque B", "Carla Vargas", 13, 50],
-          ["Galpón Panadería La Espiga", "CustomerNoteAdded", "Pedido de 120 bolsas de cemento", "Ana Rojas", 12, 55],
-          ["Departamentos Los Pinos, torre 3", "ProjectUpdated", "Estado: Ganado", "Luis Mendoza", 12, 10],
-          ["Remodelación Hotel Plaza, piso 4", "ProjectAttachmentAdded", "Foto de avance", "Pedro Suárez", 11, 40],
-          ["Estacionamiento Hupermall", "CustomerReminderCompleted", "Confirmar fecha de entrega", "Luis Mendoza", 10, 15],
+          ["Ampliación Torre Equipetrol, bloque B", "ProjectVisitCheckOutCreated", "Revisión de avance, bloque B", "Carla Vargas", 13, 50],
+          ["Tinglado Panadería La Espiga", "CustomerNoteAdded", "Pedido de 80 hojas de calamina", "Ana Rojas", 12, 55],
+          ["Departamentos Las Palmas, torre 3", "ProjectUpdated", "Estado: Ganado", "Luis Mendoza", 12, 10],
+          ["Remodelación Hotel Jardín, piso 4", "ProjectAttachmentAdded", "Foto de avance", "Pedro Suárez", 11, 40],
+          ["Estacionamiento Las Brisas", "CustomerReminderCompleted", "Confirmar fecha de entrega", "Luis Mendoza", 10, 15],
         ].map(([projectName, eventTypeName, title, userName, h, m], i) => ({ projectExternalId: `p-${i + 1}`, projectName, eventTypeName, title, userName, occurredAtUtc: D.day(0, h, m) })),
         upcomingFollowUps: D.reminders.filter((r) => !r.completed && r.reminderAtUtc >= D.NOW).slice(0, 5).map((r) => ({ reminderExternalId: r.externalId, customerExternalId: r.customerExternalId, customerName: r.customerName, projectName: r.projectName, text: r.text, reminderAtUtc: r.reminderAtUtc, assignedToName: r.assignedTo.name })),
         urgentDeliveries: deliveries.filter((d) => d.statusId !== 3).slice(0, 3).map((d, i) => ({ deliveryExternalId: d.externalId, projectExternalId: d.projectExternalId, projectName: d.projectName, customerName: D.projects.find((p) => p.externalId === d.projectExternalId).customerName, productName: d.items[0].productName, statusName: d.statusName, committedDateUtc: d.committedDateUtc, isOverdue: i === 0 })),
@@ -100,7 +100,7 @@ function api(path, q) {
       return { sellerExternalId: "s-ana", sellerName: "Ana Rojas", date: q.get("date") || "2026-11-10", revision: 3, stops: stops.map((c, i) => ({ targetType: "customer", targetExternalId: c.externalId, name: c.companyName, address: c.address, latitude: c.latitude, longitude: c.longitude, visitedAtUtc: i < 2 ? D.day(0, 12 + i * 2, 10) : null })) };
     }
     case "/deliveries": return paged(q.get("projectExternalId") ? deliveries.filter((d) => d.projectExternalId === q.get("projectExternalId")) : deliveries);
-    case "/deliveries/origin-branches": return [{ externalId: "br-1", name: "Depósito Central", isActive: true }, { externalId: "br-2", name: "Depósito Sacaba", isActive: true }];
+    case "/deliveries/origin-branches": return [{ externalId: "br-1", name: "Depósito Parque Industrial", isActive: true }, { externalId: "br-2", name: "Depósito Norte", isActive: true }];
     case "/deliveries/attachment-options":
     case "/project-attachments/options":
       return { maxFileSizeBytes: 10485760, maxFilesPerReceipt: 10, attachmentTypes: [{ value: "photo", label: "Foto", description: "Foto" }], acceptedFormats: [{ description: "Imágenes", extensions: [".jpg", ".png"], contentTypes: ["image/jpeg", "image/png"] }] };
@@ -117,7 +117,7 @@ function api(path, q) {
       return paged(D.projects.map((p) => ({ ...p, projectExternalId: p.externalId })));
     case "/report-studio/templates":
       return [
-        { id: "t-1", name: "Informe de avance de obra", description: "Fotos, visitas y materiales entregados", entityType: "project", createdAtUtc: D.day(-20), updatedAtUtc: D.day(-2) },
+        { id: "t-1", name: "Informe de avance de obra", description: "Fotos, visitas y materiales entregados en la obra", entityType: "project", createdAtUtc: D.day(-20), updatedAtUtc: D.day(-2) },
         { id: "t-2", name: "Acta de visita", description: "Resumen de una visita con firma", entityType: "visit", createdAtUtc: D.day(-20), updatedAtUtc: D.day(-5) },
       ];
 
@@ -139,14 +139,14 @@ function api(path, q) {
   if (/^\/projects\/p-\d+\/timeline$/.test(p))
     return paged([
       ["ProjectVisitCheckOutCreated", "Revisión de avance, bloque B", "Carla Vargas", -0, 13, 50],
-      ["ProjectUpdated", "Recepción parcial: 120 bolsas de cemento", "Carla Vargas", -1, 15, 0],
+      ["ProjectUpdated", "Recepción parcial: 60 hojas de calamina", "Carla Vargas", -1, 15, 0],
       ["ProjectAttachmentAdded", "Foto de losa del piso 3", "Carla Vargas", -2, 16, 20],
-      ["ProjectNoteAdded", "El cliente pide adelantar el fierro para el 15", "Carla Vargas", -3, 13, 0],
+      ["ProjectNoteAdded", "El cliente pide adelantar la pintura para el 15", "Carla Vargas", -3, 13, 0],
       ["ProjectUpdated", "Estado: En negociación → En progreso", "Gabriela Torrez", -8, 14, 0],
     ].map(([eventTypeName, title, name, d, h, m], i) => ({ externalId: `tl-${i}`, eventTypeName, title, description: null, occurredAtUtc: D.day(d, h, m), createdBy: { externalId: "x", name } })));
-  if (/^\/projects\/p-\d+\/notes$/.test(p)) return [{ externalId: "n-1", content: "El cliente pide adelantar el fierro para el 15 de noviembre.", createdBy: { name: "Carla Vargas" }, occurredAtUtc: D.day(-3, 13) }];
-  if (/^\/projects\/p-\d+\/reminders$/.test(p)) return [{ externalId: "pr-1", text: "Confirmar fecha de entrega de fierro", reminderAtUtc: D.day(2, 13), assignedTo: { name: "Carla Vargas" }, completed: false }];
-  if (/^\/projects\/p-\d+\/visits$/.test(p)) return [{ externalId: "v-6", projectExternalId: project1.externalId, projectName: project1.name, customerExternalId: "c-3", customerName: "Edificio Torre Blanca", visitedAtUtc: D.day(0, 13, 5), checkOutAtUtc: D.day(0, 13, 50), notes: null, result: "Revisión de avance, bloque B", sellerName: "Carla Vargas" }];
+  if (/^\/projects\/p-\d+\/notes$/.test(p)) return [{ externalId: "n-1", content: "El cliente pide adelantar la pintura para el 15 de noviembre.", createdBy: { name: "Carla Vargas" }, occurredAtUtc: D.day(-3, 13) }];
+  if (/^\/projects\/p-\d+\/reminders$/.test(p)) return [{ externalId: "pr-1", text: "Confirmar fecha de entrega de pintura", reminderAtUtc: D.day(2, 13), assignedTo: { name: "Carla Vargas" }, completed: false }];
+  if (/^\/projects\/p-\d+\/visits$/.test(p)) return [{ externalId: "v-6", projectExternalId: project1.externalId, projectName: project1.name, customerExternalId: "c-3", customerName: "Edificio Torre Equipetrol", visitedAtUtc: D.day(0, 13, 5), checkOutAtUtc: D.day(0, 13, 50), notes: null, result: "Revisión de avance, bloque B", sellerName: "Carla Vargas" }];
   if (/^\/projects\/p-\d+\/attachments$/.test(p)) return [];
   if (/^\/customers\/c-\d+\/(notes|reminders)$/.test(p)) return [];
   if (/^\/customers\/c-\d+\/timeline$/.test(p)) return { items: [], pagination: { page: 1, pageSize: 50, totalItems: 0, totalPages: 0 } };
@@ -183,8 +183,8 @@ const shots = [
   { name: "ingreso", path: "/login", loggedIn: false, size: [1280, 800] },
   { name: "resumen", path: "/" },
   { name: "buscador", path: "/", run: async (p) => { await p.keyboard.press("Control+k"); await p.waitForTimeout(400); await p.keyboard.type("torre"); } },
-  { name: "contactos", path: "/customers" },
-  { name: "seguimiento", path: "/projects?selected=p-1" },
+  { name: "clientes", path: "/customers" },
+  { name: "obra", path: "/projects?selected=p-1" },
   { name: "agenda", path: "/reminders" },
   { name: "equipo-en-vivo", path: "/operations/dashboard" },
   { name: "visitas-en-curso", path: "/operations/active" },
