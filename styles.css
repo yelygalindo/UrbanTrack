@@ -129,6 +129,9 @@ h2 em {
   align-items: center;
   gap: 10px;
 }
+.nav-actions .button {
+  white-space: nowrap;
+}
 .menu-toggle {
   display: none;
   width: 44px;
@@ -190,6 +193,15 @@ h2 em {
 .button-dark:hover {
   background: #000;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+}
+.button-ghost {
+  border-color: rgba(21, 21, 21, 0.18);
+  background: transparent;
+  color: var(--ink);
+}
+.button-ghost:hover {
+  border-color: var(--ink);
+  background: #fff;
 }
 .button-primary {
   background: var(--orange);
@@ -1803,6 +1815,12 @@ h2 em {
   .button-small {
     padding-inline: 14px;
   }
+  .nav-actions {
+    gap: 8px;
+  }
+  .nav-actions .button-small {
+    padding-inline: 12px;
+  }
   .hero-actions {
     align-items: stretch;
     flex-direction: column;
@@ -1950,6 +1968,19 @@ h2 em {
   .footer-bottom {
     flex-direction: column;
     gap: 10px;
+  }
+}
+@media (max-width: 380px) {
+  .nav-actions {
+    gap: 6px;
+  }
+  .nav-actions .button-small {
+    gap: 6px;
+    padding-inline: 10px;
+    font-size: 0.82rem;
+  }
+  .nav-actions .button-small span {
+    display: none;
   }
 }
 @media (prefers-reduced-motion: reduce) {
